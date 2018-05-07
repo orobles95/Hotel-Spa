@@ -20,7 +20,7 @@
             @yield('content')
         </div>
 
-
+        @include('footer')
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>
