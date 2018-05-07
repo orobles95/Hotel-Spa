@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    overflow-y: scroll;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    /*background-color: #606;*/
+}
+.titulo {
+    width: 430px;
+    height: 80px;
+    background: url("../images/titulo.jpg") no-repeat center top;
+    background-size: contain;
+    /*background-color: #218838;*/
+    margin-left: 200px;
+}
+.menu ul li {
+    display: inline;
+    font-family: arial;
+    font-size: 14px;
+    padding-right: 15px;
+}
+.header-img {
+    width: 100%;
+    height: 437px;
+    background: url("../images/spa.jpg") no-repeat center top;
+    background-size: contain;
+    border-top: 5px solid #5d3b20;
+    border-bottom: 8px solid #5d3b20;
+}
+
