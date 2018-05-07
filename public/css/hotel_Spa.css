@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: 437px;
     background: url("../images/spa.jpg") no-repeat center top;
-    background-size: contain;
+    background-size: cover;
     border-top: 5px solid #5d3b20;
     border-bottom: 8px solid #5d3b20;
 }
