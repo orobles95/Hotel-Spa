@@ -16,9 +16,8 @@
                 <li>CONDICIONES</li>
             </ul>
         </div>
-        <div>
-
-        </div>
+        <div class="icons"></div>
+        <div class="icons-follow"></div>
     </div>
 </div>
 
