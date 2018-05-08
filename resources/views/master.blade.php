@@ -15,7 +15,7 @@
         @include('navbar')
 
         <div class="container">
-            @notification()
+            <!--@notification()-->
 
             @yield('content')
             @include('sections')
