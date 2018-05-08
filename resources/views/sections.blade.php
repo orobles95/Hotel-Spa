@@ -1,37 +1,44 @@
-<div  class="container">
-    <div  class="row">
-        <div class="col-3 align-self-center">
+<div class="container main_container">
+    <div  class="row main_row">
+        <div class="main_col col-3 align-self-center">
             <img src="images/instalaciones.jpg" class="img img-fluid rounded" alt="Instalaciones Spa">
         </div>
-        <div  class="col-7">
-            <h4 id="instalaciones_title">Instalaciones</h4>
-            <p id="instalaciones_description">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+        <div class="main_col col-7">
+            <h4>Instalaciones</h4>
+            <p>Nuestro hotel Spa se caracteriza por presentar un diseño innovador que combina, tanto en el interior 
+                como en el exterior del edificio, tonos y matices que permiten jugar con los colores tan antagónicos
+                como el blanco o negro, proyectando con ello nuevas sensaciones.</p>
         </div>
-        <div  class="col-2 align-self-center">
+        <div class="main_col col-2 align-self-center">
             <img src="images/instalaciones_circle.jpg" class="img img-fluid rounded-circle" alt="Instalaciones Spa 2">
         </div>
     </div>
-    <div id="tratamientos_container">
-        <div id="imgPortada_tratamientos_container">
+    <div class="row main_row">
+        <div class="main_col col-3 align-self-center">
             <img src="images/tratamientos.jpg" class="img img-fluid rounded" alt="Tratamientos Spa">
         </div>
-        <div id="text_tratamientos_container">
-            <h4 id="tratamientos_title">Trataminetos</h4>
-            <p id="tratamientos_description">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+        <div class="main_col col-7">
+            <h4>Trataminetos</h4>
+            <p>Spa & Relax confía el cuidado de la piel de sus clientes a la prestigiosa firma de cosmética de lujo 
+                Natura Bissé. Descubra las experiencias exclusivas de belleza y la relajación absoluta rodeada de un 
+                ambiente único. Ofrecemos masajes de lujo para parejas con los mejores productos naturales y terapias exclusivas.
+            </p>
         </div>
-        <div id="imgCercle_tratamientos_container">
+        <div class="main_col col-2 align-self-center">
             <img src="images/tratamientos_circle.jpg" class="img img-fluid rounded-circle" alt="Tratamientos Spa 2">
         </div>
     </div>
-    <div id="socios_container">
-        <div id="imgPortada_socios_container">
+    <div class="row main_row">
+        <div class="main_col col-3 align-self-center">
             <img src="images/socios.jpg" class="img img-fluid rounded" alt="Socios Spa">
         </div>
-        <div id="text_socios_container">
-            <h4 id="socios_title">Socios</h4>
-            <p id="socios_description">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+        <div class="main_col col-7">
+            <h4>Socios</h4>
+            <p>Disfrute de las ventajas de ser socio vip con nuestros descuentos en los tratamientos y ofertas 
+                especiales que ofrecemos en las distintas temporadas del año. Para personas exigentes que ya han
+                probado lo mejor hay salas vip disponibles sólo para socios.</p>
         </div>
-        <div id="imgCercle_socios_container">
+        <div class="main_col col-2 align-self-center">
             <img src="images/socios_circle.jpg" class="img img-fluid rounded-circle" alt="Socios Spa 2">
         </div>
     </div>

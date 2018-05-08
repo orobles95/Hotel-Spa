@@ -18,22 +18,8 @@
             @notification()
 
             @yield('content')
+            @include('sections')
         </div>
-        
-        @include('sections')
-        
-        
-
-
-
-
-
-        <div id="servicios">
-
-        </div>
-
-
-
 
 
         @include('footer')
