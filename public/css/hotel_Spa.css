@@ -3,65 +3,27 @@ body {
     overflow-y: scroll;
 }
 
-.header {
-    width: 100%;
-    height: 150px;
-    /*background-color: #606;*/
-}
-.titulo {
-    width: 430px;
-    height: 80px;
-    background: url("../images/titulo.jpg") no-repeat center top;
-    background-size: contain;
-    /*background-color: #1e120a;*/
-    margin-left: 200px;
+/************************* HEADER *********************************************/
+.container {
+    width: 1400px;
+    margin: 0 auto;
 }
 .menu ul li {
     display: inline;
     font-family: arial;
-    font-size: 14px;
-    padding-right: 15px;
+    font-size: 1.3vw;
+    padding-right: 1vw;
 }
 .header-img {
     width: 100%;
-    /*height: 436px;
-    background: url("../images/spa.jpg") no-repeat center top;
-    background-size: contain;*/
-    border-top: 5px solid #5d3b20;
-    border-bottom: 8px solid #5d3b20;
+    border-top: 0.5vw solid #5d3b20;
+    border-bottom: 0.7vw solid #5d3b20;
 }
+/******************************************************************************/
 
-.footer {
-    width: 100%;
-    height: 200px;
-    background-color: #1e120a;
-    border-top: 15px solid #b38057;
-    display: flex;
-    justify-content: center;
-}
-.container-footer {
-    width: 1400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: arial;
-    font-size: 16px;
-    color: #ab8b65;
-    margin-right: 30px;
-    /*background-color: palegreen;*/
-}
-.icons {
-    width: 250px;
-    height: 50px;
-    background: url("../images/icons.png") no-repeat center top;
-    background-size: contain;
-}
-.icons-follow {
-    width: 200px;
-    height: 50px;
-    background: url("../images/icons-follow.png") no-repeat center top;
-    background-size: contain;
-}
+
+
+
 
 #section_container {
     text-align: center;
@@ -90,20 +52,15 @@ body {
     display:inline-block;
 }
 
-#imgCercle_instalaciones_container, #imgCercle_tratamientos_container, #imgCercle_socios_container {
-    width: 18%;
-    height: 150px;
-    display:inline-block;
-}
 
-p {
-    font-size: 0.9vw;
-    text-align: left;
+/************************** FOOTER ********************************************/
+.footer {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background-color: #1e120a;
+    border-top: 1vw solid #b38057;
+    font-family: arial;
+    font-size: 1vw;
+    color: #ab8b65;
 }
-
-.img {
-    min-height: 100px;
-    max-height: 150px;
-    float:right;
-    width: 100%;
-}
+/******************************************************************************/
