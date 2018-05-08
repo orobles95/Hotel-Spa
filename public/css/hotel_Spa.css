@@ -53,6 +53,43 @@ body {
 }
 
 
+/*box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);*/
+
+/************************** SUBSCRIBE *****************************************/
+.subscribe {
+    font-family: arial;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    margin-bottom: 3vw;
+}
+.subscribe a:link {
+    text-decoration: none;
+    color: #000;
+}
+.line {
+    width: 100%;
+    border-top: 0.1vw solid #ab8b65;
+    margin-bottom: 1vw;
+}
+.text-title {
+    font-size: 1vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+.text-med {
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+.text-slim {
+    font-size: 0.7vw;
+}
+.marco {
+    margin-top: 1vw;
+    border: 0.2vw solid #ab8b65;
+    padding: 0.8vw;
+}
+/******************************************************************************/
+
 /************************** FOOTER ********************************************/
 .footer {
     padding-top: 2vw;

@@ -19,10 +19,10 @@
 
             @yield('content')
         </div>
-        
+
         @include('sections')
-        
-        
+
+
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-
+        @include('subscribe')
         @include('footer')
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
