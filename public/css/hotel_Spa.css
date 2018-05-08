@@ -63,33 +63,47 @@ body {
     background-size: contain;
 }
 
-#section_container{
+#section_container {
     text-align: center;
     width: 100%;
+    margin-bottom: 50px;
 }
 
-#section1, #section2, #section3{
+#instalaciones_container, #tratamientos_container, #socios_container {
     width: 80%;
-    min-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: inline-block;
 }
 
-#imgPortada_instalaciones_container{
-    width: 30%;
-    height: 300px;
-    display:inline-block;
-    background: url("../images/instalaciones.jpg") no-repeat center top;
-}
-
-#text_instalaciones_container{
-    width: 50%;
+#imgPortada_instalaciones_container, #imgPortada_tratamientos_container, #imgPortada_socios_container {
+    width: 28%;
+    height: 150px;
     display:inline-block;
 }
 
-#imgCercle_instalaciones_container{
-    width: 19%;
-    height: 300px;
+#text_instalaciones_container, #text_tratamientos_container, #text_socios_container {
+    width: 48%;
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
     display:inline-block;
-    background: url("../images/imagesTest/test1.jpg") no-repeat center top;
-    
+}
+
+#imgCercle_instalaciones_container, #imgCercle_tratamientos_container, #imgCercle_socios_container {
+    width: 18%;
+    height: 150px;
+    display:inline-block;
+}
+
+p {
+    font-size: 0.9vw;
+    text-align: left;
+}
+
+.img {
+    min-height: 100px;
+    max-height: 150px;
+    float:right;
+    width: 100%;
 }
