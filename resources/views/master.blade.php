@@ -14,12 +14,7 @@
     <body>
         @include('navbar')
 
-        <div class="container">
-            @notification()
-
-            @yield('content')
-            @include('sections')
-        </div>
+        @include('sections')
 
         @include('subscribe')
         @include('footer')
