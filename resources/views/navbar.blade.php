@@ -12,6 +12,6 @@
     </div>
 </div>
 <div class="header-img">
-
+    <img src="images/spa.jpg" class="img-fluid" alt="Responsive image">
 </div>
 
