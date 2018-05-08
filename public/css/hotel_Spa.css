@@ -5,16 +5,18 @@ body {
 
 /************************* HEADER *********************************************/
 .container {
+    max-width: 100% !important;
+    width: 70%;
     margin: 0 auto;
-    max-width: 100%;
-    width: 80%;
 }
+
 .menu ul li {
     display: inline;
     font-family: arial;
     font-size: 1.3vw;
     padding-right: 1vw;
 }
+
 .header-img {
     width: 100%;
     border-top: 0.5vw solid #5d3b20;
