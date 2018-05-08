@@ -28,12 +28,22 @@
                 </a>
             </div>
         </div>
-        <div class="row marco">
+        <div class="row marco justify-content-around">
             <form>
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <button class="">Enviar</button>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control form-control-sm" placeholder="Nombre">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control form-control-sm" placeholder="Apellidos">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control form-control-sm" placeholder="E-mail">
+                    </div>
+                    <div class="col">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

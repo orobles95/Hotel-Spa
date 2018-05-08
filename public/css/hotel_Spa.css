@@ -56,10 +56,16 @@ p {
 /*box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);*/
 
 /************************** SUBSCRIBE *****************************************/
+.form-row {
+    /*max-width: 100% !important;*/
+    width: 100%;
+    background-color: palegreen;
+}
 .subscribe {
     font-family: arial;
     padding-left: 9vw;
     padding-right: 9vw;
+    margin-top: 5vw;
     margin-bottom: 3vw;
 }
 .subscribe a:link {
@@ -68,7 +74,7 @@ p {
 }
 .line {
     width: 100%;
-    border-top: 0.1vw solid #ab8b65;
+    border-top: 0.1vw solid #b79061;
     margin-bottom: 1vw;
 }
 .text-title {
@@ -85,8 +91,14 @@ p {
 }
 .marco {
     margin-top: 1vw;
-    border: 0.2vw solid #ab8b65;
+    border: 0.15vw solid #b79061;
     padding: 0.8vw;
+}
+.marco button {
+    font-size: 0.8vw;
+    color: #FFF;
+    padding: 0.2vw 2.5vw;
+    background-color: #b79061;
 }
 /******************************************************************************/
 
