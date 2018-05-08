@@ -19,7 +19,7 @@
                 <img src="images/tratamientos.jpg" class="img img-fluid rounded" alt="Tratamientos Spa">
             </div>
             <div class="main_col col-7">
-                <h4>Trataminetos</h4>
+                <h4>Tratamientos</h4>
                 <p>Spa & Relax confía el cuidado de la piel de sus clientes a la prestigiosa firma de cosmética de lujo 
                     Natura Bissé. Descubra las experiencias exclusivas de belleza y la relajación absoluta rodeada de un 
                     ambiente único. Ofrecemos masajes de lujo para parejas con los mejores productos naturales y terapias exclusivas.
