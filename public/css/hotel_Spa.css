@@ -68,7 +68,7 @@ body {
     width: 100%;
 }
 
-#secciones{
+#section1, #section2, #section3{
     width: 80%;
     min-height: 200px; 
     display: inline-block;
@@ -90,6 +90,6 @@ body {
     width: 19%;
     height: 300px;
     display:inline-block;
-    background: url("../images/imagesTest/qh_grand_boras_spa1.jpg") no-repeat center top;
+    background: url("../images/imagesTest/test1.jpg") no-repeat center top;
     
 }
