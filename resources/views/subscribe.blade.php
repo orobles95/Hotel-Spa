@@ -28,19 +28,19 @@
                 </a>
             </div>
         </div>
-        <div class="row marco justify-content-around">
+        <div class="row marco">
             <form>
-                <div class="form-row">
-                    <div class="col">
+                <div class="row">
+                    <div class="col-3">
                         <input type="text" class="form-control form-control-sm" placeholder="Nombre">
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                         <input type="text" class="form-control form-control-sm" placeholder="Apellidos">
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                         <input type="text" class="form-control form-control-sm" placeholder="E-mail">
                     </div>
-                    <div class="col">
+                    <div class="col-1">
                         <button type="submit">Enviar</button>
                     </div>
                 </div>

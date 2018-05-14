@@ -9,14 +9,25 @@ body {
     width: 70%;
     margin: 0 auto;
 }
-
-.menu ul li {
-    display: inline;
+/*.acceso a:link {
+    font-family: arial;
+    font-size: 1vw;
+    color: #000;
+    text-decoration: none;
+}
+*/
+.menu ul li a {
+    /*display: inline;*/
     font-family: arial;
     font-size: 1.3vw;
-    padding-right: 1vw;
+    border-bottom: 0.5vw solid #FFF;
 }
-
+.menu a:hover {
+    border-bottom: 0.5vw solid palegreen;
+}
+.menu a:after {
+    border-bottom: 0.5vw solid palegreen;
+}
 .header-img {
     width: 100%;
     border-top: 0.5vw solid #5d3b20;
@@ -62,11 +73,6 @@ p {
 /*box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);*/
 
 /************************** SUBSCRIBE *****************************************/
-.form-row {
-    /*max-width: 100% !important;*/
-    width: 100%;
-    background-color: palegreen;
-}
 .subscribe {
     font-family: arial;
     padding-left: 9vw;
@@ -105,6 +111,7 @@ p {
     color: #FFF;
     padding: 0.2vw 2.5vw;
     background-color: #b79061;
+    cursor: pointer;
 }
 /******************************************************************************/
 
