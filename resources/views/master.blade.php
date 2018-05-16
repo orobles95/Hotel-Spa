@@ -14,6 +14,7 @@
 
     </head>
     <body>
+        ola
         @include('navbar')
 
         @include('sections')
