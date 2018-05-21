@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('master');
 });
+
+Route::get('/habitaciones', function () {
+    return view('habitaciones');
+});
