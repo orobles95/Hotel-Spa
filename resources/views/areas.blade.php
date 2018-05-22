@@ -1,8 +1,8 @@
 <section>
     <div class="container main_container">
         <div  class="row main_row">
-            <div class="main_col col-3 align-self-center">
-                <img src="images/instalaciones.jpg" class="img img-fluid rounded" alt="Instalaciones Spa">
+            <div class="main_col col-3 align-self-center div_center_content">
+                <img src="images/instalaciones.jpg" class="img img-fluid rounded center_width_img" alt="Instalaciones Spa">
             </div>
             <div class="main_col col-7">
                 <h4>Instalaciones</h4>
@@ -10,13 +10,13 @@
                     como en el exterior del edificio, tonos y matices que permiten jugar con los colores tan antagónicos
                     como el blanco o negro, proyectando con ello nuevas sensaciones.</p>
             </div>
-            <div class="main_col col-2 align-self-center">
-                <img src="images/instalaciones_circle.jpg" class="img img-fluid rounded-circle" alt="Instalaciones Spa 2">
+            <div class="main_col col-2 align-self-center div_center_content">
+                <img src="images/instalaciones_circle.jpg" class="img img-fluid rounded-circle center_width_img" alt="Instalaciones Spa 2">
             </div>
         </div>
         <div class="row main_row">
-            <div class="main_col col-3 align-self-center">
-                <img src="images/tratamientos.jpg" class="img img-fluid rounded" alt="Tratamientos Spa">
+            <div class="main_col col-3 align-self-center div_center_content">
+                <img src="images/tratamientos.jpg" class="img img-fluid rounded center_width_img" alt="Tratamientos Spa">
             </div>
             <div class="main_col col-7">
                 <h4>Tratamientos</h4>
@@ -25,13 +25,13 @@
                     ambiente único. Ofrecemos masajes de lujo para parejas con los mejores productos naturales y terapias exclusivas.
                 </p>
             </div>
-            <div class="main_col col-2 align-self-center">
-                <img src="images/tratamientos_circle.jpg" class="img img-fluid rounded-circle" alt="Tratamientos Spa 2">
+            <div class="main_col col-2 align-self-center div_center_content">
+                <img src="images/tratamientos_circle.jpg" class="img img-fluid rounded-circle center_width_img" alt="Tratamientos Spa 2">
             </div>
         </div>
         <div class="row main_row">
-            <div class="main_col col-3 align-self-center">
-                <img src="images/socios.jpg" class="img img-fluid rounded" alt="Socios Spa">
+            <div class="main_col col-3 align-self-center div_center_content">
+                <img src="images/socios.jpg" class="img img-fluid rounded center_width_img center_width_img" alt="Socios Spa">
             </div>
             <div class="main_col col-7">
                 <h4>Socios</h4>
@@ -39,7 +39,7 @@
                     especiales que ofrecemos en las distintas temporadas del año. Para personas exigentes que ya han
                     probado lo mejor hay salas vip disponibles sólo para socios.</p>
             </div>
-            <div class="main_col col-2 align-self-center">
+            <div class="main_col col-2 align-self-center div_center_content">
                 <img src="images/socios_circle.jpg" class="img img-fluid rounded-circle" alt="Socios Spa 2">
             </div>
         </div>
