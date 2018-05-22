@@ -60,14 +60,14 @@
                             <a class="nav-link" href="#">Ofertas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contactos</a>
+                            <a class="nav-link" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-    <div class="header-img">
+    <!--<div class="header-img">
         <img src="images/spa.jpg" class="img-fluid" alt="Hotel-Spa">
-    </div>
+    </div>-->
 </header>

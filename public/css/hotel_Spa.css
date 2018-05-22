@@ -33,9 +33,30 @@ body {
     border-top: 0.5vw solid #5d3b20;
     border-bottom: 0.7vw solid #5d3b20;
 }
+.description {
+    width: 70%;
+    padding: 3vw;
+    background-color: palevioletred;
+    margin: 0 auto;
+}
+/*.header-hab-img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1px;
+    border-top: 0.5vw solid #5d3b20;
+    border-bottom: 0.7vw solid #5d3b20;
+    background: url("../images/habitacionesHeader.jpg") no-repeat center top;
+    background-size: 100% auto;
+
+}*/
 /******************************************************************************/
 
+/**************************** HABITACIONES ************************************/
+.img-dcha {
+    width: 60%;
+}
 
+/******************************************************************************/
 
 
 
