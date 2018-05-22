@@ -22,3 +22,11 @@ Route::get('/habitaciones', function () {
 Route::get('/hab', function () {
     return view('hab');
 });
+
+Route::get('/restaurante', function () {
+    return view('restaurante');
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});

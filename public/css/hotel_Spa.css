@@ -192,3 +192,41 @@ p {
     color: #ab8b65;
 }
 /******************************************************************************/
+
+/******************************** CONTACTO ************************************/
+
+.texto-encabezado{
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+}
+
+.titulo_contacto{
+    font-size: 2.2vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitulo_contacto{
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.titulo_form_contacto{
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-weight: bold;
+}
+
+.div_input{
+    margin-bottom: 2vw;
+}
+
+.input_contacto{
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+#textarea{
+    resize: none;
+}

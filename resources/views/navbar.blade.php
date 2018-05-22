@@ -44,13 +44,13 @@
                 <a class="navbar-brand" href="#"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/Hotel-Spa/public">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Habitaciones</a>
+                        <a class="nav-link" href="hab">Habitaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Restaurante</a>
+                        <a class="nav-link" href="restaurante">Restaurante</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Spa</a>
@@ -59,7 +59,7 @@
                         <a class="nav-link" href="#">Ofertas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
