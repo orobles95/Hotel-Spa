@@ -26,6 +26,30 @@
                         clientes cuando vienen a nuestro restaurante. Desde la comida, hasta las instalaciones, menús y entretenimiento.
                     </p>
                 </div>
+                <div class="row hab-ficha">
+                    <div class="hab-description">
+                        <p>MADAME BUTTERFLY</p>
+                        <p>Suite laquesea</p>
+                        <p>Un oasis de paz y bienestar inspirado en la famosa ópera de Giacomo Puccini.</p>
+                        <div>
+                            <button type="button">Reservar</button>
+                            <a href="#">Descubrela -></a>
+                        </div>
+                    </div>
+                    <div class="hab-img dcha-img">
+                        <img src="images/suitePresidencial.jpg" class="img-fluid" alt="Suite Presidencial">
+                    </div>
+                </div>
+                <div class="row hab-ficha">
+                    <div class="hab-description dcha-description">
+                        <p>
+                            Suite laquesea
+                        </p>
+                    </div>
+                    <div class="hab-img">
+                        <img src="images/suitePresidencial.jpg" class="img-fluid" alt="Suite Presidencial">
+                    </div>
+                </div>
             </div>
         </section>
 
