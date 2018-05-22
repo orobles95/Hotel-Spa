@@ -168,15 +168,18 @@ p {
 .hotel_sections_titulo{
     text-align: center;
     margin-top: 10px;
+    font-size: 1vw;
+    font-style: italic;
 }
 
 .hotel_section_div_title{
-    height: 10%;
+    height: 12%;
 }
 
 .hotel_section_div_img{
-    height: 90%;
+    height: 88%;
 }
+
 
 /******************************** SUBSCRIBE *****************************************/
 .subscribe {
@@ -232,6 +235,51 @@ p {
     font-size: 1vw;
     color: #ab8b65;
 }
+
+/******************************************************************************/
+
+/******************************** RESTAURANTE ************************************/
+
+.rest-ficha {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    /*background-color: peru;*/
+}
+.rest-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 5vw;
+    background-color: #e3d5c4;
+    position: absolute;
+    padding: 3vw;
+}
+.rest-img {
+    width: 70%;
+    /*background-color: palegreen;*/
+    position: relative;
+}
+.dcha-description {
+    left: 55%;
+}
+.dcha-img {
+    left: 33%;
+}
+.rest-nombre {
+    font-family: Courrier;
+    font-size: 1vw;
+}
+.rest-titulo {
+    font-family: Arial;
+    font-size: 3vw;
+}
+.rest-mindescrip {
+    font-family: Arial;
+    font-size: 1vw;
+}
+
+
+
 /******************************************************************************/
 
 /******************************** CONTACTO ************************************/

@@ -20,33 +20,34 @@
                 <img src="images/restauranteHeader.jpg" class="img-fluid" alt="Restaurante">
             </div>
             <div class="container">
-                <div class="description">
-                    <p>
-                        Bienvenidos al restaurante de Gran Hotel Miramar. Esta es una descripcion de todo lo que ofrecemos a nuestros 
-                        clientes cuando vienen a nuestro restaurante. Desde la comida, hasta las instalaciones, menús y entretenimiento.
-                    </p>
-                </div>
-                <div class="row hab-ficha">
-                    <div class="hab-description">
-                        <p>MADAME BUTTERFLY</p>
-                        <p>Suite laquesea</p>
-                        <p>Un oasis de paz y bienestar inspirado en la famosa ópera de Giacomo Puccini.</p>
-                        <div>
-                            <button type="button">Reservar</button>
-                            <a href="#">Descubrela -></a>
-                        </div>
-                    </div>
-                    <div class="hab-img dcha-img">
-                        <img src="images/suitePresidencial.jpg" class="img-fluid" alt="Suite Presidencial">
-                    </div>
-                </div>
-                <div class="row hab-ficha">
-                    <div class="hab-description dcha-description">
+                <div class="rel">
+                    <div class="description">
                         <p>
-                            Suite laquesea
+                            Bienvenidos al restaurante de Gran Hotel Miramar. Esta es una descripcion de todo lo que ofrecemos a nuestros 
+                            clientes cuando vienen a nuestro restaurante. Desde la comida, hasta las instalaciones, menús y entretenimiento.
                         </p>
                     </div>
-                    <div class="hab-img">
+                </div>
+                <div class="row rest-ficha">
+                    <div class="rest-description">
+                        <p class="rest_menu_title">Menú</p>
+                        <p>Os presentamos una carta preparada especialmente para disfrutar, compartir,
+                            comer y cenar en el restaurante y tomar si es de su agrado en nuestra zona de cócteles saludables. </p>
+                        <p>A parte del encantador y luminoso espacio interior, La Balsa cuenta con dos grandes terrazas, para poder 
+                            disfrutar del silencio, tranquilidad de la zona con vistas a nuestro frondoso jardín. Un verdadero lujo 
+                            dentro de Barcelona. </p>
+                    </div>
+                    <div class="rest-img dcha-img">
+                        <img src="images/restauranteMenu.jpg" class="img-fluid" alt="Suite Presidencial">
+                    </div>
+                </div>
+                <div class="row rest-ficha">
+                    <div class="rest-description dcha-description">
+                        <p>
+                            Instalaciones
+                        </p>
+                    </div>
+                    <div class="rest-img">
                         <img src="images/suitePresidencial.jpg" class="img-fluid" alt="Suite Presidencial">
                     </div>
                 </div>
