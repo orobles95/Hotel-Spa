@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/habitaciones', function () {
     return view('habitaciones');
 });
+
+Route::get('/hab', function () {
+    return view('hab');
+});
