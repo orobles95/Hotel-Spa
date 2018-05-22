@@ -47,7 +47,7 @@
                         <a class="nav-link" href="/Hotel-Spa/public">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hab">Habitaciones</a>
+                        <a class="nav-link" href="habitaciones">Habitaciones</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="restaurante">Restaurante</a>
