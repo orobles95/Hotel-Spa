@@ -36,7 +36,10 @@ body {
 .description {
     width: 70%;
     padding: 3vw;
-    background-color: palevioletred;
+    background-color: #bea280;
+    font-family: arial;
+    font-size: 2vw;
+    color: #FFF;
     margin: 0 auto;
 }
 /*.header-hab-img {

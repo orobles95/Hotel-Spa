@@ -14,11 +14,7 @@
 
     </head>
     <body>
-        @include('navbar')
-
-        <div class="header-img">
-            <img src="images/spa.jpg" class="img-fluid" alt="Hotel-Spa">
-        </div>
+        @include('header')
 
         @include('areas')
 
