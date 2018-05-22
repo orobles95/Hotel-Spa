@@ -20,7 +20,9 @@
             <img src="images/spa.jpg" class="img-fluid" alt="Hotel-Spa">
         </div>
 
-        @include('sections')
+        @include('areas')
+
+        @include('hotel_sections')
 
         @include('subscribe')
 
