@@ -33,14 +33,21 @@ body {
     border-top: 0.5vw solid #5d3b20;
     border-bottom: 0.7vw solid #5d3b20;
 }
+.rel {
+    width: 100%;
+    /*background-color: plum;*/
+}
 .description {
     width: 70%;
-    padding: 3vw;
+    padding: 2.5vw;
     background-color: #bea280;
     font-family: arial;
     font-size: 2vw;
     color: #FFF;
     margin: 0 auto;
+    position: relative;
+    top: -3vw;
+    z-index: 1;
 }
 /*.header-hab-img {
     width: 100%;
@@ -55,8 +62,42 @@ body {
 /******************************************************************************/
 
 /**************************** HABITACIONES ************************************/
-.img-dcha {
-    width: 60%;
+.hab-ficha {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    /*background-color: peru;*/
+}
+.hab-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 5vw;
+    background-color: #e3d5c4;
+    position: absolute;
+    padding: 3vw;
+}
+.hab-img {
+    width: 70%;
+    /*background-color: palegreen;*/
+    position: relative;
+}
+.dcha-description {
+    left: 55%;
+}
+.dcha-img {
+    left: 33%;
+}
+.hab-nombre {
+    font-family: Courrier;
+    font-size: 1vw;
+}
+.hab-titulo {
+    font-family: Arial;
+    font-size: 3vw;
+}
+.hab-mindescrip {
+    font-family: Arial;
+    font-size: 1vw;
 }
 
 /******************************************************************************/
@@ -192,3 +233,41 @@ p {
     color: #ab8b65;
 }
 /******************************************************************************/
+
+/******************************** CONTACTO ************************************/
+
+.texto-encabezado{
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+}
+
+.titulo_contacto{
+    font-size: 2.2vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitulo_contacto{
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.titulo_form_contacto{
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-weight: bold;
+}
+
+.div_input{
+    margin-bottom: 2vw;
+}
+
+.input_contacto{
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+#textarea{
+    resize: none;
+}

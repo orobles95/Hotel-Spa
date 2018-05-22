@@ -14,7 +14,9 @@
 
     </head>
     <body>
-        @include('hab1')
+        @include('navbar')
+
+        @include('hab_section')
 
         @include('subscribe')
 
