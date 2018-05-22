@@ -33,21 +33,23 @@ body {
     border-top: 0.5vw solid #5d3b20;
     border-bottom: 0.7vw solid #5d3b20;
 }
-.rel {
+/*.rel {
     width: 100%;
-    /*background-color: plum;*/
-}
+    /*background-color: plum;
+}*/
 .description {
     width: 70%;
     padding: 2.5vw;
     background-color: #bea280;
-    font-family: arial;
-    font-size: 2vw;
-    color: #FFF;
     margin: 0 auto;
     position: relative;
     top: -3vw;
     z-index: 1;
+}
+.description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+    color: #FFF;
 }
 /*.header-hab-img {
     width: 100%;
@@ -71,7 +73,7 @@ body {
 .hab-description {
     width: 30%;
     z-index: 1;
-    margin-top: 5vw;
+    margin-top: 3vw;
     background-color: #e3d5c4;
     position: absolute;
     padding: 3vw;
@@ -88,16 +90,23 @@ body {
     left: 33%;
 }
 .hab-nombre {
-    font-family: Courrier;
+    font-family: 'IM Fell French Canon SC', serif;
     font-size: 1vw;
 }
 .hab-titulo {
-    font-family: Arial;
+    font-family: 'Arapey', serif;
     font-size: 3vw;
 }
 .hab-mindescrip {
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9vw;
+}
+.hab-button {
     font-size: 1vw;
+    color: #FFF;
+    padding: 0.5vw 2.5vw;
+    background-color: #b79061;
+    cursor: pointer;
 }
 
 /******************************************************************************/
