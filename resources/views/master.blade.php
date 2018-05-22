@@ -16,7 +16,7 @@
     <body>
         @include('header')
 
-        @include('areas')
+        @include('main')
 
         @include('hotel_sections')
 

@@ -98,18 +98,43 @@ p {
 
 /**************************** HOTEL SECTIONS ************************************/
 
+.hotel_sections_container {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.hotel_sections_row{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    height: 15vw;
+}
+
 .div_center_content {
     position: relative;
     overflow: hidden;
 }
 
 .center_width_img {
+    max-height: 85%;
     position: absolute;
     top: -9999px;
     bottom: -9999px;
     left: -9999px;
     right: -9999px;
     margin: auto;
+}
+
+.hotel_sections_titulo{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hotel_section_div_title{
+    height: 10%;
+}
+
+.hotel_section_div_img{
+    height: 90%;
 }
 
 /******************************** SUBSCRIBE *****************************************/
@@ -154,9 +179,6 @@ p {
     cursor: pointer;
 }
 
-#sections{
-
-}
 /******************************************************************************/
 
 /************************** FOOTER ********************************************/
