@@ -15,6 +15,8 @@
     </head>
     <body>
         @include('navbar')
+        
+        @include('areas')
 
         @include('sections')
 
