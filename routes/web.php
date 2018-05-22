@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('master');
 });
 
-Route::get('/prueba', function () {
-    return view('habitaciones');
+Route::get('/calendario', function () {
+    return view('calendario');
 });
 
 Route::get('/hab', function () {
