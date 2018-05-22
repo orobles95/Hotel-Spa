@@ -1,4 +1,4 @@
-<div id="sections" class="container" >
+<div id="hotel_sections" class="container" >
     <div  class="row">
         <div class="col-3 align-self-center" style="background-color: black; height: 100px;">
         </div>
