@@ -18,7 +18,7 @@
         
         @include('areas')
 
-        @include('sections')
+        @include('hotel_sections')
 
         @include('subscribe')
 
