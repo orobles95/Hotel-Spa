@@ -16,6 +16,7 @@
     <body>
         <section>
             @include('navbar')
+            
             <div class="header-img">
                 <img src="images/restauranteHeader.jpg" class="img-fluid" alt="Restaurante">
             </div>
