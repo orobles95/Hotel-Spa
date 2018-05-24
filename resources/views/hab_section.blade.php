@@ -4,20 +4,17 @@
     </div>
     <div class="container">
         <div class="description">
-            <p>
-                Con un diseño elegante y fresco, basado en el uso de materiales nobles, nuestras habitaciones te transportarán
-                a los orígenes del descanso. Una esencia única que garantiza una estancia vital llena de paz y comodidad.
-            </p>
+            <p>{{ trans('habitaciones.bienvenida') }}</p>
         </div>
         <div class="row hab-ficha">
             <div class="hab-description">
-                <p class="hab-nombre">MADAME BUTTERFLY<span class="hab-rombo"> ♦ </span>92 m²</p>
+                <p class="hab-nombre">{{ trans('habitaciones.titulo_1') }}<span class="hab-rombo"> ♦ </span>92 m²</p>
                 <div class="line"></div>
-                <p class="hab-titulo">Suite Presidencial</p>
-                <p class="hab-mindescrip">Un oasis de paz y bienestar inspirado en la famosa ópera de Giacomo Puccini.</p>
+                <p class="hab-titulo">{{ trans('habitaciones.descripcion_1') }}</p>
+                <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_1_2') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">Reservar</button>
-                    <a href="#">Descubrela →</a>
+                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img dcha-img">
@@ -26,13 +23,13 @@
         </div>
         <div class="row hab-ficha">
             <div class="hab-description dcha-description">
-                <p class="hab-nombre">MADAME BUTTERFLY<span class="hab-rombo"> ♦ </span>92 m²</p>
+                <p class="hab-nombre">{{ trans('habitaciones.titulo_2') }}<span class="hab-rombo"> ♦ </span>{{ trans('habitaciones.detalles_2') }}</p>
                 <div class="line"></div>
-                <p class="hab-titulo">Suite Presidencial</p>
-                <p class="hab-mindescrip">Un oasis de paz y bienestar inspirado en la famosa ópera de Giacomo Puccini.</p>
+                <p class="hab-titulo">{{ trans('habitaciones.descripcion_2') }}</p>
+                <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_2_2') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">Reservar</button>
-                    <a href="#">Descubrela →</a>
+                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img">

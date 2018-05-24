@@ -6,7 +6,7 @@ return [
     'accesosDirectos_reservas' => 'Reservations',
     'accesosDirectos_idiomaBtn' => 'Change language',
     'menu_inicio' => 'Home',
-    'menu_habitaciones' => 'Rooms',
+    'menu_habitaciones' => 'Bedrooms',
     'menu_restaurante' => 'Restaurant',
     'menu_spa' => 'Spa',
     'menu_ofertas' => 'Offers',
