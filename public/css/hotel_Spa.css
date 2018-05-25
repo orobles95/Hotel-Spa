@@ -51,6 +51,17 @@ body {
     font-size: 1vw;
     color: #FFF;
 }
+.habitaciones {
+    margin-top: 2vw;
+    font-family: 'Arapey', serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    color: #5d3b20;
+}
+.hab-line {
+    height: 0.05vw;
+    background-color: #5d3b20;
+}
 /*.header-hab-img {
     width: 100%;
     height: auto;

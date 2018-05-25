@@ -9,6 +9,13 @@
                 a los orígenes del descanso. Una esencia única que garantiza una estancia vital llena de paz y comodidad.
             </p>
         </div>
+        <div class="habitaciones text-center">HABITACIONES</div>
+        <div class="row justify-content-center">
+            <div class="col-1 text-right"> ♦ </div>
+            <!--<div class="col-1 line align-self-end"></div>-->
+            <div class="col-1 hab-line align-self-center"></div>
+            <div class="col-1"> ♦ </div>
+        </div>
         <div class="row hab-ficha">
             <div class="hab-description">
                 <p class="hab-nombre">MADAME BUTTERFLY<span class="hab-rombo"> ♦ </span>92 m²</p>
