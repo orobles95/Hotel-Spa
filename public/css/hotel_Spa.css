@@ -9,6 +9,15 @@ body {
     width: 70%;
     margin: 0 auto;
 }
+.btn-bandera {
+    width: 3.5vw;
+    height: 3.5vw;
+    background: transparent url("../images/ico-bandera.png") 0 0 no-repeat;
+    border: 0vw;
+    margin: 0vw;
+    padding: 0vw;
+    outline: none;
+}
 /*.acceso a:link {
     font-family: arial;
     font-size: 1vw;
