@@ -1,4 +1,5 @@
 <section>
+    @include('hab_Suite_Presidencial')
     <div class="header-img">
         <img src="images/habitacionesHeader.jpg" class="img-fluid" alt="Habitaciones">
     </div>
@@ -9,7 +10,6 @@
         <div class="habitaciones text-center">{{ trans('habitaciones.tituloPagina') }}</div>
         <div class="row justify-content-center">
             <div class="col-1 text-right">~ ♦ ~</div>
-            <!--<div class="col-1 line align-self-end"></div>-->
             <div class="col-1 hab-line align-self-center"></div>
             <div class="col-1">~ ♦ ~</div>
         </div>
@@ -20,8 +20,8 @@
                 <p class="hab-titulo">{{ trans('habitaciones.titulo_1') }}</p>
                 <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_1') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
-                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img dcha-img">
@@ -35,8 +35,8 @@
                 <p class="hab-titulo">{{ trans('habitaciones.titulo_2') }}</p>
                 <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_2') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
-                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img">
@@ -50,8 +50,8 @@
                 <p class="hab-titulo">{{ trans('habitaciones.titulo_3') }}</p>
                 <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_3') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
-                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img dcha-img">
@@ -65,8 +65,8 @@
                 <p class="hab-titulo">{{ trans('habitaciones.titulo_4') }}</p>
                 <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_4') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
-                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img">
@@ -80,8 +80,8 @@
                 <p class="hab-titulo">{{ trans('habitaciones.titulo_5') }}</p>
                 <p class="hab-mindescrip">{{ trans('habitaciones.descripcion_5') }}</p>
                 <div class="hab">
-                    <button type="button" class="hab-button">{{ trans('habitaciones.reservarBtn') }}</button>
-                    <a href="#">{{ trans('habitaciones.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="hab-img dcha-img">

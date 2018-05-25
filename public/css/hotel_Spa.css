@@ -152,6 +152,20 @@ body {
 .hab a:hover {
     color: #5d3b20;
 }
+#containerModal {
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);
+}
+.font-dark {
+    color: #000;
+}
+.detalles ul {
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+    list-style-type: none;
+}
 
 /******************************************************************************/
 
