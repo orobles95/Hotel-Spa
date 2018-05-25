@@ -10,6 +10,7 @@
   | contains the "web" middleware group. Now create something great!
   |
  */
+//Route::get('/home/{lang}', 'HomeController@gethome');
 
 Route::get('/', function () {
     return view('master');
@@ -30,3 +31,10 @@ Route::get('/restaurante', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
+
+//Route::get('/change_lang/{lang}', 'LangController@changeLang');
+
+Route::post('/language', array(
+    'Middleware' => 'LanguageSwitcher',
+    'uses' => 'LanguageController@index'
+));

@@ -2,18 +2,18 @@
     <div class="container row">
         <div class="col-3">
             <ul>
-                <li>HISTORIA</li>
-                <li>QUIENES SOMOS</li>
-                <li>DONDE ESTAMOS</li>
-                <li>ENVIANOS UN MENSAJE</li>
+                <li>{{ trans('footer.historia') }}</li>
+                <li>{{ trans('footer.informacion') }}</li>
+                <li>{{ trans('footer.ubicacion') }}</li>
+                <li>{{ trans('footer.contacto') }}</li>
             </ul>
         </div>
         <div class="col-4">
             <ul>
-                <li>MAPA DEL SITIO</li>
-                <li>AVISO LEGAL</li>
-                <li>PREGUNTAS FRECUENTES (FAQ)</li>
-                <li>CONDICIONES</li>
+                <li>{{ trans('footer.mapa') }}</li>
+                <li>{{ trans('footer.avisoLegal') }}</li>
+                <li>{{ trans('footer.faq') }}</li>
+                <li>{{ trans('footer.condiciones') }}</li>
             </ul>
         </div>
         <div class="col-3 align-self-center">

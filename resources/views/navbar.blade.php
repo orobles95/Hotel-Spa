@@ -13,22 +13,25 @@
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span>Acceso Socios</span>
+                                <span>{{ trans('nav.accesosDirectos_socios') }}</span>
                                 <img src="images/ico-socios.png" class="img-fluid" alt="Acceso Socios">
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span>Reservas</span>
+                                <span>{{ trans('nav.accesosDirectos_reservas') }}</span>
                                 <img src="images/ico-reservas.png" class="img-fluid" alt="Resrvas On-line">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span>Español</span>
-                                <img src="images/ico-bandera.png" class="img-fluid" alt="Idioma">
-                                <i class="fas fa-angle-down"></i>
-                            </a>
+                        <li>
+                            <form action="language" method="post">
+                                <select name="locale">
+                                    <option value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
+                                    <option value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
+                                </select>
+                                {{ csrf_field() }}
+                                <input type="submit" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">
+                            </form>
                         </li>
                     </ul>
                 </div>
@@ -44,22 +47,22 @@
                 <a class="navbar-brand" href="#"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="/Hotel-Spa/public">Home</a>
+                        <a class="nav-link" href="/Hotel-Spa/public">{{ trans('nav.menu_inicio') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="habitaciones">Habitaciones</a>
+                        <a class="nav-link" href="habitaciones">{{ trans('nav.menu_habitaciones') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="restaurante">Restaurante</a>
+                        <a class="nav-link" href="restaurante">{{ trans('nav.menu_restaurante') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Spa</a>
+                        <a class="nav-link" href="#">{{ trans('nav.menu_spa') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ofertas</a>
+                        <a class="nav-link" href="#">{{ trans('nav.menu_ofertas') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto">Contacto</a>
+                        <a class="nav-link" href="contacto">{{ trans('nav.menu_contacto') }}</a>
                     </li>
                 </ul>
             </div>

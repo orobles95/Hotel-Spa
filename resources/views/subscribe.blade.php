@@ -2,29 +2,29 @@
     <div class="container subscribe">
         <div class="row align-items-center">
             <div class="col-3 text-center"><div class="line"></div></div>
-            <div class="col-7 text-center  text-title">Suscríbete, consigue tu regalo y estate bien informado</div>
+            <div class="col-7 text-center  text-title">{{ trans('suscribe.mensaje') }}</div>
             <div class="col-2 text-center"><div class="line"></div></div>
         </div>
         <div class="row">
             <div class="col text-center">
                 <a href="#">
                     <img src="images/subscribe1.png" class="img-fluid" alt="Cada artículo en tu buzón">
-                    <div class="text-med">Cada artículo en tu buzón</div>
-                    <div class="text-slim">Cada artículo nuevo que publiquemos lo recibiras en tu buzón para leerlo comodamente</div>
+                    <div class="text-med">{{ trans('suscribe.ventaja_titulo_1') }}</div>
+                    <div class="text-slim">{{ trans('suscribe.ventaja_texto_1') }}</div>
                 </a>
             </div>
             <div class="col text-center">
                 <a href="#">
                     <img src="images/subscribe2.png" class="img-fluid" alt="Entérate siempre el primero">
-                    <div class="text-med">Entérate siempre el primero</div>
-                    <div class="text-slim">Siempre te contaremos a ti primero cada nuevo contenido, evento u oferta ¡Que no se te escape!</div>
+                    <div class="text-med">{{ trans('suscribe.ventaja_titulo_2') }}</div>
+                    <div class="text-slim">{{ trans('suscribe.ventaja_texto_2') }}</div>
                 </a>
             </div>
             <div class="col text-center">
                 <a href="#">
                     <img src="images/subscribe3.png" class="img-fluid" alt="Y sin gastar un euro">
-                    <div class="text-med">Y sin gastar un euro</div>
-                    <div class="text-slim">Suscribirte a nuestra web no tiene coste alguno, ya que nuestros contenidos son gratuitos</div>
+                    <div class="text-med">{{ trans('suscribe.ventaja_titulo_3') }}</div>
+                    <div class="text-slim">{{ trans('suscribe.ventaja_texto_3') }}</div>
                 </a>
             </div>
         </div>
@@ -32,16 +32,16 @@
             <form>
                 <div class="row">
                     <div class="col-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Nombre">
+                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputNombre') }}">
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control form-control-sm" placeholder="Apellidos">
+                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputApellidos') }}">
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control form-control-sm" placeholder="E-mail">
+                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputEmail') }}">
                     </div>
                     <div class="col-1">
-                        <button type="submit">Enviar</button>
+                        <button type="submit">{{ trans('suscribe.enviarBtn') }}</button>
                     </div>
                 </div>
             </form>

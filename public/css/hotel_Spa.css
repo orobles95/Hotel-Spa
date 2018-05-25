@@ -183,12 +183,12 @@ p {
 
 /**************************** HOTEL SECTIONS ************************************/
 
-.hotel_sections_container {
+.hotel_section_container {
     margin-top: 5vw;
     margin-bottom: 5vw;
 }
 
-.hotel_sections_row{
+.hotel_section_row{
     margin-top: 2vw;
     margin-bottom: 2vw;
     height: 15vw;
@@ -209,7 +209,7 @@ p {
     margin: auto;
 }
 
-.hotel_sections_titulo{
+.hotel_section_titulo{
     text-align: center;
     margin-top: 10px;
     font-size: 1vw;
