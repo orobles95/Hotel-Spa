@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'titulo' => 'Bedrooms',
+    'titulo' => 'Rooms',
     'bienvenida' => 'With an elegant and fresh design, based on the use of noble materials, our rooms will transport you
                  to the origins of rest. A unique essence that guarantees a vital stay full of peace and comfort.',
     'titulo_1' => 'MADAME BUTTERFLY',
@@ -13,6 +13,6 @@ return [
     'detalles_2' => '92 m²',
     'descripcion_2' => 'Suite Presidencial',
     'descripcion_2_2' => 'Un oasis de paz y bienestar inspirado en la famosa ópera de Giacomo Puccini.',
-    'reservarBtn' => 'Reserve',
+    'reservarBtn' => 'Book Now',
     'descubrelaBtn' => 'Discover it →'
 ];

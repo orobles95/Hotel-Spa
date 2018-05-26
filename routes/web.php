@@ -16,6 +16,7 @@ Route::get('/', function () {
     return view('master');
 });
 
+
 Route::get('/calendario', function () {
     return view('calendario');
 });
@@ -38,3 +39,7 @@ Route::post('/language', array(
     'Middleware' => 'LanguageSwitcher',
     'uses' => 'LanguageController@index'
 ));
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
