@@ -22,8 +22,6 @@ body {
     display: inline-block;
     text-align: left;
     vertical-align: middle;
-    
-    
 }
 
 * {
@@ -41,6 +39,19 @@ body {
     border-radius: 5px 5px 0px 0px;
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header .close{
+    padding-top: 0;
+}
+
+.modal-header h4 {
+    margin-left: 18px;
+    width: 100%;
+}
+
+.modal-footer {
+    display: block;
 }
 
 .modal-title {
