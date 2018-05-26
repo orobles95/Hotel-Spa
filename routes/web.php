@@ -25,6 +25,26 @@ Route::get('/habitaciones', function () {
     return view('habitaciones');
 });
 
+Route::get('/habitaciones/suite-Presidencial', function () {
+    return view('hab_Suite_Presidencial');
+});
+
+Route::get('/habitaciones/suite-Superior', function () {
+    return view('hab_Suite_Superior');
+});
+
+Route::get('/habitaciones/suite-Estandar', function () {
+    return view('hab_Suite_Estandar');
+});
+
+Route::get('/habitaciones/hab-Superior', function () {
+    return view('hab_Hab_Superior');
+});
+
+Route::get('/habitaciones/hab-Estandar', function () {
+    return view('hab_Hab_Estandar');
+});
+
 Route::get('/restaurante', function () {
     return view('restaurante');
 });

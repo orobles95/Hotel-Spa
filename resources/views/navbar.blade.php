@@ -37,7 +37,8 @@
                                     <option value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
                                 </select>
                                 {{ csrf_field() }}
-                                <input type="submit" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">
+                                <!--<input type="submit" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">-->
+                                <button type="submit" class="btn-bandera"></button>
                             </form>
                         </li>
                     </ul>

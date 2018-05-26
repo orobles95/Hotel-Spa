@@ -83,6 +83,15 @@ body {
     width: 70%;
     margin: 0 auto;
 }
+.btn-bandera {
+    width: 3.5vw;
+    height: 3.5vw;
+    background: transparent url("../images/ico-bandera.png") 0 0 no-repeat;
+    border: 0vw;
+    margin: 0vw;
+    padding: 0vw;
+    outline: none;
+}
 /*.acceso a:link {
     font-family: arial;
     font-size: 1vw;
@@ -124,6 +133,17 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1vw;
     color: #FFF;
+}
+.habitaciones {
+    margin-top: 2vw;
+    font-family: 'Arapey', serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    color: #5d3b20;
+}
+.hab-line {
+    height: 0.05vw;
+    background-color: #5d3b20;
 }
 /*.header-hab-img {
     width: 100%;
@@ -205,6 +225,20 @@ body {
 }
 .hab a:hover {
     color: #5d3b20;
+}
+#containerModal {
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);
+}
+.font-dark {
+    color: #000;
+}
+.detalles ul {
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+    list-style-type: none;
 }
 
 /******************************************************************************/
