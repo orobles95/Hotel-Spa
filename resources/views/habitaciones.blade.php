@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ trans('habitaciones.titulo') }}</title>
+        <title>{{ trans('habitaciones.tituloPestanya') }}</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">

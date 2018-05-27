@@ -49,7 +49,6 @@ body {
 .description {
     width: 70%;
     padding: 2.5vw;
-    background-color: #bea280;
     margin: 0 auto;
     position: relative;
     top: -3vw;
@@ -84,6 +83,9 @@ body {
 /******************************************************************************/
 
 /**************************** HABITACIONES ************************************/
+.desc-bgcolor-hab {
+    background-color: #bea280;
+}
 .hab-ficha {
     width: 100%;
     padding-top: 3vw;
@@ -97,10 +99,6 @@ body {
     background-color: #e3d5c4;
     position: absolute;
     padding: 3vw;
-}
-.hab-borde {
-    padding: 0.6vw;
-    border: 0.1vw solid #5d3b20;
 }
 .hab-img {
     width: 70%;
@@ -165,6 +163,78 @@ body {
     margin-left: 1vw;
     margin-bottom: 2vw;
     list-style-type: none;
+}
+/******************************************************************************/
+
+/**************************** RESTAURANTE ************************************/
+.desc-bgcolor-rest {
+    background-color: #96586d;
+}
+.rest-ficha {
+    width: 100%;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+}
+.rest-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 3vw;
+    padding: 3vw;
+    background-color: #d1acbc;
+    position: absolute;
+}
+.rest-img {
+    width: 70%;
+    position: relative;
+    padding: 0.6vw;
+    border: 0.1vw solid #96586d;
+}
+/*.dcha-description {
+    left: 55%;
+}
+.dcha-img {
+    left: 33%;
+}*/
+.rest-nombre {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 1vw;
+}
+.rest-rombo {
+    font-size: 0.8vw;
+    color: #b79061;
+    padding: 0 1vw;
+}
+.rest-titulo {
+    font-family: 'Arapey', serif;
+    font-size: 2.5vw;
+}
+.rest-mindescrip {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9vw;
+}
+.rest {
+    font-family: sans-serif;
+    font-size: 1vw;
+}
+.rest button {
+    color: #FFF;
+    padding: 0.4vw 2.5vw;
+    background-color: #b79061;
+    cursor: pointer;
+}
+.rest button:hover {
+    background-color: #5d3b20;
+}
+.rest a:link {
+    color: #b79061;
+    text-decoration: none;
+    margin-left: 1.5vw;
+}
+.rest a:hover {
+    color: #5d3b20;
+}
+.font-dark {
+    color: #000;
 }
 
 /******************************************************************************/
@@ -302,50 +372,6 @@ p {
     font-size: 1vw;
     color: #ab8b65;
 }
-
-/******************************************************************************/
-
-/******************************** RESTAURANTE ************************************/
-
-.rest-ficha {
-    width: 100%;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    /*background-color: peru;*/
-}
-.rest-description {
-    width: 30%;
-    z-index: 1;
-    margin-top: 5vw;
-    background-color: #e3d5c4;
-    position: absolute;
-    padding: 3vw;
-}
-.rest-img {
-    width: 70%;
-    /*background-color: palegreen;*/
-    position: relative;
-}
-.dcha-description {
-    left: 55%;
-}
-.dcha-img {
-    left: 33%;
-}
-.rest-nombre {
-    font-family: Courrier;
-    font-size: 1vw;
-}
-.rest-titulo {
-    font-family: Arial;
-    font-size: 3vw;
-}
-.rest-mindescrip {
-    font-family: Arial;
-    font-size: 1vw;
-}
-
-
 
 /******************************************************************************/
 

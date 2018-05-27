@@ -8,7 +8,7 @@
         <img src="images/habitacionesHeader.jpg" class="img-fluid" alt="Habitaciones">
     </div>
     <div class="container">
-        <div class="description">
+        <div class="description desc-bgcolor-hab">
             <p>{{ trans('habitaciones.bienvenida') }}</p>
         </div>
         <div class="habitaciones text-center">{{ trans('habitaciones.tituloPagina') }}</div>

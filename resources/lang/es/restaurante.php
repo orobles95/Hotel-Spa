@@ -1,15 +1,24 @@
 <?php
 
 return [
-    'titulo' => 'Restaurante',
-    'bienvenida' => 'Bienvenidos al restaurante de Gran Hotel Miramar. Esta es una descripcion de todo lo que ofrecemos a nuestros 
-                    clientes cuando vienen a nuestro restaurante. Desde la comida, hasta las instalaciones, menús y entretenimiento.',
-    'titulo_1' => 'Menú',
-    'descripcion_1' => 'Os presentamos una carta preparada especialmente para disfrutar, compartir,
-                            comer y cenar en el restaurante y tomar si es de su agrado en nuestra zona de cócteles saludables.',
-    'descripcion_1_2' => 'A parte del encantador y luminoso espacio interior, La Balsa cuenta con dos grandes terrazas, para poder 
-                            disfrutar del silencio, tranquilidad de la zona con vistas a nuestro frondoso jardín. Un verdadero lujo 
-                            dentro de Barcelona.',
-    'titulo_2' => 'Instalaciones',
-    'descripcion_2' => ''
+    'tituloPestanya' => 'Restaurante',
+    'tituloPagina' => 'RESTAURANTE',
+    'bienvenida' => 'El amor por la tierra y los tesoros que ofrece el Mediterráneo son la base de nuestra gastronomía. Nuestros chefs
+                    maridan este legado con la alta cocina creativa para ofrecerte una propuesta gastronómica exquisita y saludable.',
+    'reservarBtn' => 'Reserva mesa',
+    'descubrelaBtn' => 'Descubrelo →',
+    'nombre_1' => 'RESTAURANTE EXTERIOR',
+    'titulo_1' => 'Spring Space',
+    'descripcion_1' => 'Un espacio privilegiado rodeado de naturaleza donde disfrutar de sol, paz y tranquilidad. Ideal
+                        para comenzar bien el día con un nutritivo desayuno a base de frutas exoticas.',
+    'nombre_2' => 'SALON INTERIOR',
+    'titulo_2' => 'Delicias Supremas',
+    'descripcion_2' => 'La elegancia y la exclusividad de nuestros platos harán de su comida una explosión de sabores delicadamente
+                        seleccionados por los mejores chefs para incluir en nuestros menús especias de todos los rincones del mundo.',
+    'nombre_3' => 'RESTAURANTE ATARDECER',
+    'titulo_3' => 'Media Luna',
+    'descripcion_3' => 'El auténtico gran lujo, confort y amplitud con preciosas vistas.',
+    'nombre_4' => 'ZONA COOKTEL',
+    'titulo_4' => 'Sunset Chill Out',
+    'descripcion_4' => 'El auténtico gran lujo, confort y amplitud con preciosas vistas.'
 ];
