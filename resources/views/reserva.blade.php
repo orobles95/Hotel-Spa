@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-<head>
-    <title>20 bootstrap</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-$(function () {
-$("#fecha").datepicker();
-});
-</script>
-    
-</head>
-<body>
-                   
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Bootstrap and my style -->
+        <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url('/css/hotel_Spa.css') }}" rel="stylesheet">
+        <!-- Fonts and Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Arapey|IM+Fell+French+Canon+SC|Poppins" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+        
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('/js/hotelSpa.js') }}"></script>
+        
+        
+        <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+        
 
-    <div class="row">
+        
+
+    </head>
+    <body>
+        @include('navbar')
+        
+        <div class="row">
 
     <div class="col-sm-8">
     <h1>Reserva</h1>
     
     <form action="#" method="post" enctype="multipart/form-data">
        {{ csrf_field() }}
-          
 
+        {{$habitacion->img}}
 	<div class="form-group">
             <label for="year">Habitacion</label>
             <input readonly="readonly" type="text" name="room" id="room" class="form-control" value="{{$habitacion->nom}}">
@@ -60,13 +62,23 @@ $("#fecha").datepicker();
 
     </div>
   </div>
-    
-    
-</body>
+
+
+        @include('subscribe')
+
+        @include('footer')
+       
+
+    </body>
 </html>
-        
             
 <script>
+    
+        $(function () {
+        $("#fecha").datepicker();
+        });
+        
+        
  $.datepicker.regional['es'] = {
  closeText: 'Cerrar',
  prevText: '< Ant',
