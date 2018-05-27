@@ -3,14 +3,14 @@ body {
     overflow-y: scroll;
 }
 
-/********************************** MODAL *************************************/
-/*
-.modal {
+/********************************** MODAL SOCIOS ******************************/
+
+.modal_socios {
     text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-    .modal:before {
+    .modal_socios:before {
         display: inline-block;
         vertical-align: middle;
         content: " ";
@@ -18,7 +18,7 @@ body {
     }
 }
 
-.modal-dialog {
+.modal_dialog_socios {
     display: inline-block;
     text-align: left;
     vertical-align: middle;
@@ -32,7 +32,7 @@ body {
     background: #3374C2;
 }
 
-.modal-header {
+.modal_header_socios {
     text-align: center;
     background: #455A64;
     color: white;
@@ -41,20 +41,20 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-header .close{
+.modal_header_socios .close{
     padding-top: 0;
 }
 
-.modal-header h4 {
+.modal_header_socios h4 {
     margin-left: 18px;
     width: 100%;
 }
 
-.modal-footer {
+.modal_footer_socios {
     display: block;
 }
 
-.modal-title {
+.modal_title_socios {
     text-align: center;
     display:inline;
     cursor:default;
@@ -87,7 +87,7 @@ body {
     text-shadow: 0 1px 0 #fff;
     font-size: 30px;
 }
-*/
+
 
 
 /************************* HEADER *********************************************/
