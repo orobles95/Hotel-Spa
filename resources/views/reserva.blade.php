@@ -25,7 +25,6 @@
 
     </head>
     <body>
-        @include('navbar')
         
         <div class="row">
 
@@ -35,9 +34,7 @@
     <form action="#" method="post" enctype="multipart/form-data">
        {{ csrf_field() }}
 
-        {{$habitacion->img}}
 	<div class="form-group">
-            <label for="year">Habitacion</label>
             <input readonly="readonly" type="text" name="room" id="room" class="form-control" value="{{$habitacion->nom}}">
 	</div>
 
@@ -49,6 +46,11 @@
 	<div class="form-group">
             <label for="fechallegada">Salida</label>
             <input name="fechasalida" id="salida"/>
+	</div>
+       
+       <div class="form-group">
+            <label for="fechallegada">Huéspedes</label>
+            <input name="huespedes" id="huespedes"/>
 	</div>
 
 	<div class="form-group text-center">
