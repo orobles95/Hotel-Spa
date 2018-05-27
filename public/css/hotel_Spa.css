@@ -282,6 +282,26 @@ body {
 }
 /******************************************************************************/
 
+/****************************** TRATAMIENTOS **********************************/
+.desc-bgcolor-trata {
+    background-color: #99bca7;
+}
+.trata-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 3vw;
+    padding: 3vw;
+    background-color: #c9dfd2;
+    position: absolute;
+}
+.trata-img {
+    width: 70%;
+    position: relative;
+    padding: 0.6vw;
+    border: 0.1vw solid #6d93e1;
+}
+/******************************************************************************/
+
 /******************************** MAIN ************************************/
 
 .main_container {

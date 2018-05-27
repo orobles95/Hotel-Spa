@@ -7,7 +7,8 @@ return [
     'menu_inicio' => 'Inicio',
     'menu_habitaciones' => 'Habitaciones',
     'menu_restaurante' => 'Restaurante',
-    'menu_spa' => 'Spa',
+    'menu_spa' => 'Balneario-Spa',
+    'menu_tratamientos' => 'Tratamientos',
     'menu_ofertas' => 'Ofertas',
     'menu_contacto' => 'Contacto'
 ];

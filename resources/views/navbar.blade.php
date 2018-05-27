@@ -67,6 +67,9 @@
                         <a class="nav-link" href="spa">{{ trans('nav.menu_spa') }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="tratamientos">{{ trans('nav.menu_tratamientos') }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="ofertas">{{ trans('nav.menu_ofertas') }}</a>
                     </li>
                     <li class="nav-item">
