@@ -102,7 +102,6 @@
 $(function () {
 $("#llegada").datepicker();
 });
-
 $.datepicker.regional['es'] = {
  closeText: 'Cerrar',
  prevText: '< Ant',
@@ -124,8 +123,4 @@ $.datepicker.regional['es'] = {
 $(function () {
 $("#salida").datepicker();
 });
-
-
-
-
 </script>
