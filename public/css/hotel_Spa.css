@@ -3,6 +3,80 @@ body {
     overflow-y: scroll;
 }
 
+/********************************** MODAL *************************************/
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#perfilBtn :hover{
+    background: #3374C2;
+}
+
+.modal-header {
+    text-align: center;
+    background: #455A64; 
+    color: white; 
+    border-radius: 5px 5px 0px 0px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-title {
+    text-align: center; 
+    display:inline; 
+    cursor:default;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.42857143;
+    font-weight: 500;
+}
+
+.close_icon {
+    display:inline;
+    margin-top: -2px;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
+
+.close_icon a{
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 30px;
+}
+
+
+
 /************************* HEADER *********************************************/
 .container {
     max-width: 100% !important;

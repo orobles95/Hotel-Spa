@@ -2,8 +2,8 @@
     <div class="container subscribe">
         <div class="row align-items-center">
             <div class="col-3 text-center"><div class="line"></div></div>
-            <div class="col-7 text-center  text-title">{{ trans('suscribe.mensaje') }}</div>
-            <div class="col-2 text-center"><div class="line"></div></div>
+            <div class="col-6 text-center  text-title">{{ trans('suscribe.mensaje') }}</div>
+            <div class="col-3 text-center"><div class="line"></div></div>
         </div>
         <div class="row">
             <div class="col text-center">

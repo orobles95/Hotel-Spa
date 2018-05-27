@@ -11,10 +11,17 @@
                 <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="#"></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
+                        @if (Auth::check()) 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link">
+                                <span>Bienvenido <strong>{{ Auth::user()->name }}</strong> </span>
+                            </a>      
+                        </li>
+                        @endif
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">
                                 <span>{{ trans('nav.accesosDirectos_socios') }}</span>
-                                <img src="images/ico-socios.png" class="img-fluid" alt="Acceso Socios">
+                                <img src="images/ico-socios.png" class="img-fluid" alt="Zona Socios">
                             </a>
                         </li>
                         <li class="nav-item">
