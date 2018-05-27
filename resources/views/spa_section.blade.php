@@ -5,13 +5,13 @@
     @include('hab_Hab_Superior')
     @include('hab_Hab_Estandar')
     <div class="header-img">
-        <img src="images/restauranteHeader.jpg" class="img-fluid" alt="Habitaciones">
+        <img src="images/spaHeader2.jpg" class="img-fluid" alt="Spa">
     </div>
     <div class="container">
-        <div class="description desc-bgcolor-rest">
-            <p>{{ trans('restaurante.bienvenida') }}</p>
+        <div class="description desc-bgcolor-spa">
+            <p>{{ trans('spa.bienvenida') }}</p>
         </div>
-        <div class="habitaciones text-center">{{ trans('restaurante.tituloPagina') }}</div>
+        <div class="habitaciones text-center">{{ trans('spa.tituloPagina') }}</div>
         <div class="row justify-content-center">
             <div class="col-1 text-right">~ ♦ ~</div>
             <div class="col-1 hab-line align-self-center"></div>
@@ -19,62 +19,47 @@
         </div>
         <div class="row ficha">
             <div class="spa-description">
-                <p class="nombre">{{ trans('restaurante.nombre_1') }}<span class="spa-rombo"> ♦ </span>56 mesas</p>
+                <p class="nombre">{{ trans('spa.nombre_1') }}<span class="rombo"> ♦ </span>56 mesas</p>
                 <div class="line"></div>
-                <p class="titulo">{{ trans('restaurante.titulo_1') }}</p>
-                <p class="mindescrip">{{ trans('restaurante.descripcion_1') }}</p>
+                <p class="titulo">{{ trans('spa.titulo_1') }}</p>
+                <p class="mindescrip">{{ trans('spa.descripcion_1') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img dcha-img">
-                <img src="images/restaurante4.jpg" class="img-fluid" alt="Suite Presidencial">
+                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Presidencial">
             </div>
         </div>
         <div class="row ficha">
             <div class="spa-description dcha-description">
-                <p class="nombre">{{ trans('restaurante.nombre_2') }}<span class="spa-rombo"> ♦ </span>89 mesas</p>
+                <p class="nombre">{{ trans('spa.nombre_2') }}<span class="rombo"> ♦ </span>89 mesas</p>
                 <div class="line"></div>
-                <p class="titulo">{{ trans('restaurante.titulo_2') }}</p>
-                <p class="mindescrip">{{ trans('restaurante.descripcion_2') }}</p>
+                <p class="titulo">{{ trans('spa.titulo_2') }}</p>
+                <p class="mindescrip">{{ trans('spa.descripcion_2') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img">
-                <img src="images/restaurante7.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Superior">
             </div>
         </div>
         <div class="row ficha">
             <div class="spa-description">
-                <p class="rest-nombre">{{ trans('restaurante.nombre_3') }}<span class="rest-rombo"> ♦ </span>47 mesas</p>
+                <p class="rest-nombre">{{ trans('spa.nombre_3') }}<span class="rombo"> ♦ </span>47 mesas</p>
                 <div class="line"></div>
-                <p class="titulo">{{ trans('restaurante.titulo_3') }}</p>
-                <p class="mindescrip">{{ trans('restaurante.descripcion_3') }}</p>
+                <p class="titulo">{{ trans('spa.titulo_3') }}</p>
+                <p class="mindescrip">{{ trans('spa.descripcion_3') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <button type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img dcha-img">
-                <img src="images/restaurante1.jpg" class="img-fluid" alt="Suite Estándar">
-            </div>
-        </div>
-        <div class="row ficha">
-            <div class="spa-description dcha-description">
-                <p class="nombre">{{ trans('restaurante.nombre_4') }}<span class="rest-rombo"> ♦ </span>36 mesas</p>
-                <div class="line"></div>
-                <p class="titulo">{{ trans('restaurante.titulo_4') }}</p>
-                <p class="mindescrip">{{ trans('restaurante.descripcion_4') }}</p>
-                <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('restaurante.descubrelaBtn') }}</a>
-                </div>
-            </div>
-            <div class="spa-img">
-                <img src="images/restaurante10.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Estándar">
             </div>
         </div>
     </div>

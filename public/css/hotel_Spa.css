@@ -264,7 +264,7 @@ body {
 
 /******************************* SPA ******************************************/
 .desc-bgcolor-spa {
-    background-color: #81d5d2;
+    background-color: #59a0be;
 }
 .spa-description {
     width: 30%;
@@ -278,7 +278,7 @@ body {
     width: 70%;
     position: relative;
     padding: 0.6vw;
-    border: 0.1vw solid #5488ac;
+    border: 0.1vw solid #6d93e1;
 }
 /******************************************************************************/
 
