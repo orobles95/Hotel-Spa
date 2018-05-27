@@ -36,7 +36,7 @@ $("#fecha").datepicker();
 
 	<div class="form-group">
             <label for="year">Habitacion</label>
-            <input type="text" name="room" id="room" class="form-control" value="{{$habitacion->nom}}">
+            <input readonly="readonly" type="text" name="room" id="room" class="form-control" value="{{$habitacion->nom}}">
 	</div>
 
 	<div class="form-group">
