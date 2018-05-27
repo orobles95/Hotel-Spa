@@ -1,4 +1,4 @@
-<a id="perfilBtn" data-toggle="modal" data-target="#myModal" style="cursor: pointer;">
+<a id="reservasBtn" data-toggle="modal" data-target="#myModal_2" style="cursor: pointer;">
     <div class="card">
         <div class="card-header">
             <h4><i class="fas fa-bed"></i> Mis Reservas</h4>
@@ -9,20 +9,20 @@
     </div>
 </a>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-    <div id="modal_modificar" class="modal-dialog" role="document">
-        <div class="modal-content">
-            <form id="formEditGrup" name="formEditGrup" class="form-horizontal" method="POST" action="{{ url('/editGrup') }}">
+<div class="modal modal_socios fade" tabindex="-1" role="dialog" id="myModal_2">
+    <div id="modal_reservas_socios" class="modal-dialog modal_dialog_socios" role="document">
+        <div class="modal-content modal_content">
+            <form id="formReservas" name="formReservas" class="form-horizontal" method="POST" action="{{ url('/editGrup') }}">
                 <div class="controls">
                     {{ method_field('PUT') }}
                     {{ csrf_field()  }}
-                    <div class="modal-header" style="text-align: center; background: #455A64; color: white; border-radius: 5px 5px 0px 0px;">
-                        <h4 class="modal-title" style="text-align: center; display:inline; cursor:default;">Modificar grup</h4>
+                    <div class="modal-header modal_header_socios" style="text-align: center; background: #455A64; color: white; border-radius: 5px 5px 0px 0px;">
+                        <h4 class="modal-title modal_title_socios" style="text-align: center; display:inline; cursor:default;">Modificar grup</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display:inline;">
                             <a aria-hidden="true" style="font-size: 30px;">&times;</a>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body modal_body_socios">
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-4">
                                 <label for="nomUsuari">Nom Usuari:</label>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer" style="text-align: center;">
+                    <div class="modal-footer modal_footer_socios" style="text-align: center;">
                         <button type="submit" class="btn btn-success" id="modalGuardar" style="margin-right: 25%;">Guardar</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
