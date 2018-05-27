@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Room;
 use App\Reserva;
-use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -34,13 +33,17 @@ class ReservaController extends Controller
   
     
     $habitacio = Reserva::where('room', $request->room)
-                        ->where('fechasalida',' = ', $request->fechaentrada)->first();
+                        ->where('fechasalida', '<' , $request->fechaentrada)
+                        ->orderBy('fechasalida', 'desc');
     
-    if($habitacio != null) {
+    if($habitacio == null || $fechasalida < $fechasalida) {
+     
         return redirect('/habitaciones');
+    
     }
 
-
+    
+    
     $p = new Reserva;
     $p->room = $room;
     $p->fechaentrada = $fechaentrada;
