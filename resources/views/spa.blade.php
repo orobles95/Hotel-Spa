@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hotel-Spa Miramar</title>
+        <title>{{ trans('spa.tituloPestanya') }}</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -15,11 +15,9 @@
 
     </head>
     <body>
-        @include('header')
+        @include('navbar')
 
-        @include('main')
-
-        @include('hotel_sections')
+        @include('spa_section')
 
         @include('subscribe')
 
@@ -31,4 +29,5 @@
         <script type="text/javascript" src="{{ url('/js/hotelSpa.js') }}"></script>
     </body>
 </html>
+
 

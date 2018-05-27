@@ -4,12 +4,12 @@ body {
 }
 
 /********************************** MODAL *************************************/
-
+/*
 .modal {
     text-align: center;
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
     .modal:before {
         display: inline-block;
         vertical-align: middle;
@@ -34,8 +34,8 @@ body {
 
 .modal-header {
     text-align: center;
-    background: #455A64; 
-    color: white; 
+    background: #455A64;
+    color: white;
     border-radius: 5px 5px 0px 0px;
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
@@ -55,8 +55,8 @@ body {
 }
 
 .modal-title {
-    text-align: center; 
-    display:inline; 
+    text-align: center;
+    display:inline;
     cursor:default;
     font-size: 18px;
     margin: 0;
@@ -87,7 +87,7 @@ body {
     text-shadow: 0 1px 0 #fff;
     font-size: 30px;
 }
-
+*/
 
 
 /************************* HEADER *********************************************/
@@ -129,14 +129,9 @@ body {
     border-top: 0.5vw solid #5d3b20;
     border-bottom: 0.7vw solid #5d3b20;
 }
-/*.rel {
-    width: 100%;
-    /*background-color: plum;
-}*/
 .description {
     width: 70%;
     padding: 2.5vw;
-    background-color: #bea280;
     margin: 0 auto;
     position: relative;
     top: -3vw;
@@ -147,17 +142,10 @@ body {
     font-size: 1vw;
     color: #FFF;
 }
-.habitaciones {
-    margin-top: 2vw;
-    font-family: 'Arapey', serif;
-    font-size: 1.5vw;
-    letter-spacing: 0.5vw;
-    color: #5d3b20;
+.desc-bgcolor-home {
+    background-color: #cfae81;
 }
-.hab-line {
-    height: 0.05vw;
-    background-color: #5d3b20;
-}
+
 /*.header-hab-img {
     width: 100%;
     height: auto;
@@ -171,11 +159,24 @@ body {
 /******************************************************************************/
 
 /**************************** HABITACIONES ************************************/
-.hab-ficha {
+.desc-bgcolor-hab {
+    background-color: #bea280;
+}
+.habitaciones {
+    margin-top: 2vw;
+    font-family: 'Arapey', serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    color: #5d3b20;
+}
+.hab-line {
+    height: 0.05vw;
+    background-color: #5d3b20;
+}
+.ficha {
     width: 100%;
     padding-top: 3vw;
     padding-bottom: 3vw;
-    /*background-color: peru;*/
 }
 .hab-description {
     width: 30%;
@@ -184,10 +185,6 @@ body {
     background-color: #e3d5c4;
     position: absolute;
     padding: 3vw;
-}
-.hab-borde {
-    padding: 0.6vw;
-    border: 0.1vw solid #5d3b20;
 }
 .hab-img {
     width: 70%;
@@ -201,20 +198,20 @@ body {
 .dcha-img {
     left: 33%;
 }
-.hab-nombre {
+.nombre {
     font-family: 'IM Fell French Canon SC', serif;
     font-size: 1vw;
 }
-.hab-rombo {
+.rombo {
     font-size: 0.8vw;
     color: #b79061;
     padding: 0 1vw;
 }
-.hab-titulo {
+.titulo {
     font-family: 'Arapey', serif;
     font-size: 2.5vw;
 }
-.hab-mindescrip {
+.mindescrip {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9vw;
 }
@@ -239,6 +236,9 @@ body {
 .hab a:hover {
     color: #5d3b20;
 }
+/******************************************************************************/
+
+/**************************** HAB REST SPA MODAL ******************************/
 #containerModal {
     border: 2px solid #666;
     border-radius: 5px;
@@ -253,7 +253,66 @@ body {
     margin-bottom: 2vw;
     list-style-type: none;
 }
+/******************************************************************************/
 
+/**************************** RESTAURANTE ************************************/
+.desc-bgcolor-rest {
+    background-color: #96586d;
+}
+.rest-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 3vw;
+    padding: 3vw;
+    background-color: #d1acbc;
+    position: absolute;
+}
+.rest-img {
+    width: 70%;
+    position: relative;
+    padding: 0.6vw;
+    border: 0.1vw solid #866189;
+}
+/******************************************************************************/
+
+/******************************* SPA ******************************************/
+.desc-bgcolor-spa {
+    background-color: #59a0be;
+}
+.spa-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 3vw;
+    padding: 3vw;
+    background-color: #d2dee7;
+    position: absolute;
+}
+.spa-img {
+    width: 70%;
+    position: relative;
+    padding: 0.6vw;
+    border: 0.1vw solid #6d93e1;
+}
+/******************************************************************************/
+
+/****************************** TRATAMIENTOS **********************************/
+.desc-bgcolor-trata {
+    background-color: #99bca7;
+}
+.trata-description {
+    width: 30%;
+    z-index: 1;
+    margin-top: 3vw;
+    padding: 3vw;
+    background-color: #c9dfd2;
+    position: absolute;
+}
+.trata-img {
+    width: 70%;
+    position: relative;
+    padding: 0.6vw;
+    border: 0.1vw solid #6d93e1;
+}
 /******************************************************************************/
 
 /******************************** MAIN ************************************/
@@ -389,50 +448,6 @@ p {
     font-size: 1vw;
     color: #ab8b65;
 }
-
-/******************************************************************************/
-
-/******************************** RESTAURANTE ************************************/
-
-.rest-ficha {
-    width: 100%;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    /*background-color: peru;*/
-}
-.rest-description {
-    width: 30%;
-    z-index: 1;
-    margin-top: 5vw;
-    background-color: #e3d5c4;
-    position: absolute;
-    padding: 3vw;
-}
-.rest-img {
-    width: 70%;
-    /*background-color: palegreen;*/
-    position: relative;
-}
-.dcha-description {
-    left: 55%;
-}
-.dcha-img {
-    left: 33%;
-}
-.rest-nombre {
-    font-family: Courrier;
-    font-size: 1vw;
-}
-.rest-titulo {
-    font-family: Arial;
-    font-size: 3vw;
-}
-.rest-mindescrip {
-    font-family: Arial;
-    font-size: 1vw;
-}
-
-
 
 /******************************************************************************/
 

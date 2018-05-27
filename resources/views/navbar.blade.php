@@ -11,11 +11,11 @@
                 <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="#"></a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
-                        @if (Auth::check()) 
+                        @if (Auth::check())
                         <li class="nav-item">
                             <a class="nav-link">
                                 <span>Bienvenido <strong>{{ Auth::user()->name }}</strong> </span>
-                            </a>      
+                            </a>
                         </li>
                         @endif
                         <li class="nav-item">
@@ -64,10 +64,13 @@
                         <a class="nav-link" href="restaurante">{{ trans('nav.menu_restaurante') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ trans('nav.menu_spa') }}</a>
+                        <a class="nav-link" href="spa">{{ trans('nav.menu_spa') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ trans('nav.menu_ofertas') }}</a>
+                        <a class="nav-link" href="tratamientos">{{ trans('nav.menu_tratamientos') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas">{{ trans('nav.menu_ofertas') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto">{{ trans('nav.menu_contacto') }}</a>
