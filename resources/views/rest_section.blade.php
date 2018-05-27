@@ -4,7 +4,7 @@
     @include('rest_Media_Luna')
     @include('rest_Sunset_ChillOut')
     <div class="header-img">
-        <img src="images/restauranteHeader.jpg" class="img-fluid" alt="Habitaciones">
+        <img src="images/restauranteHeader.jpg" class="img-fluid" alt="Restaurantes">
     </div>
     <div class="container">
         <div class="description desc-bgcolor-rest">
@@ -24,11 +24,11 @@
                 <p class="mindescrip">{{ trans('restaurante.descripcion_1') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <a href="#miModalSpring" data-toggle="modal" data-target="#miModalSpring">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="rest-img dcha-img">
-                <img src="images/restaurante4.jpg" class="img-fluid" alt="Suite Presidencial">
+                <img src="images/restaurante4.jpg" class="img-fluid" alt="Restaurante Spring Space">
             </div>
         </div>
         <div class="row ficha">
@@ -39,11 +39,11 @@
                 <p class="mindescrip">{{ trans('restaurante.descripcion_2') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <a href="#miModalDelicias" data-toggle="modal" data-target="#miModalDelicias">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="rest-img">
-                <img src="images/restaurante7.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/restaurante8.jpg" class="img-fluid" alt="Restaurante Delicias Supremas">
             </div>
         </div>
         <div class="row ficha">
@@ -54,11 +54,11 @@
                 <p class="mindescrip">{{ trans('restaurante.descripcion_3') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <a href="#miModalMediaLuna" data-toggle="modal" data-target="#miModalMediaLuna">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="rest-img dcha-img">
-                <img src="images/restaurante1.jpg" class="img-fluid" alt="Suite Estándar">
+                <img src="images/restaurante1.jpg" class="img-fluid" alt="Restaurante Media Luna">
             </div>
         </div>
         <div class="row ficha">
@@ -69,11 +69,11 @@
                 <p class="mindescrip">{{ trans('restaurante.descripcion_4') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('restaurante.descubrelaBtn') }}</a>
+                    <a href="#miModalSunsetChillOut" data-toggle="modal" data-target="#miModalSunsetChillOut">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="rest-img">
-                <img src="images/restaurante10.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/restaurante10.jpg" class="img-fluid" alt="Sunset Chill Out">
             </div>
         </div>
     </div>

@@ -17,8 +17,10 @@ return [
                         seleccionados por los mejores chefs para incluir en nuestros menús especias de todos los rincones del mundo.',
     'nombre_3' => 'RESTAURANTE ATARDECER',
     'titulo_3' => 'Media Luna',
-    'descripcion_3' => 'El auténtico gran lujo, confort y amplitud con preciosas vistas.',
+    'descripcion_3' => 'Una visión contemporánea de la cocina mediterranea donde la creatividad se deja lucir por nuestros chefs
+                        reconocidos con una estrella Michelin.',
     'nombre_4' => 'ZONA COOKTEL',
     'titulo_4' => 'Sunset Chill Out',
-    'descripcion_4' => 'El auténtico gran lujo, confort y amplitud con preciosas vistas.'
+    'descripcion_4' => 'Sofisticación en esencia donde disfrutaréis de un ambiente relajado de bar por la noche, ideal para parejas,
+                        encuentros familiares y de amigos.'
 ];
