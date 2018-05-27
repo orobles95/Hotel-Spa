@@ -25,6 +25,26 @@ Route::get('/habitaciones', function () {
     return view('habitaciones');
 });
 
+Route::get('/habitaciones/suite-Presidencial', function () {
+    return view('hab_Suite_Presidencial');
+});
+
+Route::get('/habitaciones/suite-Superior', function () {
+    return view('hab_Suite_Superior');
+});
+
+Route::get('/habitaciones/suite-Estandar', function () {
+    return view('hab_Suite_Estandar');
+});
+
+Route::get('/habitaciones/hab-Superior', function () {
+    return view('hab_Hab_Superior');
+});
+
+Route::get('/habitaciones/hab-Estandar', function () {
+    return view('hab_Hab_Estandar');
+});
+
 Route::get('/restaurante', function () {
     return view('restaurante');
 });
@@ -39,7 +59,17 @@ Route::post('/language', array(
     'Middleware' => 'LanguageSwitcher',
     'uses' => 'LanguageController@index'
 ));
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'AdminController@index');
+
+
+Route::get('calendario', 'ReservaController@getIndex')->name('catalog.index');
+
+Route::get('reserva/{id}', 'ReservaController@getShow')->name('catalog.show');
+
+Route::get('catalog/create', 'CatalogController@getCreate')->name('catalog.create');
+
+Route::post('reserva/{id}', 'ReservaController@postCreate')->name('catalog.create');
