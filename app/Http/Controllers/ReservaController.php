@@ -33,22 +33,22 @@ class ReservaController extends Controller
   
     
     $habitacio = Reserva::where('room', $request->room)
-                        ->where('fechasalida', '<' , $request->fechaentrada)->first();
+                        ->where('fechasalida', '>' , $request->fechaentrada)
+                        ->orderBy('fechasalida', 'desc')->first();
     
-    if($habitacio == null) {
+    if($habitacio == null && $fechaentrada < $fechasalida ) {
+        
+        $p = new Reserva;
+        $p->room = $room;
+        $p->fechaentrada = $fechaentrada;
+        $p->fechasalida = $fechasalida;
+
+        $p->save();
      
         return redirect('/habitaciones');
     
     }
 
-    
-    
-    $p = new Reserva;
-    $p->room = $room;
-    $p->fechaentrada = $fechaentrada;
-    $p->fechasalida = $fechasalida;
-
-    $p->save();
     
     return redirect('/habitaciones');
 
