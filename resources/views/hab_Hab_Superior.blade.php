@@ -46,19 +46,19 @@
             </div>
             <div class="row detalles">
                 <ul>
-                    <li><span class="hab-rombo"> ♦ </span>Habitación 35 m²</li>
-                    <li><span class="hab-rombo"> ♦ </span>Sala de estar</li>
-                    <li><span class="hab-rombo"> ♦ </span>Cama de 1,80m x 2m</li>
+                    <li><span class="rombo"> ♦ </span>Habitación 35 m²</li>
+                    <li><span class="rombo"> ♦ </span>Sala de estar</li>
+                    <li><span class="rombo"> ♦ </span>Cama de 1,80m x 2m</li>
                 </ul>
                 <ul>
-                    <li><span class="hab-rombo"> ♦ </span>Balcón exterior</li>
-                    <li><span class="hab-rombo"> ♦ </span>Vistas al mar</li>
-                    <li><span class="hab-rombo"> ♦ </span>Vistas al jardín</li>
+                    <li><span class="rombo"> ♦ </span>Balcón exterior</li>
+                    <li><span class="rombo"> ♦ </span>Vistas al mar</li>
+                    <li><span class="rombo"> ♦ </span>Vistas al jardín</li>
                 </ul>
                 <ul>
-                    <li><span class="hab-rombo"> ♦ </span>Baño completo</li>
-                    <li><span class="hab-rombo"> ♦ </span>Secador</li>
-                    <li><span class="hab-rombo"> ♦ </span>Bañera hidromasaje</li>
+                    <li><span class="rombo"> ♦ </span>Baño completo</li>
+                    <li><span class="rombo"> ♦ </span>Secador</li>
+                    <li><span class="rombo"> ♦ </span>Bañera hidromasaje</li>
                 </ul>
             </div>
         </div>

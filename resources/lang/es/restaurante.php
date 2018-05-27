@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'tituloPestanya' => 'Restaurante',
-    'tituloPagina' => 'RESTAURANTE',
+    'tituloPestanya' => 'Restaurantes',
+    'tituloPagina' => 'RESTAURANTES',
     'bienvenida' => 'El amor por la tierra y los tesoros que ofrece el Mediterráneo son la base de nuestra gastronomía. Nuestros chefs
                     maridan este legado con la alta cocina creativa para ofrecerte una propuesta gastronómica exquisita y saludable.',
     'reservarBtn' => 'Reserva mesa',

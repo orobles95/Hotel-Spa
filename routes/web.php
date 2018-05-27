@@ -29,6 +29,10 @@ Route::get('/restaurante', function () {
     return view('restaurante');
 });
 
+Route::get('/spa', function () {
+    return view('spa');
+});
+
 Route::get('/contacto', function () {
     return view('contacto');
 });
