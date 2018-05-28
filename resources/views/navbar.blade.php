@@ -44,17 +44,18 @@
                         @endif
                         <li class="int-box nav-item cambio_idioma_nav">
                             <form action="language" method="post">
-                                <select name="locale">
-                                    <option value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
-                                    <option value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
+                                {{ csrf_field() }}
+                                <select onchange="this.form.submit()" name="locale">
+                                    <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
+                                    <option  value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
                                 </select>
                                 @if (App::getLocale() == 'es')
                                 <button class="btn-bandera-esp"></button>
                                 @else
                                 <button class="btn-bandera-eng"></button>
                                 @endif
-                                {{ csrf_field() }}
-                                <input type="submit" class="btn btn-default" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">
+                                
+                                <!--<input type="submit" class="btn btn-default" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">-->
                                 <!--<button type="submit" value="Cambiar idioma"></button>-->
 
                             </form>
