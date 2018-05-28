@@ -1,9 +1,4 @@
 <section>
-    @include('hab_Suite_Presidencial')
-    @include('hab_Suite_Superior')
-    @include('hab_Suite_Estandar')
-    @include('hab_Hab_Superior')
-    @include('hab_Hab_Estandar')
     <div class="header-img">
         <img src="images/tratamientosHeader.jpg" class="img-fluid" alt="Tratamientos">
     </div>
@@ -25,11 +20,10 @@
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_1') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
-                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('tratamientos.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="trata-img dcha-img">
-                <img src="images/suitePresidencial.jpg" class="img-fluid" alt="Suite Presidencial">
+                <img src="images/tratamientos1.jpg" class="img-fluid" alt="Masaje Corporal">
             </div>
         </div>
         <div class="row ficha">
@@ -40,11 +34,10 @@
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_2') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('tratamientos.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="trata-img">
-                <img src="images/suiteSuperior.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/tratamientos2.jpg" class="img-fluid" alt="Tratamiento Facial">
             </div>
         </div>
         <div class="row ficha">
@@ -55,11 +48,10 @@
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_3') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
-                    <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('tratamientos.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="trata-img dcha-img">
-                <img src="images/suiteStandar.jpg" class="img-fluid" alt="Suite Estándar">
+                <img src="images/tratamientos3.jpg" class="img-fluid" alt="Drenaje Linfático">
             </div>
         </div>
         <div class="row ficha">
@@ -70,26 +62,10 @@
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_4') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
-                    <a href="#miModalHabSup" data-toggle="modal" data-target="#miModalHabSup">{{ trans('tratamientos.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="trata-img">
-                <img src="images/habitacionSuperior.jpg" class="img-fluid" alt="Habitación Superior">
-            </div>
-        </div>
-        <div class="row ficha">
-            <div class="trata-description">
-                <p class="nombre">{{ trans('tratamientos.tiempo_5') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_5') }}</p>
-                <div class="line"></div>
-                <p class="titulo">{{ trans('tratamientos.titulo_5') }}</p>
-                <p class="mindescrip">{{ trans('tratamientos.descripcion_5') }}</p>
-                <div class="hab">
-                    <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
-                    <a href="#miModalHabEst" data-toggle="modal" data-target="#miModalHabEst">{{ trans('tratamientos.descubrelaBtn') }}</a>
-                </div>
-            </div>
-            <div class="trata-img dcha-img">
-                <img src="images/habitacionStandar.jpg" class="img-fluid" alt="Habitación Estándar">
+                <img src="images/tratamientos4.jpg" class="img-fluid" alt="Terapia Geotermal">
             </div>
         </div>
     </div>
