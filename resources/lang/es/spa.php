@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'tituloPestanya' => 'Spa',
-    'tituloPagina' => 'SPA',
+    'tituloPestanya' => 'Balneario-Spa',
+    'tituloPagina' => 'BALNEARIO-SPA',
     'bienvenida' => 'Adéntrate en nuestro Spa y sumérgete en un oasis lleno de sensaciones y placeres indescriptibles. Un auténtico
                     templo del bienestar que recupera el legado ancestral de la vinoterapia para que disfrutes de una experiencia vital.',
     'reservarBtn' => 'Reserva hora',

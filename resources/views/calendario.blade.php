@@ -19,7 +19,7 @@ and open the template in the editor.
     @foreach( $arrayHabitaciones as $key => $habitacion )
     <div class="col-xs-6 col-sm-4 col-md-3 text-center">
 
-        <a href="{{ url('/reserva/' . $key ) }}">
+        <a href="{{ url('/reserva/' . 0 ) }}">
             <h4 style="min-height:45px;margin:5px 0 10px 0">
                 {{$habitacion['nom']}}
             </h4>
