@@ -5,6 +5,8 @@ use App\Room;
 use App\Reserva;
 use App\Restaurant;
 use App\Reservasrestaurant;
+use App\Spa;
+use App\Reservasspa;
 
 use Illuminate\Http\Request;
 
@@ -69,6 +71,32 @@ class ReservaController extends Controller
         $p->save();
      
         return redirect('/restaurante');
+    
+
+    }
+    
+     public function getShowspa($id){
+    return view('reservaspa', array('spa'=>$model = Spa::findOrFail($id)));
+  }
+  
+  public function postCreatespa(Request $request) {
+     
+      
+    $spa = $request->input('spa');
+    $fechaentrada = $request->input('fechaentrada');
+    $personas = $request->input('personas');
+    $hora = $request->input('hora');
+  
+        
+        $p = new Reservasspa;
+        $p->spa = $spa;
+        $p->fechaentrada = $fechaentrada;
+        $p->personas = $personas;
+        $p->hora = $hora;
+
+        $p->save();
+     
+        return redirect('/spa');
     
 
     }
