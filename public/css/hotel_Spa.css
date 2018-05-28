@@ -94,15 +94,51 @@ body {
     width: 70%;
     margin: 0 auto;
 }
-.btn-bandera {
-    width: 3.5vw;
-    height: 3.5vw;
-    background: transparent url("../images/ico-bandera.png") 0 0 no-repeat;
+
+ul.ext-box { 
+    display: table; 
+    width:100%;
+}
+
+li.int-box { 
+    display: table-cell; 
+    vertical-align: middle; 
+}
+
+.btn-bandera-esp {
+    width: 37px;
+    height: 33.3px;
+    background: transparent url("../images/ico-bandera-esp.png") 0 0 no-repeat;
     border: 0vw;
     margin: 0vw;
     padding: 0vw;
     outline: none;
+    margin-left: 8%;
 }
+
+.btn-bandera-eng {
+    width: 37px;
+    height: 33.3px;
+    background: transparent url("../images/ico-bandera-eng.png") 0 0 no-repeat;
+    border: 0vw;
+    margin: 0vw;
+    padding: 0vw;
+    outline: none;
+    margin-left: 8%;
+}
+/*
+.img_socios_nav {
+    margin-left: 25%;
+}
+
+.img_reservas_nav {
+    margin-left: 25%;
+}
+
+.cambio_idioma_nav {
+    margin-top: 15px;
+}
+*/
 /*.acceso a:link {
     font-family: arial;
     font-size: 1vw;
