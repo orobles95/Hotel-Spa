@@ -19,7 +19,7 @@
         </div>
         <div class="row ficha">
             <div class="trata-description">
-                <p class="nombre">{{ trans('tratamientos.nombre_1') }}<span class="rombo"> ♦ </span>92 m²</p>
+                <p class="nombre">{{ trans('tratamientos.tiempo_1') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_1') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('tratamientos.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_1') }}</p>
@@ -34,7 +34,7 @@
         </div>
         <div class="row ficha">
             <div class="trata-description dcha-description">
-                <p class="nombre">{{ trans('tratamientos.nombre_2') }}<span class="rombo"> ♦ </span>76 m²</p>
+                <p class="nombre">{{ trans('tratamientos.tiempo_2') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_2') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('tratamientos.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_2') }}</p>
@@ -49,7 +49,7 @@
         </div>
         <div class="row ficha">
             <div class="trata-description">
-                <p class="nombre">{{ trans('tratamientos.nombre_3') }}<span class="rombo"> ♦ </span>64 m²</p>
+                <p class="nombre">{{ trans('tratamientos.tiempo_3') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_3') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('tratamientos.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_3') }}</p>
@@ -64,7 +64,7 @@
         </div>
         <div class="row ficha">
             <div class="trata-description dcha-description">
-                <p class="nombre">{{ trans('tratamientos.nombre_4') }}<span class="rombo"> ♦ </span>35 m²</p>
+                <p class="nombre">{{ trans('tratamientos.tiempo_4') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_4') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('tratamientos.titulo_4') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_4') }}</p>
@@ -79,7 +79,7 @@
         </div>
         <div class="row ficha">
             <div class="trata-description">
-                <p class="nombre">{{ trans('tratamientos.nombre_5') }}<span class="rombo"> ♦ </span>28 m²</p>
+                <p class="nombre">{{ trans('tratamientos.tiempo_5') }}<span class="rombo"> ♦ </span>{{ trans('tratamientos.precio_5') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('tratamientos.titulo_5') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_5') }}</p>
