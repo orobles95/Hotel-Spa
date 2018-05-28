@@ -1,9 +1,7 @@
 <section>
-    @include('hab_Suite_Presidencial')
-    @include('hab_Suite_Superior')
-    @include('hab_Suite_Estandar')
-    @include('hab_Hab_Superior')
-    @include('hab_Hab_Estandar')
+    @include('spa_Circuito_Termal')
+    @include('spa_Balneario_Natural')
+    @include('spa_Sauna')
     <div class="header-img">
         <img src="images/spaHeader2.jpg" class="img-fluid" alt="Spa">
     </div>
@@ -19,47 +17,47 @@
         </div>
         <div class="row ficha">
             <div class="spa-description">
-                <p class="nombre">{{ trans('spa.nombre_1') }}<span class="rombo"> ♦ </span>56 mesas</p>
+                <p class="nombre">{{ trans('spa.nombre_1') }}<span class="rombo"> ♦ </span>{{ trans('spa.capacidad_1') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('spa.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_1') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('spa.reservarBtn') }}</button>
-                    <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('spa.descubrelaBtn') }}</a>
+                    <a href="#miModalSpaCircuito" data-toggle="modal" data-target="#miModalSpaCircuito">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img dcha-img">
-                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Presidencial">
+                <img src="images/balneario4.jpg" class="img-fluid" alt="Balneario Natural">
             </div>
         </div>
         <div class="row ficha">
             <div class="spa-description dcha-description">
-                <p class="nombre">{{ trans('spa.nombre_2') }}<span class="rombo"> ♦ </span>89 mesas</p>
+                <p class="nombre">{{ trans('spa.nombre_2') }}<span class="rombo"> ♦ </span>{{ trans('spa.capacidad_2') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('spa.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_2') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('spa.reservarBtn') }}</button>
-                    <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('spa.descubrelaBtn') }}</a>
+                    <a href="#miModalSpaBalneario" data-toggle="modal" data-target="#miModalSpaBalneario">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img">
-                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Superior">
+                <img src="images/balneario1.jpg" class="img-fluid" alt="Circuito Termal">
             </div>
         </div>
         <div class="row ficha">
             <div class="spa-description">
-                <p class="rest-nombre">{{ trans('spa.nombre_3') }}<span class="rombo"> ♦ </span>47 mesas</p>
+                <p class="nombre">{{ trans('spa.nombre_3') }}<span class="rombo"> ♦ </span>{{ trans('spa.capacidad_3') }}</p>
                 <div class="line"></div>
                 <p class="titulo">{{ trans('spa.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_3') }}</p>
                 <div class="hab">
                     <button type="button">{{ trans('spa.reservarBtn') }}</button>
-                    <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('spa.descubrelaBtn') }}</a>
+                    <a href="#miModalSpaSauna" data-toggle="modal" data-target="#miModalSpaSauna">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
             <div class="spa-img dcha-img">
-                <img src="images/spa1.jpg" class="img-fluid" alt="Suite Estándar">
+                <img src="images/balneario8.jpg" class="img-fluid" alt="Sauna Purificante">
             </div>
         </div>
     </div>
