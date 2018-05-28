@@ -17,7 +17,7 @@ class ReservaController extends Controller
   }
   
   public function getShow($id){
-    return view('reserva', array('habitacion'=>$model = Room::findOrFail($id)));
+    return view('reservahabitacion', array('habitacion'=>$model = Room::findOrFail($id)));
   }
 
   public function getCreate(){
