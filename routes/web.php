@@ -56,8 +56,8 @@ Route::get('/admin', 'AdminController@index');
 
 Route::get('calendario', 'ReservaController@getIndex')->name('catalog.index');
 
-Route::get('reserva/{id}', 'ReservaController@getShow')->name('catalog.show');
+Route::get('reservahabitacion/{id}', 'ReservaController@getShow')->name('catalog.show');
 
 Route::get('catalog/create', 'CatalogController@getCreate')->name('catalog.create');
 
-Route::post('reserva/{id}', 'ReservaController@postCreate')->name('catalog.create');
+Route::post('reservahabitacion/{id}', 'ReservaController@postCreate')->name('catalog.create');
