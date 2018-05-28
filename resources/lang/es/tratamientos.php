@@ -6,27 +6,26 @@ return [
     'bienvenida' => 'Ponemos a tu disposición una amplia variedad de terapias y tratamientos holísticos para proporcionarte el
                     equilibrio y bienestar necesarios para tu salud.',
     'reservarBtn' => 'Reserva hora',
-    'descubrelaBtn' => 'Descubrelo →',
-    'tiempo_1' => 'TIEMPO: 60 min',
+    'tiempo_1' => 'TIEMPO: 25 min',
     'precio_1' => 'PRECIO: 45 €',
-    'titulo_1' => 'Spring Space',
-    'descripcion_1' => 'Un espacio privilegiado rodeado de naturaleza donde disfrutar de sol, paz y tranquilidad. Ideal
-                        para comenzar bien el día con un nutritivo desayuno a base de frutas exoticas.',
+    'titulo_1' => 'Masaje Corporal',
+    'descripcion_1' => 'Masaje corporal antiestrés acentuado en piernas y espalda con aceites de esencias aromáticas que
+                        proporciona una gran relajación.',
     'tiempo_2' => 'TIEMPO: 60 min',
-    'precio_2' => 'PRECIO: 45 €',
-    'titulo_2' => 'Delicias Supremas',
-    'descripcion_2' => 'La elegancia y la exclusividad de nuestros platos harán de su comida una explosión de sabores delicadamente
-                        seleccionados por los mejores chefs para incluir en nuestros menús especias de todos los rincones del mundo.',
-    'tiempo_3' => 'TIEMPO: 60 min',
-    'precio_3' => 'PRECIO: 45 €',
-    'titulo_3' => 'Media Luna',
-    'descripcion_3' => 'Una visión contemporánea de la cocina mediterranea donde la creatividad se deja lucir por nuestros chefs
-                        reconocidos con una estrella Michelin.',
-    'tiempo_4' => 'TIEMPO: 60 min',
-    'precio_4' => 'PRECIO: 45 €',
-    'titulo_4' => 'Sunset Chill Out',
-    'descripcion_4' => 'Sofisticación en esencia donde disfrutaréis de un ambiente relajado de bar por la noche, ideal para parejas,
-                        encuentros familiares y de amigos.'
+    'precio_2' => 'PRECIO: 85 €',
+    'titulo_2' => 'Lifting Facial',
+    'descripcion_2' => 'Tratamiento facial efecto lifting, activador del colágeno que atenúa las líneas de expresión y las arrugas
+                        en toda la musculatura facial y craneal.',
+    'tiempo_3' => 'TIEMPO: 50 min',
+    'precio_3' => 'PRECIO: 65 €',
+    'titulo_3' => 'Drenaje Linfático',
+    'descripcion_3' => 'Masaje relajante liberador de toxinas que mejora la circulación sanguínea y linfática, muy eficaz para
+                        combatir la retención de líquidos.',
+    'tiempo_4' => 'TIEMPO: 80 min',
+    'precio_4' => 'PRECIO: 110 €',
+    'titulo_4' => 'Terapia geotermal',
+    'descripcion_4' => 'Masaje energético y equilibrador que combina la aplicación de piedras frías y calientes para armonizar
+                        cuerpo y mente.'
 ];
 
 
