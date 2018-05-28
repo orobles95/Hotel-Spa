@@ -68,3 +68,8 @@ Route::get('reservaspa/{id}', 'ReservaController@getShowspa')->name('catalog.sho
 
 Route::post('reservaspa/{id}', 'ReservaController@postCreatespa')->name('catalog.create');
 
+
+Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->name('catalog.show');
+
+Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
+

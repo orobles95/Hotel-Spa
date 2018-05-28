@@ -7,6 +7,8 @@ use App\Restaurant;
 use App\Reservasrestaurant;
 use App\Spa;
 use App\Reservasspa;
+use App\Tratamiento;
+use App\Reservastratamiento;
 
 use Illuminate\Http\Request;
 
@@ -97,6 +99,30 @@ class ReservaController extends Controller
         $p->save();
      
         return redirect('/spa');
+    
+
+    }
+    
+     public function getShowtratamiento($id){
+    return view('reservatratamiento', array('tratamiento'=>$model = Tratamiento::findOrFail($id)));
+  }
+  
+  public function postCreatetratamiento(Request $request) {
+     
+      
+    $tratamiento = $request->input('tratamiento');
+    $fechaentrada = $request->input('fechaentrada');
+    $hora = $request->input('hora');
+  
+        
+        $p = new Reservastratamiento;
+        $p->tratamiento = $tratamiento;
+        $p->fechaentrada = $fechaentrada;
+        $p->hora = $hora;
+
+        $p->save();
+     
+        return redirect('/tratamientos');
     
 
     }

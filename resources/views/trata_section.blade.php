@@ -19,7 +19,7 @@
                 <p class="titulo">{{ trans('tratamientos.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_1') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservatratamientos/' . 0 ) }}'" type="button">{{ trans('tratamientos.reservarBtn') }}</button>
                 </div>
             </div>
             <div class="trata-img dcha-img">
@@ -33,7 +33,7 @@
                 <p class="titulo">{{ trans('tratamientos.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_2') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservatratamientos/' . 1 ) }}'" type="button">{{ trans('tratamientos.reservarBtn') }}</button>
                 </div>
             </div>
             <div class="trata-img">
@@ -47,7 +47,7 @@
                 <p class="titulo">{{ trans('tratamientos.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_3') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservatratamientos/' . 2 ) }}'" type="button">{{ trans('tratamientos.reservarBtn') }}</button>
                 </div>
             </div>
             <div class="trata-img dcha-img">
@@ -61,7 +61,7 @@
                 <p class="titulo">{{ trans('tratamientos.titulo_4') }}</p>
                 <p class="mindescrip">{{ trans('tratamientos.descripcion_4') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('tratamientos.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservatratamientos/' . 3 ) }}'" type="button">{{ trans('tratamientos.reservarBtn') }}</button>
                 </div>
             </div>
             <div class="trata-img">
