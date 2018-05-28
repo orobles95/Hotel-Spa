@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Reserva de {{$habitacion->nom}}</title>
+    <title>Reserva en {{$restaurante->nom}}</title>
   </head>
   <body>
 
@@ -20,7 +20,7 @@
   			<div class="panel-heading">
   				<h3 class="panel-title text-center">
   					<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-  					Reserva de {{$habitacion->nom}}
+  					Reserva en el restaurante {{$restaurante->nom}}
   				</h3>
   			</div>
 
@@ -30,39 +30,53 @@
             {{ csrf_field() }}
 
       		<div class="form-group">
-    			<label for="title">Habitación</label>
-    			<input readonly="readonly" type="text" name="room" id="room" class="form-control" value="{{$habitacion->nom}}">
+    			<label for="title">Restaurante</label>
+    			<input readonly="readonly" type="text" name="restaurant" id="restaurant" class="form-control" value="{{$restaurante->nom}}">
   		</div>
 
   		<div class="form-group">
-                        <label for="year">Fecha Llegada</label>
+                        <label for="year">Fecha</label>
                         <input type="text" name="fechaentrada" id="llegada" class="form-control" value="Selecciona la fecha">
   		</div>
 
   		<div class="form-group">
-                        <label for="director">Fecha Salida</label>
-                        <input type="text" name="fechasalida" id="salida" class="form-control" value="Selecciona la fecha">
-  		</div>
-
-
-  		<div class="form-group">
-  			<label for="synopsis">Huéspedes</label>
-      			<select  class="form-control" name="huespedes" id="huespedes" >
+  			<label for="synopsis">Comensales</label>
+      			<select  class="form-control" name="comensales" id="comensales" >
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
   		</div>
+            
+                <div class="form-group">
+  			<label for="synopsis">Hora</label>
+      			<select  class="form-control" name="hora" id="hora" >
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                            <option value="22:00">22:00</option>
+                            <option value="22:30">22:30</option>
+                        </select>
+  		</div>
 
   		<div class="form-group text-center">
-  			<button onclick="{{ url('/habitaciones') }}" type="submit" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
+                    
+                        <button onclick="{{ url('/restaurante') }}" type="submit" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
   				Volver
   			</button>
                     
   			<button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
   				Reservar
   			</button>
+                    
   		</div>
 
   	</form>
@@ -132,7 +146,7 @@ $.datepicker.regional['es'] = {
  dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
  dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
  weekHeader: 'Sm',
- dateFormat: 'mmddyy',
+ dateFormat: 'dd/mm/yy',
  firstDay: 1,
  isRTL: false,
  showMonthAfterYear: false,

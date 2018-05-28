@@ -23,7 +23,7 @@
                 <p class="titulo">{{ trans('restaurante.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('restaurante.descripcion_1') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservarestaurante/' . 0 ) }}'" type="button">{{ trans('restaurante.reservarBtn') }}</button>
                     <a href="#miModalSpring" data-toggle="modal" data-target="#miModalSpring">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <p class="titulo">{{ trans('restaurante.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('restaurante.descripcion_2') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservarestaurante/' . 1 ) }}'" type="button">{{ trans('restaurante.reservarBtn') }}</button>
                     <a href="#miModalDelicias" data-toggle="modal" data-target="#miModalDelicias">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <p class="titulo">{{ trans('restaurante.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('restaurante.descripcion_3') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservarestaurante/' . 2 ) }}'" type="button">{{ trans('restaurante.reservarBtn') }}</button>
                     <a href="#miModalMediaLuna" data-toggle="modal" data-target="#miModalMediaLuna">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 <p class="titulo">{{ trans('restaurante.titulo_4') }}</p>
                 <p class="mindescrip">{{ trans('restaurante.descripcion_4') }}</p>
                 <div class="hab">
-                    <button type="button">{{ trans('restaurante.reservarBtn') }}</button>
+                    <button onclick="location.href='{{ url('/reservarestaurante/' . 3 ) }}'" type="button">{{ trans('restaurante.reservarBtn') }}</button>
                     <a href="#miModalSunsetChillOut" data-toggle="modal" data-target="#miModalSunsetChillOut">{{ trans('restaurante.descubrelaBtn') }}</a>
                 </div>
             </div>

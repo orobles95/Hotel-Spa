@@ -54,10 +54,11 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'AdminController@index');
 
 
-Route::get('calendario', 'ReservaController@getIndex')->name('catalog.index');
-
 Route::get('reservahabitacion/{id}', 'ReservaController@getShow')->name('catalog.show');
 
-Route::get('catalog/create', 'CatalogController@getCreate')->name('catalog.create');
-
 Route::post('reservahabitacion/{id}', 'ReservaController@postCreate')->name('catalog.create');
+
+
+Route::get('reservarestaurante/{id}', 'ReservaController@getShowrestaurante')->name('catalog.show');
+
+Route::post('reservarestaurante/{id}', 'ReservaController@postCreaterestaurante')->name('catalog.create');
