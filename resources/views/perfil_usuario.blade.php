@@ -28,7 +28,7 @@
                                 <label for="nomUsuari">Nom Usuari:</label>
                             </div>
                             <div class="col-8">
-                                <input type="text" style="width: 100%;" name="cu45_nomUsuari" id="cu45_nomUsuari" placeholder="Nom Usuari" value="" required />
+                                <input type="text" style="width: 100%;" name="cu45_nomUsuari" id="cu45_nomUsuari" placeholder="Nom Usuari" value="{{ $user->name }}" required />
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -36,7 +36,7 @@
                                 <label for="contrasenya">Contrasenya:</label>
                             </div>
                             <div class="col-8">
-                                <input type="password" style="width: 100%;" name="cu45_contrasenya" id="cu45_contrasenya" placeholder="Contrasenya" value="" required />
+                                <input type="password" style="width: 100%;" name="cu45_contrasenya" id="cu45_contrasenya" placeholder="Contrasenya" required />
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -61,7 +61,7 @@
                                 <label for="email" >Email:</label>
                             </div>
                             <div class="col-8">
-                                <input type="email" style="width: 100%;" name="cu45_email" id="cu45_email" placeholder="Email" value="" required />
+                                <input type="email" style="width: 100%;" name="cu45_email" id="cu45_email" placeholder="Email" value="{{ $user->email }}" required />
                             </div>
                         </div>
                         <div class="row">

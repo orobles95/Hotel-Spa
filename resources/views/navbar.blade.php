@@ -18,7 +18,7 @@
                                 <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
                                 @if (Auth::check())
                                 <div>
-                                    <span >Bienvenido/a <strong>{{ Auth::user()->name }}</strong> </span>
+                                    <span >Bienvenido/a <strong name="nomUsuari">{{ Auth::user()->name }}</strong> </span>
                                     <form action="{{ url('/logout') }}" method="POST" style="display:inline">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger" style="display:inline;cursor:pointer">

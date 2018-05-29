@@ -48,6 +48,11 @@ Route::post('/language', array(
     'uses' => 'LanguageController@index'
 ));
 
+Route::group(['middleware' => 'auth'], function() {
+    //vistas para las que es necesario estar autentificado
+    
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
