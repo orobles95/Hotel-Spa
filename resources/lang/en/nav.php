@@ -1,7 +1,6 @@
 <?php
 
 return [
-    
     'accesosDirectos_socios' => 'Member Access',
     'accesosDirectos_reservas' => 'Reservations',
     'accesosDirectos_idiomaBtn' => 'Change language',
@@ -9,7 +8,7 @@ return [
     'menu_habitaciones' => 'Rooms',
     'menu_restaurante' => 'Restaurant',
     'menu_spa' => 'Spa',
+    'menu_tratamientos' => 'Treatments',
     'menu_ofertas' => 'Offers',
     'menu_contacto' => 'Contact'
-
 ];
