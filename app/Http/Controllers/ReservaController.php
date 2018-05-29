@@ -9,6 +9,7 @@ use App\Spa;
 use App\Reservasspa;
 use App\Tratamiento;
 use App\Reservastratamiento;
+use Auth;
 
 use Illuminate\Http\Request;
 
@@ -29,6 +30,8 @@ class ReservaController extends Controller
     $fechasalida = $request->input('fechasalida');
   
     
+    
+    
     $habitacio = Reserva::where('room', $request->room)
                         ->where('fechasalida', '>' , $request->fechaentrada)
                         ->orderBy('fechasalida', 'desc')->first();
@@ -37,8 +40,10 @@ class ReservaController extends Controller
         
         $p = new Reserva;
         $p->room = $room;
+        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->fechasalida = $fechasalida;
+        
 
         $p->save();
      
@@ -66,6 +71,7 @@ class ReservaController extends Controller
         
         $p = new Reservasrestaurant;
         $p->restaurant = $restaurant;
+        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->comensales = $comensales;
         $p->hora = $hora;
@@ -92,6 +98,7 @@ class ReservaController extends Controller
         
         $p = new Reservasspa;
         $p->spa = $spa;
+        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->personas = $personas;
         $p->hora = $hora;
@@ -117,6 +124,7 @@ class ReservaController extends Controller
         
         $p = new Reservastratamiento;
         $p->tratamiento = $tratamiento;
+        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->hora = $hora;
 
