@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-05-2018 a las 21:35:51
--- Versión del servidor: 10.1.30-MariaDB
+-- Tiempo de generación: 29-05-2018 a las 20:55:47
+-- Versión del servidor: 5.7.21-log
 -- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -27,20 +27,52 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `admins`
 --
-------------------------------------------------
+
+CREATE TABLE `admins` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `migrations`
 --
 
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
 -- Volcado de datos para la tabla `migrations`
 --
--------------------------------------------
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2018_05_24_181958_create_admins_table', 1);
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `password_resets`
 --
------------------------------------------------------
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `reservas`
@@ -48,6 +80,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `reservas` (
   `id` int(10) UNSIGNED NOT NULL,
+  `client_email` varchar(30) NOT NULL,
   `room` varchar(50) NOT NULL,
   `fechaentrada` int(25) NOT NULL,
   `fechasalida` int(25) NOT NULL,
@@ -64,6 +97,7 @@ CREATE TABLE `reservas` (
 
 CREATE TABLE `reservasrestaurants` (
   `id` int(10) NOT NULL,
+  `client_email` varchar(30) NOT NULL,
   `restaurant` varchar(50) NOT NULL,
   `fechaentrada` varchar(25) NOT NULL,
   `comensales` int(11) NOT NULL,
@@ -76,15 +110,16 @@ CREATE TABLE `reservasrestaurants` (
 -- Volcado de datos para la tabla `reservasrestaurants`
 --
 
-INSERT INTO `reservasrestaurants` (`id`, `restaurant`, `fechaentrada`, `comensales`, `hora`, `created_at`, `updated_at`) VALUES
-(2, 'Spring Space', '04/05/2018', 0, '13:00', '2018-05-28 16:35:23', '2018-05-28 16:35:23'),
-(3, 'Spring Space', '04/05/2018', 0, '15:30', '2018-05-28 16:36:24', '2018-05-28 16:36:24'),
-(4, 'Spring Space', '03/05/2018', 1, '22:00', '2018-05-28 16:38:26', '2018-05-28 16:38:26'),
-(5, 'Spring Space', '05/05/2018', 2, '13:00', '2018-05-28 16:38:51', '2018-05-28 16:38:51'),
-(6, 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 16:45:05', '2018-05-28 16:45:05'),
-(7, 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 16:48:15', '2018-05-28 16:48:15'),
-(8, 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 16:48:18', '2018-05-28 16:48:18'),
-(9, 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 17:14:17', '2018-05-28 17:14:17');
+INSERT INTO `reservasrestaurants` (`id`, `client_email`, `restaurant`, `fechaentrada`, `comensales`, `hora`, `created_at`, `updated_at`) VALUES
+(2, '', 'Spring Space', '04/05/2018', 0, '13:00', '2018-05-28 14:35:23', '2018-05-28 14:35:23'),
+(3, '', 'Spring Space', '04/05/2018', 0, '15:30', '2018-05-28 14:36:24', '2018-05-28 14:36:24'),
+(4, '', 'Spring Space', '03/05/2018', 1, '22:00', '2018-05-28 14:38:26', '2018-05-28 14:38:26'),
+(5, '', 'Spring Space', '05/05/2018', 2, '13:00', '2018-05-28 14:38:51', '2018-05-28 14:38:51'),
+(6, '', 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 14:45:05', '2018-05-28 14:45:05'),
+(7, '', 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 14:48:15', '2018-05-28 14:48:15'),
+(8, '', 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 14:48:18', '2018-05-28 14:48:18'),
+(9, '', 'Spring Space', 'Selecciona la fecha', 1, '13:00', '2018-05-28 15:14:17', '2018-05-28 15:14:17'),
+(10, '', 'Spring Space', '30/05/2018', 1, '13:00', '2018-05-29 16:15:28', '2018-05-29 16:15:28');
 
 -- --------------------------------------------------------
 
@@ -94,6 +129,7 @@ INSERT INTO `reservasrestaurants` (`id`, `restaurant`, `fechaentrada`, `comensal
 
 CREATE TABLE `reservasspas` (
   `id` int(10) UNSIGNED NOT NULL,
+  `client_email` varchar(30) NOT NULL,
   `spa` varchar(50) NOT NULL,
   `fechaentrada` varchar(25) NOT NULL,
   `personas` int(11) DEFAULT NULL,
@@ -106,10 +142,10 @@ CREATE TABLE `reservasspas` (
 -- Volcado de datos para la tabla `reservasspas`
 --
 
-INSERT INTO `reservasspas` (`id`, `spa`, `fechaentrada`, `personas`, `hora`, `created_at`, `updated_at`) VALUES
-(1, 'Circuito Termal', '06/05/2018', 1, '13:00', '2018-05-28 17:09:16', '2018-05-28 17:09:16'),
-(2, 'Circuito Termal', 'Selecciona la fecha', 1, '13:00', '2018-05-28 17:14:22', '2018-05-28 17:14:22'),
-(3, 'Termal Aqua', 'Selecciona la fecha', 1, '13:00', '2018-05-28 17:14:27', '2018-05-28 17:14:27');
+INSERT INTO `reservasspas` (`id`, `client_email`, `spa`, `fechaentrada`, `personas`, `hora`, `created_at`, `updated_at`) VALUES
+(1, '', 'Circuito Termal', '06/05/2018', 1, '13:00', '2018-05-28 15:09:16', '2018-05-28 15:09:16'),
+(2, '', 'Circuito Termal', 'Selecciona la fecha', 1, '13:00', '2018-05-28 15:14:22', '2018-05-28 15:14:22'),
+(3, '', 'Termal Aqua', 'Selecciona la fecha', 1, '13:00', '2018-05-28 15:14:27', '2018-05-28 15:14:27');
 
 -- --------------------------------------------------------
 
@@ -119,6 +155,7 @@ INSERT INTO `reservasspas` (`id`, `spa`, `fechaentrada`, `personas`, `hora`, `cr
 
 CREATE TABLE `reservastratamientos` (
   `id` int(10) UNSIGNED NOT NULL,
+  `client_email` varchar(30) NOT NULL,
   `tratamiento` varchar(50) NOT NULL,
   `fechaentrada` varchar(25) NOT NULL,
   `hora` varchar(25) NOT NULL,
@@ -130,10 +167,10 @@ CREATE TABLE `reservastratamientos` (
 -- Volcado de datos para la tabla `reservastratamientos`
 --
 
-INSERT INTO `reservastratamientos` (`id`, `tratamiento`, `fechaentrada`, `hora`, `created_at`, `updated_at`) VALUES
-(1, 'Drenaje Linfático', '04/05/2018', '13:00', '2018-05-28 17:31:45', '2018-05-28 17:31:45'),
-(2, 'Masaje Corporal', 'Selecciona la fecha', '13:00', '2018-05-28 17:33:54', '2018-05-28 17:33:54'),
-(3, 'Lifting Facial', 'Selecciona la fecha', '13:00', '2018-05-28 17:33:59', '2018-05-28 17:33:59');
+INSERT INTO `reservastratamientos` (`id`, `client_email`, `tratamiento`, `fechaentrada`, `hora`, `created_at`, `updated_at`) VALUES
+(1, '', 'Drenaje Linfático', '04/05/2018', '13:00', '2018-05-28 15:31:45', '2018-05-28 15:31:45'),
+(2, '', 'Masaje Corporal', 'Selecciona la fecha', '13:00', '2018-05-28 15:33:54', '2018-05-28 15:33:54'),
+(3, '', 'Lifting Facial', 'Selecciona la fecha', '13:00', '2018-05-28 15:33:59', '2018-05-28 15:33:59');
 
 -- --------------------------------------------------------
 
@@ -229,6 +266,25 @@ INSERT INTO `tratamientos` (`id`, `nom`, `img`) VALUES
 -- Estructura de tabla para la tabla `users`
 --
 
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Oscar', 'prueba@prueba.com', '$2y$10$RujRxqCirH6GsqUchaRsn.FLnFziOk8rj.oLk.IcKZe8f1CcrAq02', 'AENyGLTFqDLw0wrcsxQz0f5RaBTOomF0KHfXoECThEPCAJCsXtS9QtKwaBlF', '2018-05-25 09:39:28', '2018-05-25 09:39:28'),
+(2, 'Gloria', 'gloria@prueba.com', '$2y$10$IiXNCJjekBe7WdaAJ1Yz8u94AmRRaClQNSPbYNJCJGpxESotbioT2', NULL, '2018-05-29 07:41:59', '2018-05-29 07:41:59');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -281,6 +337,12 @@ ALTER TABLE `tratamientos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -288,13 +350,13 @@ ALTER TABLE `tratamientos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT de la tabla `reservasrestaurants`
 --
 ALTER TABLE `reservasrestaurants`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `reservasspas`
@@ -307,6 +369,12 @@ ALTER TABLE `reservasspas`
 --
 ALTER TABLE `reservastratamientos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
