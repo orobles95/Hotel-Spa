@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row justify-content-between">
-        <div class="col-5">
+        <div class="col-4">
             <a href="{{ url('/') }}">
                 <img src="images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
             </a>
         </div>
-        <div class="col-5 align-self-center">
+        <div class="col-6 align-self-center">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,25 +37,20 @@
                                 <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
                             </a>
                         </li>
-                        <li class="int-box nav-item cambio_idioma_nav">
+                        <li class="int-box nav-item">
                             <form action="language" method="post">
                                 {{ csrf_field() }}
-                                <select onchange="this.form.submit()" name="locale">
+                                @if (App::getLocale() == 'es')
+                                <img src="images/ico-bandera-esp.png" class="img-fluid">
+                                @else
+                                <img src="images/ico-bandera-eng.png" class="img-fluid">
+                                @endif
+                                <select id="idioma" onchange="this.form.submit()" name="locale">
                                     <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
                                     <option  value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
                                 </select>
-                                @if (App::getLocale() == 'es')
-                                <div class="btn-bandera-esp"></div>
-                                @else
-                                <div class="btn-bandera-eng"></div>
-                                @endif
-
-<!--<input type="submit" class="btn btn-default" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">-->
-                                <!--<button type="submit" value="Cambiar idioma"></button>-->
-
                             </form>
                         </li>
-
                     </ul>
                 </div>
             </nav>
