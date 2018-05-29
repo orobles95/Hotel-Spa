@@ -1,7 +1,9 @@
 <div class="container">
     <div class="row justify-content-between">
         <div class="col-5">
-            <img src="images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
+            <a href="{{ url('/') }}">
+                <img src="images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
+            </a>
         </div>
         <div class="col-5 align-self-center">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -16,7 +18,7 @@
                                 <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
                                 @if (Auth::check())
                                 <div>
-                                    <span >Bienvenido <strong>{{ Auth::user()->name }}</strong> </span>
+                                    <span >Bienvenido/a <strong>{{ Auth::user()->name }}</strong> </span>
                                     <form action="{{ url('/logout') }}" method="POST" style="display:inline">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger" style="display:inline;cursor:pointer">
@@ -29,19 +31,12 @@
                                 @endif
                             </a>
                         </li>
-                        @if (Auth::check())
                         <li class="int-box nav-item">
                             <a class="nav-link" href="#">
                                 <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
-                                @if (App::getLocale() == 'es')
                                 <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
-                                @else
-                                <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
-                                @endif
-                                
                             </a>
                         </li>
-                        @endif
                         <li class="int-box nav-item cambio_idioma_nav">
                             <form action="language" method="post">
                                 {{ csrf_field() }}
@@ -50,12 +45,12 @@
                                     <option  value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
                                 </select>
                                 @if (App::getLocale() == 'es')
-                                <button class="btn-bandera-esp"></button>
+                                <div class="btn-bandera-esp"></div>
                                 @else
-                                <button class="btn-bandera-eng"></button>
+                                <div class="btn-bandera-eng"></div>
                                 @endif
-                                
-                                <!--<input type="submit" class="btn btn-default" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">-->
+
+<!--<input type="submit" class="btn btn-default" value="{{ trans('nav.accesosDirectos_idiomaBtn') }}">-->
                                 <!--<button type="submit" value="Cambiar idioma"></button>-->
 
                             </form>
