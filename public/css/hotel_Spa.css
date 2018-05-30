@@ -94,6 +94,9 @@ body {
     width: 70%;
     margin: 0 auto;
 }
+.margin-bandera {
+    margin-left: 2vw;
+}
 #idioma {
     background: transparent;
     border: none;
