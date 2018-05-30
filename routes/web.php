@@ -50,6 +50,10 @@ Route::post('/language', array(
 
 Route::group(['middleware' => 'auth'], function() {
     //vistas para las que es necesario estar autentificado
+    
+    Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
+    
+    
 });
 
 Auth::routes();

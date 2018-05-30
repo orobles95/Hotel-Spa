@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mi Perfil</title>
+        <title>Hotel-Spa Miramar</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url('/css/hotel_Spa.css') }}" rel="stylesheet">
         <!-- Fonts and Fontawesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Arapey|IM+Fell+French+Canon+SC|Poppins" rel="stylesheet">
 
     </head>
     <body>
-        <section>
+        <header>
             <div class="container">
-
                 <div class="row align-items-center">
                     <div class="col-5">
                         <a href="{{ url('/') }}">
@@ -80,8 +79,11 @@
                         </div>
                     </div>
                 </div>
-                <!--</div>-->
-                <!--<div class="container">-->
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
                 <div class="row justify-content-center" style="margin-top: 50px;">
                     <div class="col-12">
                         <div class="card">
@@ -105,9 +107,9 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
+
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>
