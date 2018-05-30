@@ -2,27 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Auth;
+use App\Admin;
 
-class AdminController extends Controller
-{
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
+class AdminController extends Controller {
+
+    public function __construct() {
         $this->middleware('auth:admin');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('admin');
+    public function index() {
+        $admin = Admin::where('email', Auth::user()->email)->first();
+
+        return view('admin')->with('admin', $admin);
     }
+
 }
