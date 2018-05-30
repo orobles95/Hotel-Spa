@@ -50,8 +50,15 @@ Route::post('/language', array(
 
 Route::group(['middleware' => 'auth'], function() {
     //vistas para las que es necesario estar autentificado
-    
-    Route::get('reservahabitacion/{id}', 'ReservaController@getShow')->name('catalog.show');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
+
+
+Route::get('reservahabitacion/{id}', 'ReservaController@getShow')->name('catalog.show');
 
 Route::post('reservahabitacion/{id}', 'ReservaController@postCreate')->name('catalog.create');
 
@@ -69,14 +76,5 @@ Route::post('reservaspa/{id}', 'ReservaController@postCreatespa')->name('catalog
 Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->name('catalog.show');
 
 Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
-  
-    
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-Route::get('/admin', 'AdminController@index');
-
 
 

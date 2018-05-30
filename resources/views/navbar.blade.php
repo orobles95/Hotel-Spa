@@ -32,12 +32,6 @@
                             </a>
                         </li>
                         <li class="int-box nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
-                                <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
-                            </a>
-                        </li>
-                        <li class="int-box nav-item">
                             <form action="language" method="post">
                                 {{ csrf_field() }}
                                 @if (App::getLocale() == 'es')
