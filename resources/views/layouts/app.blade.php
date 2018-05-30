@@ -28,70 +28,70 @@
     <body>
 
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row align-items-center">
                 <div class="col-5">
                     <a href="{{ url('/') }}">
                         <img src="images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
                     </a>
                 </div>
-                <div class="col-5 align-self-center">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
-                            <a class="navbar-brand" href="#"></a>
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
+                <div class="col-7">
+                    <div class="row justify-content-end">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
+                                <a class="navbar-brand" href="#"></a>
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
 
-                                @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                                @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                    @guest
+                                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                    @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                    @endguest
+                                    <li class="nav-item cambio_idioma_nav">
+                                        <form action="language" method="post">
+                                            {{ csrf_field() }}
+                                            @if (App::getLocale() == 'es')
+                                            <img src="images/ico-bandera-esp.png" class="img-fluid">
+                                            @else
+                                            <img src="images/ico-bandera-eng.png" class="img-fluid">
+                                            @endif
+                                            <select id="idioma" onchange="this.form.submit()" name="locale">
+                                                <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
+                                                <option  value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
+                                            </select>
                                         </form>
-                                    </div>
-                                </li>
-                                @endguest
-                                <li class="nav-item cambio_idioma_nav">
-                                    <form action="language" method="post">
-                                        {{ csrf_field() }}
-                                        <select onchange="this.form.submit()" name="locale">
-                                            <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
-                                            <option  value="es" {{ App::getLocale() == 'es' ? ' selected' : '' }}>Español</option>
-                                        </select>
-                                        @if (App::getLocale() == 'es')
-                                        <div class="btn-bandera-esp"></div>
-                                        @else
-                                        <div class="btn-bandera-eng"></div>
-                                        @endif
-
-                                    </form>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
             </div>
+
+
+            <main class="py-4">
+                @yield('content')
+            </main>
         </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+        @include('footer')
 
-    @include('footer')
-
-</body>
+    </body>
 </html>
