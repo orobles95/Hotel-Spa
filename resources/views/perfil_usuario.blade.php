@@ -10,7 +10,7 @@
 </a>
 
 <div class="modal modal_socios fade" tabindex="-1" role="dialog" id="myModal">
-    <div id="modal_perfil_socios" class="modal-dialog modal_dialog_socios" role="document">
+    <div id="modal_perfil_socios" class="modal-dialog modal_dialog_socios modal-lg" role="document">
         <div class="modal-content modal_content_socios">
             <form id="formEditarUsuario" name="formEditarUsuario" class="form-horizontal" method="POST" action="{{ url('/editaUsuario') }}">
                 <div class="controls">

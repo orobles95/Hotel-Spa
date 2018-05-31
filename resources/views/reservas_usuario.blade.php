@@ -10,7 +10,7 @@
 </a>
 
 <div class="modal modal_socios fade" tabindex="-1" role="dialog" id="myModal_2">
-    <div id="modal_reservas_socios" class="modal-dialog modal_dialog_socios" role="document">
+    <div id="modal_reservas_socios" class="modal-dialog modal_dialog_socios modal-lg" role="document">
         <div class="modal-content modal_content">
             <form id="formReservas" name="formReservas" class="form-horizontal" method="POST" action="{{ url('/editGrup') }}">
                 <div class="controls">

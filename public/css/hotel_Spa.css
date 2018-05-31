@@ -36,6 +36,11 @@ input[type='number'] {
     vertical-align: middle;
 }
 
+.modal-lg {
+  width: 750px;
+  margin: auto;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -124,19 +129,11 @@ ul.ext-box {
 }
 
 li.int-box {
+    display: inline-block;
     vertical-align: middle;
 }
 
-.select_lang_nav {
-    height: 80px;
-    display: table;
-    text-align: center;
-}
 
-.select_lang_nav form {
-    display: table-cell;
-    vertical-align: middle;
-}
 
 /*.acceso a:link {
     font-family: arial;
