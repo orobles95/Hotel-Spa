@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Admin;
+use App\User;
 
 class AdminController extends Controller {
 
@@ -13,8 +14,10 @@ class AdminController extends Controller {
 
     public function index() {
         $admin = Admin::where('email', Auth::user()->email)->first();
+        
+        $users = User::all();
 
-        return view('admin')->with('admin', $admin);
+        return view('admin', compact('admin','users'));
     }
 
 }

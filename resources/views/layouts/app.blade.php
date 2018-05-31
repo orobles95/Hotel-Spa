@@ -31,7 +31,7 @@
             <div class="row align-items-center">
                 <div class="col-5">
                     <a href="{{ url('/') }}">
-                        <img src="images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
+                        <img src="../images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
                     </a>
                 </div>
                 <div class="col-7">
@@ -74,9 +74,9 @@
                                         <form action="language" method="post">
                                             {{ csrf_field() }}
                                             @if (App::getLocale() == 'es')
-                                            <img src="images/ico-bandera-esp.png" class="img-fluid">
+                                            <img src="../../../public/images/ico-bandera-esp.png" class="img-fluid">
                                             @else
-                                            <img src="images/ico-bandera-eng.png" class="img-fluid">
+                                            <img src="../../../public/images/ico-bandera-eng.png" class="img-fluid">
                                             @endif
                                             <select id="idioma" onchange="this.form.submit()" name="locale">
                                                 <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>

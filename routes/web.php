@@ -52,11 +52,13 @@ Route::group(['middleware' => 'auth'], function() {
     //vistas para las que es necesario estar autentificado
 
     Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
+    
+    Route::put('/editaAdmin', 'EditaAdminController@editaAdmin');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

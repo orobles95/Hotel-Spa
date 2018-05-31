@@ -3,6 +3,15 @@ body {
     overflow-y: scroll;
 }
 
+.carddd {
+    margin-top: 60px; 
+    margin-bottom: 268px;
+}
+
+.margin_top {
+    margin-top: 50px;
+}
+
 /*elimina flechas de input type=number*/
 /* Safari and Chrome */
 input[type=number]::-webkit-inner-spin-button,
@@ -36,13 +45,9 @@ input[type='number'] {
     vertical-align: middle;
 }
 
-.modal-lg {
-  width: 750px;
-  margin: auto;
-}
-
-* {
-    box-sizing: border-box;
+.modal_content_admin {
+    width: 1000px;
+    margin-left: -50%;
 }
 
 #perfilBtn :hover{

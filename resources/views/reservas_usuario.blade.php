@@ -28,7 +28,7 @@
                                 <th style="text-align: center;">Tipo reserva</th>
                                 <th style="text-align: center;">Info reserva</th>
                                 <th style="text-align: center;">Fecha entrada</th>  
-                                <th style="text-align: center;">Fecha salida / hora</th> 
+                                <th style="text-align: center;">Fecha salida | Hora</th> 
                                 <th style="text-align: center;">Opciones</th> 
                             </tr>
                         </thead>
@@ -49,9 +49,7 @@
                                     {{ $reserva_hab->fechasalida }}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger">
-                                        <span class="fa fa-trash"></span> Cancelar reserva
-                                    </button>
+                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
                                 </td>
                             </tr>
                             @endif
@@ -73,7 +71,7 @@
                                     {{ $reserva_rest->hora }}
                                 </td>
                                 <td>
-
+                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
                                 </td>
                             </tr>
                             @endif
@@ -95,7 +93,7 @@
                                     {{ $reserva_spa->hora }}
                                 </td>
                                 <td>
-
+                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
                                 </td>
                             </tr>
                             @endif
@@ -117,7 +115,7 @@
                                     {{ $reserva_trat->hora }}
                                 </td>
                                 <td>
-
+                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
                                 </td>
                             </tr>
                             @endif
@@ -125,7 +123,6 @@
                         </tbody>
                     </table>
                     <div class="modal-footer modal_footer_socios" style="text-align: center;">
-                        <button type="submit" class="btn btn-success" id="modalAceptar" style="margin-right: 25%;">Guardar</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>

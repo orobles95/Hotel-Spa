@@ -33,26 +33,24 @@
                                 <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                                     <a class="navbar-brand" href="#"></a>
                                     <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
-                                        <li class="int-box nav-item">
-                                            <a class="nav-link" href="home">
-                                                <div class="row align-items-center">
-                                                    <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
-                                                    @if (Auth::check())
-                                                    <div>
-                                                        <span>Bienvenido/a <strong name="nomUsuari">{{ Auth::user()->name }}</strong> </span>
-                                                        <form action="{{ url('/logout') }}" method="POST" style="display:inline">
-                                                            {{ csrf_field() }}
-                                                            <!--<button type="submit" class="btn btn-danger" style="display:inline;cursor:pointer">-->
-                                                            <button type="submit" class="btn btn-danger">
-                                                                Cerrar sesión
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                    @else
-                                                    <span >{{ trans('nav.accesosDirectos_socios') }}</span>
-                                                    @endif
-                                                </div>
+                                        <li class="int-box  nav-item dropdown">
+
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                <img src="images/ico-socios.png" alt="Zona Socios">{{ Auth::user()->name }} <span class="caret"></span>
                                             </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="home">
+                                                    {{ __('Home') }}
+                                                </a>
+                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
                                         </li>
                                         <!--<li class="int-box nav-item">
                                             <a class="nav-link" href="#">
@@ -85,14 +83,14 @@
 
         <section>
             <div class="container">
-                <div class="row justify-content-center" style="margin-top: 50px;">
+                <div class="row justify-content-center margin_top">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
                                 <strong>Tablero de usuario (User dashboard)</strong>
                             </div>
                             <div class="card-body">
-                                <div class="row justify-content-center" style="margin-top: 50px;">
+                                <div class="row justify-content-center">
 
                                     <div class="col-6">
                                         @include('perfil_usuario')

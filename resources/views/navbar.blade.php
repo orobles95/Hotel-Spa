@@ -14,33 +14,43 @@
                     <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                         <a class="navbar-brand" href="#"></a>
                         <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
+                            <!--
                             <li class="int-box nav-item">
-                                <a class="nav-link" href="home">
-                                    <div class="row align-items-center">
-                                        <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
-                                        @if (Auth::check())
-                                        <div>
-                                            <span>Bienvenido/a <strong name="nomUsuari">{{ Auth::user()->name }}</strong> </span>
-                                            <form action="{{ url('/logout') }}" method="POST" style="display:inline">
-                                                {{ csrf_field() }}
-                                                <!--<button type="submit" class="btn btn-danger" style="display:inline;cursor:pointer">-->
-                                                <button type="submit" class="btn btn-danger">
-                                                    Cerrar sesión
-                                                </button>
-                                            </form>
-                                        </div>
-                                        @else
-                                        <span >{{ trans('nav.accesosDirectos_socios') }}</span>
-                                        @endif
-                                    </div>
-                                </a>
-                            </li>
-                            <!--<li class="int-box nav-item">
                                 <a class="nav-link" href="#">
                                     <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
                                     <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
                                 </a>
                             </li>-->
+
+                            <li class="int-box  nav-item dropdown">
+                                @if (Auth::check())
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img src="images/ico-socios.png" alt="Zona Socios">{{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                        {{ __('Home') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                                @else
+                                <a class="nav-link" href="home">
+                                    <div class="row align-items-center">
+                                        <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
+                                        <span >{{ trans('nav.accesosDirectos_socios') }}</span>
+                                    </div>
+                                </a>
+                                @endif
+                            </li>
+
+
                             <li class="int-box nav-item select_lang_nav">
                                 <form action="language" method="post">
                                     {{ csrf_field() }}
