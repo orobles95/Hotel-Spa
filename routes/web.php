@@ -41,6 +41,10 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/notificaciones', function () {
+    return view('notificaciones');
+});
+
 //Route::get('/change_lang/{lang}', 'LangController@changeLang');
 
 Route::post('/language', array(
