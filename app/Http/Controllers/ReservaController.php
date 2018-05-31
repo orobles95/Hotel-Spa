@@ -12,6 +12,7 @@ use App\Tratamiento;
 use App\Reservastratamiento;
 use Auth;
 use Illuminate\Http\Request;
+use Krucas\Notification\Facades\Notification;
 
 class ReservaController extends Controller {
 
@@ -55,11 +56,14 @@ class ReservaController extends Controller {
 
             $p->save();
 
-            return redirect('/habitaciones');
+            Notification::success("La habitación se ha reservado correctamente.");
+            //return redirect('notificaciones');
+            return back();
         }
 
-
-        return redirect('/habitaciones');
+        Notification::error("Error!!! Esta habitación ya esta reservada para estas fechas.");
+        //return redirect('notificaciones');
+        return back();
     }
 
     public function getShowrestaurante($id) {
@@ -81,22 +85,23 @@ class ReservaController extends Controller {
         $p->comensales = $comensales;
         $p->hora = $hora;
         if (Auth::check()) {
-                $p->client_email = Auth::user()->email;
-                $p->card_number = Auth::user()->card_number;
-                $p->holder_card = Auth::user()->holder_card;
-                $p->secretNumber_card = Auth::user()->secretNumber_card;
-                $p->expDate_card = Auth::user()->expDate_card;
-            } else {
-                $p->card_number = $request->card_number;
-                $p->client_email = 'Usuario no registrado';
-                $p->holder_card = $request->holder_card;
-                $p->secretNumber_card = $request->secretNumber_card;
-                $p->expDate_card = $request->expDate_card;
-            }
+            $p->client_email = Auth::user()->email;
+            $p->card_number = Auth::user()->card_number;
+            $p->holder_card = Auth::user()->holder_card;
+            $p->secretNumber_card = Auth::user()->secretNumber_card;
+            $p->expDate_card = Auth::user()->expDate_card;
+        } else {
+            $p->card_number = $request->card_number;
+            $p->client_email = 'Usuario no registrado';
+            $p->holder_card = $request->holder_card;
+            $p->secretNumber_card = $request->secretNumber_card;
+            $p->expDate_card = $request->expDate_card;
+        }
 
         $p->save();
 
-        return redirect('/restaurante');
+        //return redirect('/restaurante');
+        return back();
     }
 
     public function getShowspa($id) {
@@ -118,22 +123,23 @@ class ReservaController extends Controller {
         $p->personas = $personas;
         $p->hora = $hora;
         if (Auth::check()) {
-                $p->client_email = Auth::user()->email;
-                $p->card_number = Auth::user()->card_number;
-                $p->holder_card = Auth::user()->holder_card;
-                $p->secretNumber_card = Auth::user()->secretNumber_card;
-                $p->expDate_card = Auth::user()->expDate_card;
-            } else {
-                $p->card_number = $request->card_number;
-                $p->client_email = 'Usuario no registrado';
-                $p->holder_card = $request->holder_card;
-                $p->secretNumber_card = $request->secretNumber_card;
-                $p->expDate_card = $request->expDate_card;
-            }
+            $p->client_email = Auth::user()->email;
+            $p->card_number = Auth::user()->card_number;
+            $p->holder_card = Auth::user()->holder_card;
+            $p->secretNumber_card = Auth::user()->secretNumber_card;
+            $p->expDate_card = Auth::user()->expDate_card;
+        } else {
+            $p->card_number = $request->card_number;
+            $p->client_email = 'Usuario no registrado';
+            $p->holder_card = $request->holder_card;
+            $p->secretNumber_card = $request->secretNumber_card;
+            $p->expDate_card = $request->expDate_card;
+        }
 
         $p->save();
 
-        return redirect('/spa');
+        //return redirect('/spa');
+        return back();
     }
 
     public function getShowtratamiento($id) {
@@ -153,22 +159,23 @@ class ReservaController extends Controller {
         $p->fechaentrada = $fechaentrada;
         $p->hora = $hora;
         if (Auth::check()) {
-                $p->client_email = Auth::user()->email;
-                $p->card_number = Auth::user()->card_number;
-                $p->holder_card = Auth::user()->holder_card;
-                $p->secretNumber_card = Auth::user()->secretNumber_card;
-                $p->expDate_card = Auth::user()->expDate_card;
-            } else {
-                $p->card_number = $request->card_number;
-                $p->client_email = 'Usuario no registrado';
-                $p->holder_card = $request->holder_card;
-                $p->secretNumber_card = $request->secretNumber_card;
-                $p->expDate_card = $request->expDate_card;
-            }
+            $p->client_email = Auth::user()->email;
+            $p->card_number = Auth::user()->card_number;
+            $p->holder_card = Auth::user()->holder_card;
+            $p->secretNumber_card = Auth::user()->secretNumber_card;
+            $p->expDate_card = Auth::user()->expDate_card;
+        } else {
+            $p->card_number = $request->card_number;
+            $p->client_email = 'Usuario no registrado';
+            $p->holder_card = $request->holder_card;
+            $p->secretNumber_card = $request->secretNumber_card;
+            $p->expDate_card = $request->expDate_card;
+        }
 
         $p->save();
 
-        return redirect('/tratamientos');
+        //return redirect('/tratamientos');
+        return back();
     }
 
 }

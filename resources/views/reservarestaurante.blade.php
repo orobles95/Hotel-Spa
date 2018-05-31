@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="panel-body" style="padding:30px">
-
+                        <div>{!! Notification::showAll() !!}</div>
                         <form action="#" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
@@ -117,10 +117,10 @@
 <script type="text/javascript" src="{{ url('/js/hotelSpa.js') }}"></script>
 
 
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>       
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 <script>
 
-$(function () {
+$(function() {
     $("#fecha").datepicker();
 });
 
@@ -143,7 +143,7 @@ $.datepicker.regional['es'] = {
     yearSuffix: ''
 };
 $.datepicker.setDefaults($.datepicker.regional['es']);
-$(function () {
+$(function() {
     $("#llegada").datepicker();
 });
 $.datepicker.regional['es'] = {
@@ -164,7 +164,7 @@ $.datepicker.regional['es'] = {
     yearSuffix: ''
 };
 $.datepicker.setDefaults($.datepicker.regional['es']);
-$(function () {
+$(function() {
     $("#salida").datepicker();
 });
 </script>
