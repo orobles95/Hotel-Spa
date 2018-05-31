@@ -36,6 +36,11 @@ input[type='number'] {
     vertical-align: middle;
 }
 
+.modal-lg {
+  width: 750px;
+  margin: auto;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -124,10 +129,11 @@ ul.ext-box {
 }
 
 li.int-box {
-    /*display: table-cell;*/
     display: inline-block;
     vertical-align: middle;
 }
+
+
 
 /*.acceso a:link {
     font-family: arial;

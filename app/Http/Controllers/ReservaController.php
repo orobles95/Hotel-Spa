@@ -37,13 +37,20 @@ class ReservaController extends Controller {
 
             $p = new Reserva;
             $p->room = $room;
-            $p->client_email = Auth::user()->email;
             $p->fechaentrada = $fechaentrada;
             $p->fechasalida = $fechasalida;
             if (Auth::check()) {
+                $p->client_email = Auth::user()->email;
                 $p->card_number = Auth::user()->card_number;
+                $p->holder_card = Auth::user()->holder_card;
+                $p->secretNumber_card = Auth::user()->secretNumber_card;
+                $p->expDate_card = Auth::user()->expDate_card;
             } else {
                 $p->card_number = $request->card_number;
+                $p->client_email = 'Usuario no registrado';
+                $p->holder_card = $request->holder_card;
+                $p->secretNumber_card = $request->secretNumber_card;
+                $p->expDate_card = $request->expDate_card;
             }
 
             $p->save();
@@ -70,15 +77,22 @@ class ReservaController extends Controller {
 
         $p = new Reservasrestaurant;
         $p->restaurant = $restaurant;
-        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->comensales = $comensales;
         $p->hora = $hora;
         if (Auth::check()) {
-            $p->card_number = Auth::user()->card_number;
-        } else {
-            $p->card_number = $request->card_number;
-        }
+                $p->client_email = Auth::user()->email;
+                $p->card_number = Auth::user()->card_number;
+                $p->holder_card = Auth::user()->holder_card;
+                $p->secretNumber_card = Auth::user()->secretNumber_card;
+                $p->expDate_card = Auth::user()->expDate_card;
+            } else {
+                $p->card_number = $request->card_number;
+                $p->client_email = 'Usuario no registrado';
+                $p->holder_card = $request->holder_card;
+                $p->secretNumber_card = $request->secretNumber_card;
+                $p->expDate_card = $request->expDate_card;
+            }
 
         $p->save();
 
@@ -100,15 +114,22 @@ class ReservaController extends Controller {
 
         $p = new Reservasspa;
         $p->spa = $spa;
-        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->personas = $personas;
         $p->hora = $hora;
         if (Auth::check()) {
-            $p->card_number = Auth::user()->card_number;
-        } else {
-            $p->card_number = $request->card_number;
-        }
+                $p->client_email = Auth::user()->email;
+                $p->card_number = Auth::user()->card_number;
+                $p->holder_card = Auth::user()->holder_card;
+                $p->secretNumber_card = Auth::user()->secretNumber_card;
+                $p->expDate_card = Auth::user()->expDate_card;
+            } else {
+                $p->card_number = $request->card_number;
+                $p->client_email = 'Usuario no registrado';
+                $p->holder_card = $request->holder_card;
+                $p->secretNumber_card = $request->secretNumber_card;
+                $p->expDate_card = $request->expDate_card;
+            }
 
         $p->save();
 
@@ -129,14 +150,21 @@ class ReservaController extends Controller {
 
         $p = new Reservastratamiento;
         $p->tratamiento = $tratamiento;
-        $p->client_email = Auth::user()->email;
         $p->fechaentrada = $fechaentrada;
         $p->hora = $hora;
         if (Auth::check()) {
-            $p->card_number = Auth::user()->card_number;
-        } else {
-            $p->card_number = $request->card_number;
-        }
+                $p->client_email = Auth::user()->email;
+                $p->card_number = Auth::user()->card_number;
+                $p->holder_card = Auth::user()->holder_card;
+                $p->secretNumber_card = Auth::user()->secretNumber_card;
+                $p->expDate_card = Auth::user()->expDate_card;
+            } else {
+                $p->card_number = $request->card_number;
+                $p->client_email = 'Usuario no registrado';
+                $p->holder_card = $request->holder_card;
+                $p->secretNumber_card = $request->secretNumber_card;
+                $p->expDate_card = $request->expDate_card;
+            }
 
         $p->save();
 

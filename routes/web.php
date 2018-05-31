@@ -50,16 +50,20 @@ Route::post('/language', array(
 
 Route::group(['middleware' => 'auth'], function() {
     //vistas para las que es necesario estar autentificado
-    
+
     Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
-    
-    
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/admin', 'AdminController@index');
+
+Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+
 
 
 Route::get('reservahabitacion/{id}', 'ReservaController@getShow')->name('catalog.show');

@@ -45,6 +45,12 @@
                                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
 
                                     @guest
+                                    @if (auth('admin')->check())
+                                    <li><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin area') }}</a></li>
+                                    @else
+                                    <li><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
+                                    @endif
+
                                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                                     <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                     @else
@@ -91,7 +97,6 @@
             </main>
         </div>
 
-        @include('footer')
 
     </body>
 </html>
