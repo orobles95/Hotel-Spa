@@ -41,7 +41,7 @@
                                     <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
                                 </a>
                             </li>-->
-                            <li class="int-box nav-item">
+                            <li class="int-box nav-item select_lang_nav">
                                 <form action="language" method="post">
                                     {{ csrf_field() }}
                                     @if (App::getLocale() == 'es')

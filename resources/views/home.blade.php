@@ -9,6 +9,8 @@
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url('/css/hotel_Spa.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
         <!-- Fonts and Fontawesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Arapey|IM+Fell+French+Canon+SC|Poppins" rel="stylesheet">
@@ -59,7 +61,7 @@
                                                 <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
                                             </a>
                                         </li>-->
-                                        <li class="int-box nav-item">
+                                        <li class="int-box nav-item select_lang_nav">
                                             <form action="language" method="post">
                                                 {{ csrf_field() }}
                                                 @if (App::getLocale() == 'es')

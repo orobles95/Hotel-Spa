@@ -124,8 +124,17 @@ ul.ext-box {
 }
 
 li.int-box {
-    /*display: table-cell;*/
-    display: inline-block;
+    vertical-align: middle;
+}
+
+.select_lang_nav {
+    height: 80px;
+    display: table;
+    text-align: center;
+}
+
+.select_lang_nav form {
+    display: table-cell;
     vertical-align: middle;
 }
 
