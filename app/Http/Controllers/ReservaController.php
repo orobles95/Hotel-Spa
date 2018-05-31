@@ -37,13 +37,15 @@ class ReservaController extends Controller {
 
             $p = new Reserva;
             $p->room = $room;
-            $p->client_email = Auth::user()->email;
+            
             $p->fechaentrada = $fechaentrada;
             $p->fechasalida = $fechasalida;
             if (Auth::check()) {
+                $p->client_email = Auth::user()->email;
                 $p->card_number = Auth::user()->card_number;
             } else {
                 $p->card_number = $request->card_number;
+                $p->client_email = 'Usuario no registrado';
             }
 
             $p->save();
