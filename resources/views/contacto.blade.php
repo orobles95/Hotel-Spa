@@ -20,7 +20,7 @@
             <div class="header-img">
                 <img src="images/contactoHeader.jpg" class="img-fluid" alt="Contacto">
             </div>
-            <div class="texto-encabezado text-center">
+            <div class="texto-encabezado text-center margin_bottom">
                 <div class="container">
                     <h1 class="titulo_contacto">{{ trans('contacto.titulo_1') }}</h1>
                     <p class="subtitulo_contacto" >{{ trans('contacto.subtitulo_1') }}</p>
@@ -67,7 +67,6 @@
             </div>
         </section>
 
-        @include('subscribe')
 
         @include('footer')
 

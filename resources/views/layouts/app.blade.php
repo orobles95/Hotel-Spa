@@ -74,9 +74,9 @@
                                         <form action="language" method="post">
                                             {{ csrf_field() }}
                                             @if (App::getLocale() == 'es')
-                                            <img src="../../../public/images/ico-bandera-esp.png" class="img-fluid">
+                                            <img src="../images/ico-bandera-esp.png" class="img-fluid">
                                             @else
-                                            <img src="../../../public/images/ico-bandera-eng.png" class="img-fluid">
+                                            <img src="../images/ico-bandera-eng.png" class="img-fluid">
                                             @endif
                                             <select id="idioma" onchange="this.form.submit()" name="locale">
                                                 <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>

@@ -51,11 +51,11 @@ input[type='number'] {
 }
 
 #perfilBtn :hover{
-    background: #0080ff;
+    background: #b7e7f0;
 }
 
 #reservasBtn :hover{
-    background: #0080ff;
+    background: #b7e7f0;
 }
 
 .modal_header_socios {
@@ -211,7 +211,7 @@ li.int-box {
     padding: 3vw;
 }
 .hab-img {
-    width: 70%;
+    /*width: 70%;*/
     position: relative;
     padding: 0.6vw;
     border: 0.1vw solid #b79061;
@@ -292,7 +292,7 @@ li.int-box {
     position: absolute;
 }
 .rest-img {
-    width: 70%;
+    /*width: 70%;*/
     position: relative;
     padding: 0.6vw;
     border: 0.1vw solid #866189;
@@ -312,7 +312,7 @@ li.int-box {
     position: absolute;
 }
 .spa-img {
-    width: 70%;
+    /*width: 70%;*/
     position: relative;
     padding: 0.6vw;
     border: 0.1vw solid #6d93e1;
@@ -332,7 +332,7 @@ li.int-box {
     position: absolute;
 }
 .trata-img {
-    width: 70%;
+    /*width: 70%;*/
     position: relative;
     padding: 0.6vw;
     border: 0.1vw solid #69b3a1;
@@ -511,4 +511,8 @@ p {
 
 #textarea{
     resize: none;
+}
+
+.margin_bottom {
+    margin-bottom: 100px;
 }
