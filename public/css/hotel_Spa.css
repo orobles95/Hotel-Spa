@@ -4,7 +4,7 @@ body {
 }
 
 .carddd {
-    margin-top: 60px; 
+    margin-top: 60px;
     margin-bottom: 268px;
 }
 
@@ -515,4 +515,59 @@ p {
 
 .margin_bottom {
     margin-bottom: 100px;
+}
+
+/***************** Modales admin **********************************/
+
+.darkColor {
+    background-color: #666;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#containerUser {
+    width: 40vw;
+    margin: 50px auto;
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);
+}
+
+.controls {
+    padding: 1vw;
+}
+
+#containerUsuarios {
+    margin: 1vw auto;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 100%;
+    height: 40vh;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.rowTitulo {
+    padding: 18px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.2vw;
+    color: #333;
+}
+
+.rowRegistro {
+    padding: 5px 50px;
+    font-family: Arial;
+    font-size: 0.9vw;
+    color: #666;
+    border-top: 1px solid #ccc;
+    line-height: 30px;
+}
+
+.divAccions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
