@@ -28,17 +28,18 @@
                 </a>
             </div>
         </div>
+        <div>{!! Notification::showAll() !!}</div>
         <div class="row marco">
-            <form>
+            <form id="formSuscribe" name="formSuscribe" method="POST" action="{{ url('/suscribe') }}">
                 <div class="row">
                     <div class="col-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputNombre') }}">
+                        <input type="text" id="suscribeNombre" name="suscribeNombre" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputNombre') }}">
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputApellidos') }}">
+                        <input type="text" id="suscribeApellidos" name="suscribeApellidos" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputApellidos') }}">
                     </div>
                     <div class="col-4">
-                        <input type="text" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputEmail') }}">
+                        <input type="text" id="suscribeEmail" name="suscribeEmail" class="form-control form-control-sm" placeholder="{{ trans('suscribe.inputEmail') }}">
                     </div>
                     <div class="col-1">
                         <button type="submit">{{ trans('suscribe.enviarBtn') }}</button>

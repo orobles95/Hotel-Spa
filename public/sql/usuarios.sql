@@ -1,9 +1,10 @@
 
 
 DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS suscritos;
 
 CREATE TABLE IF NOT EXISTS clientes (
-    idCliente INT(5) PRIMARY KEY,
+    idCliente INT(5) PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     apellidos VARCHAR(150) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
@@ -15,3 +16,9 @@ CREATE TABLE IF NOT EXISTS clientes (
 ) engine=InnoDB;
 
 
+CREATE TABLE IF NOT EXISTS suscritos (
+    idSuscrito INT(5) PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL
+) engine=InnoDB;

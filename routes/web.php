@@ -101,3 +101,6 @@ Route::post('/editUser', 'editarUsuarioController@modificarUsuari');
 
 Route::get('/eliminarUsuario', 'eliminarUsuarioController@mostraUsuari');
 Route::post('/delUser', 'eliminarUsuarioController@eliminarUsuari');
+
+//Route::get('/suscribete', 'suscribeController@getIndex');
+Route::post('/suscribe', 'suscribeController@afegirSuscriptor');
