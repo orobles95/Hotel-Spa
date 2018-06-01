@@ -52,7 +52,7 @@
                                             </a>
                                         </li>
                                         -->
-                                        <!-- USER LOGIN   
+                                        <!-- USER LOGIN
                                         <li>
                                             <a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a>
                                         </li>
@@ -79,7 +79,7 @@
                                                 </form>
                                             </div>
                                         </li>
-                                        
+
                                         <li class="int-box nav-item">
                                             <a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a>
                                         </li>
@@ -124,7 +124,16 @@
                                     </div>
 
                                     <div class="col-6">
-                                        @include('adminUsers_admin')
+                                        <a id="reservasBtn" style="cursor: pointer;">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4><i class="fas fa-bed"></i> Administrar Usuarios</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p>Administrar usuarios de la página web.</p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
 
                                 </div>
@@ -132,15 +141,21 @@
                         </div>
                     </div>
                 </div>
+                <div>{!! Notification::showAll() !!}</div>
+                @include('mostrarUsuarios')
+                @include('crearUsuario')
+                @include('editarUsuario')
+                @include('eliminarUsuario')
             </div>
         </section>
 
 
-
+        <script src="{{ url('/js/jquery.min.js') }}"></script>
+        <script src="{{ url('/js/bootstrap.min.js') }}"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>
 
-        <!-- jquery 
+        <!-- jquery
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 
         <script src="{{ url('/js/bootstrap.min.js') }}"></script>

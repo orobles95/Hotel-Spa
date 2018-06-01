@@ -56,7 +56,7 @@ Route::group(['middleware' => 'auth'], function() {
     //vistas para las que es necesario estar autentificado
 
     Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
-    
+
     Route::put('/editaAdmin', 'EditaAdminController@editaAdmin');
 });
 
@@ -92,3 +92,12 @@ Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->
 Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
 
 
+
+Route::get('/crearUsuario', 'crearUsuarioController@getIndex');
+Route::post('/newUser', 'crearUsuarioController@afegirUsuari');
+
+Route::get('/modificarUsuario', 'editarUsuarioController@mostraUsuari');
+Route::post('/editUser', 'editarUsuarioController@modificarUsuari');
+
+Route::get('/eliminarUsuario', 'eliminarUsuarioController@mostraUsuari');
+Route::post('/delUser', 'eliminarUsuarioController@eliminarUsuari');
