@@ -69,7 +69,9 @@ Route::put('/editaAdmin', 'EditaAdminController@editaAdmin');
 
 Route::put('/newUser', 'crearUsuarioController@afegirUsuari');
 
+Route::put('/editUser', 'editarUsuarioController@modificarUsuari');
 
+Route::put('/delUser', 'eliminarUsuarioController@eliminarUsuari');
 
 
 
@@ -97,12 +99,12 @@ Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento
 /*
 Route::get('/crearUsuario', 'crearUsuarioController@getIndex');
 Route::post('/newUser', 'crearUsuarioController@afegirUsuari');
-*/
+
 Route::get('/modificarUsuario', 'editarUsuarioController@mostraUsuari');
 Route::post('/editUser', 'editarUsuarioController@modificarUsuari');
 
 Route::get('/eliminarUsuario', 'eliminarUsuarioController@mostraUsuari');
 Route::post('/delUser', 'eliminarUsuarioController@eliminarUsuari');
-
+*/
 //Route::get('/suscribete', 'suscribeController@getIndex');
 Route::post('/suscribe', 'suscribeController@afegirSuscriptor');

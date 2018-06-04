@@ -7,6 +7,9 @@ $('#reservasBtn').click(function () {
     $('#containerUsuarios').css("display", "flex");
     $('#containerUsuarios').show();
 });
+
+
+
 /*
 var urlNew = "http://localhost/Hotel-Spa/public/crearUsuario";
 var urlEdit = "http://localhost/Hotel-Spa/public/modificarUsuario?id=";
@@ -77,25 +80,14 @@ $("button[name='modalButtonDelete']").click(function () {
             });
 });
 */
-$('#cancelaReservaBtn').on('click', function () {
-    $('#modal_cancelar_reserva').modal('show');
-});
-
-
 function cancelaReserva(t) {
-
+    
+    $('#modal_cancelar_reserva').modal('show');
+    
     var idReserva = $(t).parent().parent().children('.tipo_reserva').children('.idReserva').val();
-    console.log(idReserva);
-    //si existe input hidden idGrupEliminar lo elimina
-    $('#idcancelaReserva').remove();
 
-    //coge nombre grupo y añade a modal-body de eliminar
     var tipoReserva = $(t).parent().parent().children('.tipo_reserva').children('.tipoReserva').val();
-    console.log(tipoReserva);
-    //asigna nombre
-    $('#tipocancelaReserva').remove();
 
-    //creamos y añadimos id del grup modificat a un input oculto para recogerlo en el controlador
     var modal_cancelaReserva = $('#modal_cancelar_reserva').children([0]).children([0]).children([0]).children('.modal-body').children('form');
     input_idReserva = jQuery('<input type="hidden" id="idcancelaReserva" name="idcancelaReserva" value="' + idReserva + '">');
     modal_cancelaReserva.append(input_idReserva);
@@ -108,3 +100,20 @@ function borrarcancelaReserva(t) {
     $(t).parent().parent().children('#idcancelaReserva').remove();
     $(t).parent().parent().children('#tipocancelaReserva').remove();
 }
+
+function eliminarUsuario(t) {
+    
+    $('#modal_eliminar_usuario').modal('show');
+
+    var idUsuario = $(t).parent().parent().children('.nom_usuario').children('.idUsuario').val();
+    console.log(idUsuario);
+
+    var modal_eliminar_usuario = $('#modal_eliminar_usuario').children([0]).children([0]).children([0]).children('.modal-body').children('form');
+    input_idUsuario = jQuery('<input type="hidden" id="ideliminaUsuario" name="ideliminaUsuario" value="' + idUsuario + '">');
+    modal_eliminar_usuario.append(input_idUsuario);
+}
+
+function borrareliminarUsuario(t) {
+    $(t).parent().parent().children('#ideliminaUsuario').remove();
+}
+

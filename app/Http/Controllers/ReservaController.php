@@ -44,13 +44,11 @@ class ReservaController extends Controller {
                 $p->client_email = Auth::user()->email;
                 $p->card_number = Auth::user()->card_number;
                 $p->holder_card = Auth::user()->holder_card;
-                $p->secretNumber_card = Auth::user()->secretNumber_card;
                 $p->expDate_card = Auth::user()->expDate_card;
             } else {
                 $p->card_number = $request->card_number;
                 $p->client_email = 'Usuario no registrado';
                 $p->holder_card = $request->holder_card;
-                $p->secretNumber_card = $request->secretNumber_card;
                 $p->expDate_card = $request->expDate_card;
             }
 
@@ -88,13 +86,11 @@ class ReservaController extends Controller {
             $p->client_email = Auth::user()->email;
             $p->card_number = Auth::user()->card_number;
             $p->holder_card = Auth::user()->holder_card;
-            $p->secretNumber_card = Auth::user()->secretNumber_card;
             $p->expDate_card = Auth::user()->expDate_card;
         } else {
             $p->card_number = $request->card_number;
             $p->client_email = 'Usuario no registrado';
             $p->holder_card = $request->holder_card;
-            $p->secretNumber_card = $request->secretNumber_card;
             $p->expDate_card = $request->expDate_card;
         }
 
@@ -126,13 +122,11 @@ class ReservaController extends Controller {
             $p->client_email = Auth::user()->email;
             $p->card_number = Auth::user()->card_number;
             $p->holder_card = Auth::user()->holder_card;
-            $p->secretNumber_card = Auth::user()->secretNumber_card;
             $p->expDate_card = Auth::user()->expDate_card;
         } else {
             $p->card_number = $request->card_number;
             $p->client_email = 'Usuario no registrado';
             $p->holder_card = $request->holder_card;
-            $p->secretNumber_card = $request->secretNumber_card;
             $p->expDate_card = $request->expDate_card;
         }
 
@@ -162,13 +156,11 @@ class ReservaController extends Controller {
             $p->client_email = Auth::user()->email;
             $p->card_number = Auth::user()->card_number;
             $p->holder_card = Auth::user()->holder_card;
-            $p->secretNumber_card = Auth::user()->secretNumber_card;
             $p->expDate_card = Auth::user()->expDate_card;
         } else {
             $p->card_number = $request->card_number;
             $p->client_email = 'Usuario no registrado';
             $p->holder_card = $request->holder_card;
-            $p->secretNumber_card = $request->secretNumber_card;
             $p->expDate_card = $request->expDate_card;
         }
 

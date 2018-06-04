@@ -37,7 +37,7 @@
                                 <label for="usuario_apellido">Apellido:</label>
                             </div>
                             <div class="col-8">
-                                <input type="text" style="width: 100%;" name="usuario_apellido" id="usuario_apellido" placeholder="Apellido" value="{{ $user->lastName }}" required />
+                                <input type="text" style="width: 100%;" name="usuario_apellido" id="usuario_apellido" minlength="2" placeholder="Apellido" value="{{ $user->lastName }}" required />
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -53,7 +53,7 @@
                                 <label for="usuario_telefono">Telefono:</label>
                             </div>
                             <div class="col-8">
-                                <input type="text" style="width: 100%;" name="usuario_telefono" id="usuario_telefono" placeholder="Telefono" value="{{ $user->phoneNumber }}" required />
+                                <input type="number" style="width: 100%;" name="usuario_telefono" id="usuario_telefono" min="111111111" max="999999999" placeholder="Telefono" value="{{ $user->phoneNumber }}" required />
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">

@@ -4,34 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Krucas\Notification\Facades\Notification;
-use Illuminate\Support\Facades\DB;
-use App\Cliente;
+use App\User;
 
 class eliminarUsuarioController extends Controller {
 
-    public function mostraUsuari() {
-
-        $id = $_GET['id'];
-        $usuari = DB::select("SELECT * FROM clientes WHERE idCliente = " . $id);
-
-        return $usuari;
-    }
-
     public function eliminarUsuari(Request $request) {
 
-        $id = $request->deleteidUsuario;
-        $user = Cliente::findOrFail($id);
+        $user = User::where('id', $request->ideliminaUsuario)->first();
 
         if ($user != null) {
 
             $user->delete();
 
             Notification::success("El usuario se ha eliminado correctamente.");
-            return redirect('admin');
         } else {
             Notification::error("Error!!! Este usuario no existe.");
-            return redirect('admin');
         }
+        return redirect('admin');
     }
 
 }

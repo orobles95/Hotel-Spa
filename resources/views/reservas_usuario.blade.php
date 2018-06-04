@@ -52,7 +52,7 @@
                                     {{ $reserva_hab->fechasalida }}
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
+                                    <a class="btn btn-danger" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -76,7 +76,7 @@
                                     {{ $reserva_rest->hora }}
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
+                                    <a class="btn btn-danger" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -100,7 +100,7 @@
                                     {{ $reserva_spa->hora }}
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
+                                    <a class="btn btn-danger" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -124,7 +124,7 @@
                                     {{ $reserva_trat->hora }}
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
+                                    <a class="btn btn-danger" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -149,7 +149,7 @@
                     <h4 class="modal-title" style="text-align: center;"> Atención </h4>
                 </div>
                 <div class="modal-body">
-                    <p class="text-center">¿Estas seguro de que quieres cancelar la reserva?</p>
+                    <p class="text-center">¿Estas seguro de que deseas cancelar la reserva?</p>
                     <form action="{{ url('/cancelaReservaUsuario') }}" method="post">
                         {{ method_field('PUT') }}
                         {{ csrf_field()  }}

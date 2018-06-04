@@ -3,44 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use Krucas\Notification\Facades\Notification;
-use Illuminate\Support\Facades\DB;
-use App\Cliente;
 
 class editarUsuarioController extends Controller {
 
-    public function mostraUsuari() {
-
-        $id = $_GET['id'];
-        $usuari = DB::select("SELECT * FROM clientes WHERE idCliente = " . $id);
-
-        return $usuari;
+    public function __construct() {
+        $this->middleware('auth:admin');
     }
 
     public function modificarUsuari(Request $request) {
 
-        $id = $request->editidUsuario;
-        $usuari = DB::select("SELECT * FROM clientes WHERE idCliente <> " . $id . " AND email = '" . $request->editemail . "'");
-        $user = Cliente::findOrFail($id);
+        $user = User::where('id', $request->id_user)->first();
 
-        if ($usuari == null) {
-            $user->nombre = $request->editnombre;
-            $user->apellidos = $request->editapellidos;
-            $user->email = $request->editemail;
-            //$user->contrasenya = bcrypt($request->contrasenya);
-            $user->contrasenya = $request->editcontrasenya;
-            $user->telefono = $request->edittelefono;
-            $user->numTarjeta = $request->editnumTarjeta;
-            $user->fechaTarjeta = $request->editfechaTarjeta;
-            $user->cvvTarjeta = $request->editcvvTarjeta;
-            $user->save();
+        $user->name = $request->usuario_nombre;
+        $user->lastName = $request->usuario_apellido;
+        $user->email = $request->usuario_email;
+        $user->phoneNumber = $request->usuario_telefono;
+        $user->card_number = $request->usuario_tarjeta;
+        $user->holder_card = $request->usuario_tarjeta_titular;
+        $user->expDate_card = $request->usuario_tarjeta_fechacad;
 
-            Notification::success("El usuario se ha modificado correctamente.");
-            return redirect('admin');
+        $user->save();
+
+
+        if ($user !== null) {
+            Notification::success("Se han modificado los datos del usuario correctamente");
         } else {
-            Notification::error("Error!!! Este usuario ya existe.");
-            return redirect('admin');
+            Notification::error("No se ha podido modificar los datos del usuario");
         }
+
+        return redirect('admin');
     }
 
 }

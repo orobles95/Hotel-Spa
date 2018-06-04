@@ -16,7 +16,7 @@
                             <a aria-hidden="true">&times;</a>
                         </button>
                     </div>
-                    <div class="modal-body modal_body_socios modal_crearUsuario">
+                    <div class="modal-body modal_body_socios modal_widthLg">
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
