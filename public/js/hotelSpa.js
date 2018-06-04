@@ -83,13 +83,13 @@ $('#cancelaReservaBtn').on('click', function () {
 
 function cancelaReserva(t) {
 
-    var idReserva = $(t).parent().parent().children('#tipo_reserva').children('#idReserva').val();
+    var idReserva = $(t).parent().parent().children('.tipo_reserva').children('.idReserva').val();
     console.log(idReserva);
     //si existe input hidden idGrupEliminar lo elimina
     $('#idcancelaReserva').remove();
 
     //coge nombre grupo y añade a modal-body de eliminar
-    var tipoReserva = $(t).parent().parent().children('#tipo_reserva').children('#tipoReserva').val();
+    var tipoReserva = $(t).parent().parent().children('.tipo_reserva').children('.tipoReserva').val();
     console.log(tipoReserva);
     //asigna nombre
     $('#tipocancelaReserva').remove();

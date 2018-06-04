@@ -81,8 +81,11 @@
             </div>
         </header>
 
+        
+
         <section>
             <div class="container">
+                <div>{!! Notification::showAll() !!}</div>
                 <div class="row justify-content-center margin_top">
                     <div class="col-12">
                         <div class="card">

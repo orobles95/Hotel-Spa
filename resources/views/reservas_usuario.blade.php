@@ -37,7 +37,9 @@
                             @foreach( $reservas_hab as $reserva_hab )
                             @if( $user->email === $reserva_hab->client_email )
                             <tr>
-                                <td>
+                                <td class="tipo_reserva">
+                                    <input type="hidden" class="idReserva" name="idReserva" value="{{ $reserva_hab->id }}">
+                                    <input type="hidden" class="tipoReserva" name="tipoReserva" value="Habitación">
                                     Habitación
                                 </td>
                                 <td>
@@ -50,7 +52,7 @@
                                     {{ $reserva_hab->fechasalida }}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
+                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -59,9 +61,9 @@
                             @foreach( $reservas_rest as $reserva_rest )
                             @if( $user->email === $reserva_rest->client_email )
                             <tr>
-                                <td id="tipo_reserva">
-                                    <input type="hidden" id="idReserva" name="idReserva" value="{{ $reserva_rest->id }}">
-                                    <input type="hidden" id="tipoReserva" name="tipoReserva" value="Restaurante">
+                                <td class="tipo_reserva">
+                                    <input type="hidden" class="idReserva" name="idReserva" value="{{ $reserva_rest->id }}">
+                                    <input type="hidden" class="tipoReserva" name="tipoReserva" value="Restaurante">
                                     Restaurante
                                 </td>
                                 <td>
@@ -75,7 +77,6 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
-                                    <!--<button type="button" class="btn btn-danger">Cancelar reserva</button>-->
                                 </td>
                             </tr>
                             @endif
@@ -84,7 +85,9 @@
                             @foreach( $reservas_spa as $reserva_spa )
                             @if( $user->email === $reserva_spa->client_email )
                             <tr>
-                                <td>
+                                <td class="tipo_reserva">
+                                    <input type="hidden" class="idReserva" name="idReserva" value="{{ $reserva_spa->id }}">
+                                    <input type="hidden" class="tipoReserva" name="tipoReserva" value="Spa">
                                     Spa
                                 </td>
                                 <td>
@@ -97,7 +100,7 @@
                                     {{ $reserva_spa->hora }}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
+                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
@@ -106,7 +109,9 @@
                             @foreach( $reservas_trat as $reserva_trat )
                             @if( $user->email === $reserva_trat->client_email )
                             <tr>
-                                <td>
+                                <td class="tipo_reserva">
+                                    <input type="hidden" class="idReserva" name="idReserva" value="{{ $reserva_trat->id }}">
+                                    <input type="hidden" class="tipoReserva" name="tipoReserva" value="Tratamiento">
                                     Tratamiento
                                 </td>
                                 <td>
@@ -119,7 +124,7 @@
                                     {{ $reserva_trat->hora }}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
+                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
                                 </td>
                             </tr>
                             @endif
