@@ -100,23 +100,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password_confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" minlength="6" required>
+                                <input id="password_confirm" type="password" class="form-control" name="password_confirm" minlength="6" required>
                             </div>
                         </div>
-
-                        <!--
-                        <div class="row" style="margin-bottom: 15px;">
-                            <div class="col-4">
-                                <label for="contrasenya">Contrasenya:</label>
-                            </div>
-                            <div class="col-8">
-                                <input type="password" style="width: 100%;" name="cu45_contrasenya" id="cu45_contrasenya" placeholder="Contrasenya" required />
-                            </div>
-                        </div>
-                        -->
                     </div>
                     <div class="modal-footer modal_footer_socios" style="text-align: center;">
                         <button type="submit" class="btn btn-success" style="margin-right: 25%;">Crear</button>

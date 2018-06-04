@@ -13,17 +13,20 @@ class crearUsuarioController extends Controller {
         $this->middleware('auth:admin');
     }
     
-    public function getIndex() {
-
-        return redirect('admin');
-    }
-
     public function afegirUsuari(Request $request) {
 
         $usuari = User::where('email', $request->email)->first();
+        $pass1 = $request->password;
+        $pass2 = $request->password_confirm;
 
 
         if ($usuari == null) {
+            
+            if ($pass1 !== $pass2) {
+                Notification::error("Las contraseñas no coinciden");
+                return redirect('admin');
+            }
+            
             $usuari = new User;
             $usuari->name = $request->name;
             $usuari->lastName = $request->lastName_newUser;

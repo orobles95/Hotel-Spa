@@ -28,6 +28,7 @@
     <body>
 
         <div class="container">
+            <div>{!! Notification::showAll() !!}</div>
             <div class="row align-items-center">
                 <div class="col-5">
                     <a href="{{ url('/') }}">

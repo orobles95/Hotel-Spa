@@ -32,6 +32,7 @@ class RegisterController extends Controller {
     }
 
     protected function create(array $data) {
+        
         return User::create([
                     'name' => $data['name'],
                     'lastName' => $data['lastName'],
@@ -42,6 +43,7 @@ class RegisterController extends Controller {
                     'expDate_card' => $data['expDate_card'],
                     'password' => Hash::make($data['password']),
         ]);
+        
     }
 
 }
