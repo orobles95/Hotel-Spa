@@ -4,10 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Reserva;
-use App\Reservasrestaurant;
-use App\Reservasspa;
-use App\Reservastratamiento;
 
 class EditaUsuarioController extends Controller {
 
@@ -24,12 +20,8 @@ class EditaUsuarioController extends Controller {
 
         $user->save();
 
-        $reservas_hab = Reserva::all();
-        $reservas_rest = Reservasrestaurant::all();
-        $reservas_spa = Reservasspa::all();
-        $reservas_trat = Reservastratamiento::all();
-
-        return view('home', compact('user', 'reservas_hab', 'reservas_rest', 'reservas_spa', 'reservas_trat'));
+        return redirect('/home');
+        
     }
 
 }

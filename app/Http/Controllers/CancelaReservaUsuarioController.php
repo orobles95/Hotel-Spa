@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-//use Auth;
 use Krucas\Notification\Facades\Notification;
 use Illuminate\Http\Request;
-//use App\User;
 use App\Reserva;
 use App\Reservasrestaurant;
 use App\Reservasspa;
@@ -35,18 +33,13 @@ class CancelaReservaUsuarioController extends Controller {
             $reservas_trat->delete();
         }
 
-        /*
-        $user = User::where('name', Auth::user()->name)->first();
-        $reservas_hab = Reserva::all();
-        $reservas_rest = Reservasrestaurant::all();
-        $reservas_spa = Reservasspa::all();
-        $reservas_trat = Reservastratamiento::all();
 
-        return view('home', compact('user', 'reservas_hab', 'reservas_rest', 'reservas_spa', 'reservas_trat'));
-*/
-
-        Notification::success("Se ha cancelado la reserva");
+        if (($tipo_reserva !== null) && ($id_reserva !== null)) {
+            Notification::success("Se ha cancelado la reserva");
+        } else {
+            Notification::error("No se ha podido cancelar la reserva");
+        }
+        
         return redirect('/home');
     }
-
 }

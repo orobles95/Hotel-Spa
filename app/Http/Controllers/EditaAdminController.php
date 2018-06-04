@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin;
-use App\User;
 
 class EditaAdminController extends Controller {
 
@@ -22,9 +21,7 @@ class EditaAdminController extends Controller {
 
         $admin->save();
 
-        $users = User::all();
-
-        return view('admin', compact('admin', 'users'));
+        return redirect('/admin');
     }
 
 }
