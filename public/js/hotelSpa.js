@@ -1,12 +1,13 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
     // comenzamos que cuando cargue la pagina no se muestre el div que contiene los datos
     $('#containerUsuarios').hide();
 });
-
+*/
 $('#reservasBtn').click(function () {
+    $('#containerUsuarios').css("display", "flex");
     $('#containerUsuarios').show();
 });
-
+/*
 var urlNew = "http://localhost/Hotel-Spa/public/crearUsuario";
 var urlEdit = "http://localhost/Hotel-Spa/public/modificarUsuario?id=";
 var urlDelete = "http://localhost/Hotel-Spa/public/eliminarUsuario?id=";
@@ -75,7 +76,7 @@ $("button[name='modalButtonDelete']").click(function () {
                 //alert('Fi');
             });
 });
-
+*/
 $('#cancelaReservaBtn').on('click', function () {
     $('#modal_cancelar_reserva').modal('show');
 });

@@ -88,7 +88,9 @@
 
         <section>
             <div class="container">
+                <div>{!! Notification::showAll() !!}</div>
                 <div class="row justify-content-center" style="margin-top: 50px;">
+                    
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
@@ -119,13 +121,9 @@
                         </div>
                     </div>
                 </div>
-                <div>{!! Notification::showAll() !!}</div>
                 
                 @include('mostrarUsuarios')
-                @include('crearUsuario')
-                @include('editarUsuario')
-                @include('eliminarUsuario')
-               
+                
             </div>
         </section>
 

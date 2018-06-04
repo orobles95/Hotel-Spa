@@ -1,3 +1,6 @@
+<button name="modalButtonEdit" class="btn btn-warning" value="{{$user->id}}"> 
+    Editar 
+</button>
 
 <div class="modal fade" id="miModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

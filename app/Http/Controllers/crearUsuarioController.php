@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cliente;
+use App\User;
+use Illuminate\Support\Facades\Hash;
 use Krucas\Notification\Facades\Notification;
 
 class crearUsuarioController extends Controller {
 
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
+    
     public function getIndex() {
 
         return redirect('admin');
@@ -15,28 +20,28 @@ class crearUsuarioController extends Controller {
 
     public function afegirUsuari(Request $request) {
 
-        $usuari = Cliente::where('email', $request->email)->first();
+        $usuari = User::where('email', $request->email)->first();
 
 
         if ($usuari == null) {
-            $usuari = new Cliente;
-            $usuari->nombre = $request->nombre;
-            $usuari->apellidos = $request->apellidos;
+            $usuari = new User;
+            $usuari->name = $request->name;
+            $usuari->lastName = $request->lastName_newUser;
+            $usuari->phoneNumber = $request->phoneNumber_newUser;
             $usuari->email = $request->email;
-            //$usuari->contrasenya = bcrypt($request->contrasenya);
-            $usuari->contrasenya = $request->contrasenya;
-            $usuari->telefono = $request->telefono;
-            $usuari->numTarjeta = $request->numTarjeta;
-            $usuari->fechaTarjeta = $request->fechaTarjeta;
-            $usuari->cvvTarjeta = $request->cvvTarjeta;
+            $usuari->card_number = $request->card_number_newUser;
+            $usuari->holder_card = $request->holder_card_newUser;
+            $usuari->expDate_card = $request->expDate_card_newUser;
+            /*$usuari->contrasenya = $request->contrasenya;*/
+            $usuari->password = Hash::make($request->password);
+            
             $usuari->save();
 
-            Notification::success("Se ha registrado correctamente.");
-            return redirect('admin');
+            Notification::success("El usuario se ha creado correctamente.");
         } else {
-            Notification::error("Error!!! Este usuario ya existe.");
-            return redirect('admin');
+            Notification::error("Este usuario ya existe");
         }
+        return redirect('admin');
     }
 
 }

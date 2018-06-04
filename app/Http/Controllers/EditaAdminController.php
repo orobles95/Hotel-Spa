@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Krucas\Notification\Facades\Notification;
 use Illuminate\Http\Request;
 use App\Admin;
 
@@ -21,6 +22,12 @@ class EditaAdminController extends Controller {
 
         $admin->save();
 
+        if ($admin !== null) {
+            Notification::success("Se han modificado tus datos correctamente");
+        } else {
+            Notification::error("No se ha podido modificar tus datos");
+        }
+        
         return redirect('/admin');
     }
 

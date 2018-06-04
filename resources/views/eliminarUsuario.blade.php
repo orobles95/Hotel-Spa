@@ -1,3 +1,6 @@
+<button name="modalButtonDelete" class="btn btn-danger" value="{{$user->id}}"> 
+    Eliminar 
+</button>
 
 <div class="modal fade" id="miModalDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
