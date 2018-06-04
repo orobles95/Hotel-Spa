@@ -34,10 +34,26 @@
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-4">
+                                <label for="usuario_apellido">Apellido:</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" style="width: 100%;" name="usuario_apellido" id="usuario_apellido" placeholder="Apellido" value="{{ $user->lastName }}" required />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 15px;">
+                            <div class="col-4">
                                 <label for="usuario_email" >Correo electrónico:</label>
                             </div>
                             <div class="col-8">
                                 <input type="email" style="width: 100%;" name="usuario_email" id="usuario_email" placeholder="Email" value="{{ $user->email }}" required />
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 15px;">
+                            <div class="col-4">
+                                <label for="usuario_telefono">Telefono:</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" style="width: 100%;" name="usuario_telefono" id="usuario_telefono" placeholder="Telefono" value="{{ $user->phoneNumber }}" required />
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 15px;">
@@ -64,15 +80,7 @@
                                 <input type="text" style="width: 100%;" name="usuario_tarjeta_fechacad" id="usuario_tarjeta_fechacad" minlength="5" maxlength="5" placeholder="07/18" value="{{ $user->expDate_card }}" required />
                             </div>
                         </div>
-                        <div class="row" style="margin-bottom: 15px;">
-                            <div class="col-4">
-                                <label for="usuario_tarjeta_numsec">Num. secreto tarjeta:</label>
-                            </div>
-                            <div class="col-8">
-                                <input type="password" style="width: 100%;" name="usuario_tarjeta_numsec" id="usuario_tarjeta_numsec" minlength="3" maxlength="3" value="{{ $user->secretNumber_card }}" required />
-                            </div>
-                        </div>
-                        
+
                         <!--
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-4">

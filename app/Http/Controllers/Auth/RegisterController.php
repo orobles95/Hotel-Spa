@@ -21,11 +21,12 @@ class RegisterController extends Controller {
     protected function validator(array $data) {
         return Validator::make($data, [
                     'name' => 'required|string|max:255',
+                    'lastName' => 'required|string',
+                    'phoneNumber' => 'required|string',
                     'email' => 'required|string|email|max:255|unique:users',
                     'card_number' => 'required|string',
                     'holder_card' => 'required|string',
                     'expDate_card' => 'required|string',
-                    'secretNumber_card' => 'required|string',
                     'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -33,11 +34,12 @@ class RegisterController extends Controller {
     protected function create(array $data) {
         return User::create([
                     'name' => $data['name'],
+                    'lastName' => $data['lastName'],
+                    'phoneNumber' => $data['phoneNumber'],
                     'email' => $data['email'],
                     'card_number' => $data['card_number'],
                     'holder_card' => $data['holder_card'],
                     'expDate_card' => $data['expDate_card'],
-                    'secretNumber_card' => $data['secretNumber_card'],
                     'password' => Hash::make($data['password']),
         ]);
     }

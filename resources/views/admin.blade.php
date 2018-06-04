@@ -120,12 +120,12 @@
                     </div>
                 </div>
                 <div>{!! Notification::showAll() !!}</div>
-                <!--
+                
                 @include('mostrarUsuarios')
                 @include('crearUsuario')
                 @include('editarUsuario')
                 @include('eliminarUsuario')
-                -->
+               
             </div>
         </section>
 

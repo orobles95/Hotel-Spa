@@ -101,7 +101,7 @@
 
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('register') }}">
-                                        @csrf
+                                        {{ csrf_field()  }}
 
                                         <div class="form-group row">
                                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -116,7 +116,15 @@
                                                 @endif
                                             </div>
                                         </div>
+                                        
+                                        <div class="form-group row">
+                                            <label for="lastName" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
 
+                                            <div class="col-md-6">
+                                                <input id="lastName" name="lastName" type="text" class="form-control"  minlength="2" required>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="form-group row">
                                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -130,7 +138,15 @@
                                                 @endif
                                             </div>
                                         </div>
+                                                                                
+                                        <div class="form-group row">
+                                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
 
+                                            <div class="col-md-6">
+                                                <input id="phoneNumber" name="phoneNumber" type="number" class="form-control" min="111111111" max="999999999" required>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="form-group row">
                                             <label for="card_number" class="col-md-4 col-form-label text-md-right">{{ __('Targeta de pago') }}</label>
 
@@ -152,14 +168,6 @@
 
                                             <div class="col-md-6">
                                                 <input id="expDate_card" name="expDate_card" type="text" class="form-control" minlength="5" maxlength="5" placeholder="07/18" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="secretNumber_card" class="col-md-4 col-form-label text-md-right">{{ __('Num. secreto tarjeta') }}</label>
-
-                                            <div class="col-md-6">
-                                                <input id="secretNumber_card" name="secretNumber_card" type="password" class="form-control"  minlength="3" maxlength="3" required>
                                             </div>
                                         </div>
 
