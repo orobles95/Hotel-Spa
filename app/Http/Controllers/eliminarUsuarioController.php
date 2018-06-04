@@ -16,9 +16,9 @@ class eliminarUsuarioController extends Controller {
 
             $user->delete();
 
-            Notification::success("El usuario se ha eliminado correctamente.");
+            Notification::success("El usuario se ha eliminado correctamente");
         } else {
-            Notification::error("Error!!! Este usuario no existe.");
+            Notification::error("No se ha podido eliminar el usuario");
         }
         return redirect('admin');
     }

@@ -1,4 +1,4 @@
-<button name="modalButtonEdit" class="btn btn-warning" data-toggle="modal" data-target="#ModaleditUser" value="{{$user->id}}"> 
+<button name="modalButtonEdit" onclick="editaUsuari(this);" class="btn btn-warning" data-toggle="modal" data-target="#ModaleditUser" value="{{$user->id}}"> 
     Editar 
 </button>
 
@@ -20,9 +20,9 @@
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-4">
                                 <label for="usuario_nombre">Nombre:</label>
-                                <input type="hidden" name="id_user" value="{{ $user->id }}">
                             </div>
                             <div class="col-8">
+                                <input type="hidden" name="usuario_id" id="usuario_id" value="{{ $user->id }}">
                                 <input type="text" style="width: 100%;" name="usuario_nombre" id="usuario_nombre" placeholder="Nombre" value="{{ $user->name }}" required />
                             </div>
                         </div>

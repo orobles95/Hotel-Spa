@@ -14,7 +14,7 @@ class editarUsuarioController extends Controller {
 
     public function modificarUsuari(Request $request) {
 
-        $user = User::where('id', $request->id_user)->first();
+        $user = User::where('id', $request->usuario_id)->first();
 
         $user->name = $request->usuario_nombre;
         $user->lastName = $request->usuario_apellido;

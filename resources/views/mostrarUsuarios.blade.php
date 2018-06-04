@@ -12,7 +12,16 @@
     @foreach( $users as $user )
     <div class="rowRegistro row">
         <label class="col-3 nom_usuario">{{ $user->name }} {{ $user->lastName }}
-            <input type="hidden" class="idUsuario" name="idUsuario" value="{{ $user->id }}">
+            <input type="hidden" class="idUsuario" value="{{ $user->id }}">
+            <input type="hidden" class="nomUsuario" value="{{ $user->name }}">
+            <input type="hidden" class="apellidoUsuario" value="{{ $user->lastName }}">
+            <input type="hidden" class="emailUsuario" value="{{ $user->email }}">
+            <input type="hidden" class="telefonoUsuario" value="{{ $user->phoneNumber }}">
+            <input type="hidden" class="numTarjetaUsuario" value="{{ $user->card_number }}">
+            <input type="hidden" class="titularTarjetaUsuario" value="{{ $user->holder_card }}">
+            <input type="hidden" class="fechaTarjetaUsuario" value="{{ $user->expDate_card }}"> 
+
+
         </label>
         <label class="col-3">{{ $user->email }}</label>
         <label class="col-3">{{ $user->phoneNumber }}</label>
