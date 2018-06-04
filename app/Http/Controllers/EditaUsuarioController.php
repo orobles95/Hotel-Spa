@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Krucas\Notification\Facades\Notification;
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class EditaUsuarioController extends Controller {
 
     public function editaUsuario(Request $request) {
 
-        $user = User::where('id', $request->id_user)->first();
+        $user = User::where('id', Auth::user()->id)->first();
 
         $user->name = $request->usuario_nombre;
         $user->lastName = $request->usuario_apellido;

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Krucas\Notification\Facades\Notification;
 use Illuminate\Http\Request;
 use App\User;
-use Krucas\Notification\Facades\Notification;
 
 class editarUsuarioController extends Controller {
 
