@@ -36,7 +36,7 @@
                                         <li class="int-box  nav-item dropdown">
 
                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                <img src="images/ico-socios.png" alt="Zona Socios">{{ Auth::user()->name }} <span class="caret"></span>
+                                                <img src="images/ico-socios.png" alt="Zona Socios">{{ $user->name }} <span class="caret"></span>
                                             </a>
 
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -107,8 +107,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>

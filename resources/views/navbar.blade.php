@@ -24,10 +24,11 @@
 
                             <li class="int-box  nav-item dropdown">
                                 @if (Auth::check())
+    
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="images/ico-socios.png" alt="Zona Socios">{{ Auth::user()->name }} <span class="caret"></span>
+                                    <img src="images/ico-socios.png" alt="Zona Socios">{{ ( isset($user->name) ? $user->name : Auth::user()->name) }} <span class="caret"></span>
                                 </a>
-
+                                <!--  isset($array_uri[1]) ? $array_uri[1] : false  -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('home') }}">
                                         {{ __('Home') }}

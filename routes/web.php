@@ -45,30 +45,31 @@ Route::get('/notificaciones', function () {
     return view('notificaciones');
 });
 
-//Route::get('/change_lang/{lang}', 'LangController@changeLang');
-
 Route::post('/language', array(
     'Middleware' => 'LanguageSwitcher',
     'uses' => 'LanguageController@index'
 ));
 
-Route::group(['middleware' => 'auth'], function() {
-    //vistas para las que es necesario estar autentificado
-
-    Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
-
-    Route::put('/editaAdmin', 'EditaAdminController@editaAdmin');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function() {
+    //vistas para las que es necesario estar autentificado como usuario
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::put('/editaUsuario', 'EditaUsuarioController@editaUsuario');
+    Route::put('/cancelaReservaUsuario', 'CancelaReservaUsuarioController@cancelaReservaUsuario');
+});
 
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
+
+Route::put('/editaAdmin', 'EditaAdminController@editaAdmin');
+
+
+
+
 
 
 

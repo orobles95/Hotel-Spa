@@ -26,6 +26,7 @@
                         <div class="row" style="margin-bottom: 15px;">
                             <div class="col-4">
                                 <label for="admin_nombre">Nombre:</label>
+                                <input type="hidden" name="nom_admin" value="{{ $admin->name }}">
                             </div>
                             <div class="col-8">
                                 <input type="text" style="width: 100%;" name="admin_nombre" id="admin_nombre" placeholder="Nombre" value="{{ $admin->name }}" required />

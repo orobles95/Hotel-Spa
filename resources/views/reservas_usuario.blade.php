@@ -9,6 +9,7 @@
     </div>
 </a>
 
+
 <div class="modal modal_socios fade" tabindex="-1" role="dialog" id="myModal_2">
     <div id="modal_reservas_socios" class="modal-dialog modal_dialog_socios modal-lg" role="document">
         <div class="modal-content modal_content">
@@ -58,7 +59,9 @@
                             @foreach( $reservas_rest as $reserva_rest )
                             @if( $user->email === $reserva_rest->client_email )
                             <tr>
-                                <td>
+                                <td id="tipo_reserva">
+                                    <input type="hidden" id="idReserva" name="idReserva" value="{{ $reserva_rest->id }}">
+                                    <input type="hidden" id="tipoReserva" name="tipoReserva" value="Restaurante">
                                     Restaurante
                                 </td>
                                 <td>
@@ -71,7 +74,8 @@
                                     {{ $reserva_rest->hora }}
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger">Cancelar reserva</button>
+                                    <a class="btn btn-danger" id="cancelaReservaBtn" style="color: white; cursor: pointer;" onclick="cancelaReserva(this);">Cancelar reserva</a>
+                                    <!--<button type="button" class="btn btn-danger">Cancelar reserva</button>-->
                                 </td>
                             </tr>
                             @endif
@@ -127,6 +131,31 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div id="modal_cancelar_reserva" class="modal"  data-backdrop="static" data-keyboard="false">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" style="text-align: center;"> Atención </h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">¿Estas seguro de que quieres cancelar la reserva?</p>
+                    <form action="{{ url('/cancelaReservaUsuario') }}" method="post">
+                        {{ method_field('PUT') }}
+                        {{ csrf_field()  }}
+                        <div class="text-center" >
+                            <button type="submit" class=" btn btn-danger "  > Cancelar reserva</button>
+                            <button type="button" onclick="borrarcancelaReserva(this);" class=" btn btn-primary " data-dismiss="modal" > Cancelar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

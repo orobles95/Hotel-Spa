@@ -35,38 +35,16 @@
                                     <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
                                         <!--
                                         <li class="int-box nav-item">
-                                            <a class="nav-link" href="admin">
-                                                <div class="row align-items-center">
-                                                    <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
-                                                    <div>
-                                                        <span>Bienvenido/a <strong name="nomUsuari">{{ $admin->name }}</strong> </span>
-
-                                                        <form action="{{ url('/logout') }}" method="POST" style="display:inline">
-                                                            {{ csrf_field() }}
-                                                            <button type="submit" class="btn btn-danger">
-                                                                Cerrar sesión
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        -->
-                                        <!-- USER LOGIN
-                                        <li>
-                                            <a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a>
-                                        </li>
-                                        -->
-                                        <!--<li class="int-box nav-item">
                                             <a class="nav-link" href="#">
                                                 <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
                                                 <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
                                             </a>
-                                        </li>-->
+                                        </li>
+                                        -->
 
                                         <li class="int-box  nav-item dropdown">
                                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }} <span class="caret"></span>
+                                                {{ $admin->name }} <span class="caret"></span>
                                             </a>
 
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -142,10 +120,12 @@
                     </div>
                 </div>
                 <div>{!! Notification::showAll() !!}</div>
+                <!--
                 @include('mostrarUsuarios')
                 @include('crearUsuario')
                 @include('editarUsuario')
                 @include('eliminarUsuario')
+                -->
             </div>
         </section>
 
