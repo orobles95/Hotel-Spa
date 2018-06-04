@@ -10,7 +10,7 @@
             <p>{{ trans('spa.bienvenida') }}</p>
         </div>
         <div class="habitaciones text-center">{{ trans('spa.tituloPagina') }}</div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mindescrip">
             <div class="col-1 text-right">~ ♦ ~</div>
             <div class="col-1 hab-line align-self-center"></div>
             <div class="col-1">~ ♦ ~</div>
@@ -22,7 +22,7 @@
                 <p class="titulo">{{ trans('spa.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_1') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservaspa/' . 0 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservaspa/' . 0 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
                     <a href="#miModalSpaCircuito" data-toggle="modal" data-target="#miModalSpaCircuito">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <p class="titulo">{{ trans('spa.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_2') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservaspa/' . 1 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservaspa/' . 1 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
                     <a href="#miModalSpaBalneario" data-toggle="modal" data-target="#miModalSpaBalneario">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <p class="titulo">{{ trans('spa.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('spa.descripcion_3') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservaspa/' . 2 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservaspa/' . 2 ) }}'" type="button">{{ trans('spa.reservarBtn') }}</button>
                     <a href="#miModalSpaSauna" data-toggle="modal" data-target="#miModalSpaSauna">{{ trans('spa.descubrelaBtn') }}</a>
                 </div>
             </div>

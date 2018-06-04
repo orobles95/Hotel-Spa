@@ -14,14 +14,6 @@
                     <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                         <a class="navbar-brand" href="#"></a>
                         <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
-                            <!--
-                            <li class="int-box nav-item">
-                                <a class="nav-link" href="#">
-                                    <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
-                                    <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
-                                </a>
-                            </li>-->
-
                             <li class="int-box  nav-item dropdown">
                                 @if (Auth::check())
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -94,9 +86,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="tratamientos">{{ trans('nav.menu_tratamientos') }}</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="ofertas">{{ trans('nav.menu_ofertas') }}</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="contacto">{{ trans('nav.menu_contacto') }}</a>
                     </li>

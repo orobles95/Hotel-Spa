@@ -12,7 +12,7 @@
             <p>{{ trans('habitaciones.bienvenida') }}</p>
         </div>
         <div class="habitaciones text-center">{{ trans('habitaciones.tituloPagina') }}</div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mindescrip">
             <div class="col-1 text-right">~ ♦ ~</div>
             <div class="col-1 hab-line align-self-center"></div>
             <div class="col-1">~ ♦ ~</div>
@@ -24,7 +24,7 @@
                 <p class="titulo">{{ trans('habitaciones.titulo_1') }}</p>
                 <p class="mindescrip">{{ trans('habitaciones.descripcion_1') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservahabitacion/' . 0 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservahabitacion/' . 0 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
                     <a href="#miModalSuitePres" data-toggle="modal" data-target="#miModalSuitePres">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <p class="titulo">{{ trans('habitaciones.titulo_2') }}</p>
                 <p class="mindescrip">{{ trans('habitaciones.descripcion_2') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservahabitacion/' . 1 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservahabitacion/' . 1 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
                     <a href="#miModalSuiteSup" data-toggle="modal" data-target="#miModalSuiteSup">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <p class="titulo">{{ trans('habitaciones.titulo_3') }}</p>
                 <p class="mindescrip">{{ trans('habitaciones.descripcion_3') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservahabitacion/' . 2 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservahabitacion/' . 2 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
                     <a href="#miModalSuiteEst" data-toggle="modal" data-target="#miModalSuiteEst">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <p class="titulo">{{ trans('habitaciones.titulo_4') }}</p>
                 <p class="mindescrip">{{ trans('habitaciones.descripcion_4') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservahabitacion/' . 3 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservahabitacion/' . 3 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
                     <a href="#miModalHabSup" data-toggle="modal" data-target="#miModalHabSup">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <p class="titulo">{{ trans('habitaciones.titulo_5') }}</p>
                 <p class="mindescrip">{{ trans('habitaciones.descripcion_5') }}</p>
                 <div class="hab">
-                    <button onclick="location.href='{{ url('/reservahabitacion/' . 4 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
+                    <button onclick="location.href ='{{ url('/reservahabitacion/' . 4 ) }}'" type="button">{{ trans('habitaciones.reservarBtn') }}</button>
                     <a href="#miModalHabEst" data-toggle="modal" data-target="#miModalHabEst">{{ trans('habitaciones.descubrelaBtn') }}</a>
                 </div>
             </div>
