@@ -43,19 +43,19 @@
                             </button>
                             <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                                 <a class="navbar-brand" href="#"></a>
-                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
+                                <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
 
                                     @guest
                                     @if (auth('admin')->check())
-                                    <li><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin area') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin area') }}</a></li>
                                     @else
-                                    <li><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
                                     @endif
 
-                                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a></li>
-                                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                     @else
-                                    <li class="nav-item dropdown">
+                                    <li class="int-box nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
@@ -71,7 +71,7 @@
                                         </div>
                                     </li>
                                     @endguest
-                                    <li class="nav-item cambio_idioma_nav">
+                                    <li class="int-box nav-item cambio_idioma_nav">
                                         <form action="language" method="post">
                                             {{ csrf_field() }}
                                             @if (App::getLocale() == 'es')

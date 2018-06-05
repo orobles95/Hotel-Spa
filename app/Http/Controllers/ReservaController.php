@@ -23,16 +23,14 @@ class ReservaController extends Controller {
     public function postCreate(Request $request) {
 
 
-        $room = $request->input('room');
-        $fechaentrada = $request->input('fechaentrada');
-        $fechasalida = $request->input('fechasalida');
+        $room = $request->room;
+        $fechaentrada = $request->fechaentrada;
+        $fechasalida = $request->fechasalida;
 
-
-
-
-        $habitacio = Reserva::where('room', $request->room)
-                        ->where('fechasalida', '>', $request->fechaentrada)
+        $habitacio = Reserva::where('room', $room)
+                        ->where('fechasalida', '>', $fechaentrada)
                         ->orderBy('fechasalida', 'desc')->first();
+
 
         if ($habitacio == null && $fechaentrada < $fechasalida) {
 
@@ -54,14 +52,12 @@ class ReservaController extends Controller {
 
             $p->save();
 
-            Notification::success("La habitación se ha reservado correctamente.");
-            //return redirect('notificaciones');
+            Notification::success("La habitación se ha reservado correctamente");
+            return back();
+        } else {
+            Notification::error("Esta habitación ya esta reservada para estas fechas");
             return back();
         }
-
-        Notification::error("Error!!! Esta habitación ya esta reservada para estas fechas.");
-        //return redirect('notificaciones');
-        return back();
     }
 
     public function getShowrestaurante($id) {
@@ -76,6 +72,15 @@ class ReservaController extends Controller {
         $comensales = $request->input('comensales');
         $hora = $request->input('hora');
 
+
+        $reserva_rest = Restaurant::where('restaurant', $restaurant)
+                ->where('fechaentrada', $fechaentrada)
+                ->where('hora', $hora);
+
+        if ($reserva_rest !== null) {
+            Notification::error("El restaurante en esta fecha ya tiene esta hora reservada");
+            return back();
+        }
 
         $p = new Reservasrestaurant;
         $p->restaurant = $restaurant;
@@ -96,7 +101,7 @@ class ReservaController extends Controller {
 
         $p->save();
 
-        //return redirect('/restaurante');
+        Notification::success("Se ha reservado hora en el restaurante correctamente");
         return back();
     }
 
@@ -112,6 +117,14 @@ class ReservaController extends Controller {
         $personas = $request->input('personas');
         $hora = $request->input('hora');
 
+        $reserva_spa = Spa::where('spa', $spa)
+                ->where('fechaentrada', $fechaentrada)
+                ->where('hora', $hora);
+
+        if ($reserva_spa !== null) {
+            Notification::error("El Balneario-Spa en esta fecha ya tiene esta hora reservada");
+            return back();
+        }
 
         $p = new Reservasspa;
         $p->spa = $spa;
@@ -132,7 +145,7 @@ class ReservaController extends Controller {
 
         $p->save();
 
-        //return redirect('/spa');
+        Notification::success("Se ha reservado hora en el Balneario-Spa correctamente");
         return back();
     }
 
@@ -147,6 +160,14 @@ class ReservaController extends Controller {
         $fechaentrada = $request->input('fechaentrada');
         $hora = $request->input('hora');
 
+        $reserva_tratamiento = Tratamiento::where('tratamiento', $tratamiento)
+                ->where('fechaentrada', $fechaentrada)
+                ->where('hora', $hora);
+
+        if ($reserva_tratamiento !== null) {
+            Notification::error("Este tratamiento en esta fecha ya tiene esta hora reservada");
+            return back();
+        }
 
         $p = new Reservastratamiento;
         $p->tratamiento = $tratamiento;
@@ -166,7 +187,7 @@ class ReservaController extends Controller {
 
         $p->save();
 
-        //return redirect('/tratamientos');
+        Notification::success("Se ha reservado hora para el tratamiento correctamente");
         return back();
     }
 

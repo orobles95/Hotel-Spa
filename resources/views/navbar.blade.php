@@ -34,7 +34,7 @@
                                     </form>
                                 </div>
                                 @else
-                                <a class="nav-link" href="home">
+                                <a class="nav-link" href="{{ route('home') }}">
                                     <div class="row align-items-center">
                                         <img src="images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
                                         <span >{{ trans('nav.accesosDirectos_socios') }}</span>

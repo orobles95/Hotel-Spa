@@ -1,9 +1,10 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reserva en {{$tratamiento->nom}}</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -12,7 +13,7 @@
         <!-- Fonts and Fontawesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Arapey|IM+Fell+French+Canon+SC|Poppins" rel="stylesheet">
-        <title>Reserva en {{$tratamiento->nom}}</title>
+
     </head>
     <body>
         <header>
@@ -20,7 +21,7 @@
                 <div class="row align-items-center">
                     <div class="col-5">
                         <a href="{{ url('/') }}">
-                            <img src="../../public/images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
+                            <img src="../images/titulo.jpg" class="img-fluid" alt="Gran Hotel Miramar">
                         </a>
                     </div>
                     <div class="col-7">
@@ -32,40 +33,41 @@
                                 <div class="collapse navbar-collapse row" id="navbarTogglerDemo01">
                                     <a class="navbar-brand" href="#"></a>
                                     <ul class="ext-box navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
-                                        <li class="int-box nav-item">
+                                        <li class="int-box  nav-item dropdown">
+                                            @if (Auth::check())
+
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                <img src="../images/ico-socios.png" alt="Zona Socios">{{ ( isset($user->name) ? $user->name : Auth::user()->name) }} <span class="caret"></span>
+                                            </a>
+                                            <!--  isset($array_uri[1]) ? $array_uri[1] : false  -->
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('home') }}">
+                                                    {{ __('Home') }}
+                                                </a>
+                                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                            @else
                                             <a class="nav-link" href="{{ route('home') }}">
                                                 <div class="row align-items-center">
-                                                    <img src="../../public/images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
-                                                    @if (Auth::check())
-                                                    <div>
-                                                        <span>Bienvenido/a <strong name="nomUsuari">{{ Auth::user()->name }}</strong> </span>
-                                                        <form action="{{ url('/logout') }}" method="POST" style="display:inline">
-                                                            {{ csrf_field() }}
-                                                            <!--<button type="submit" class="btn btn-danger" style="display:inline;cursor:pointer">-->
-                                                            <button type="submit" class="btn btn-danger">
-                                                                Cerrar sesión
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                    @else
+                                                    <img src="../images/ico-socios.png" class="img_socios_nav img-fluid" alt="Zona Socios">
                                                     <span >{{ trans('nav.accesosDirectos_socios') }}</span>
-                                                    @endif
                                                 </div>
                                             </a>
+                                            @endif
                                         </li>
-                                        <!--<li class="int-box nav-item">
-                                            <a class="nav-link" href="#">
-                                                <img src="images/ico-reservas.png" class="img_reservas_nav img-fluid" alt="Resrvas On-line">
-                                                <span >{{ trans('nav.accesosDirectos_reservas') }}</span>
-                                            </a>
-                                        </li>-->
                                         <li class="int-box nav-item select_lang_nav">
                                             <form action="language" method="post">
                                                 {{ csrf_field() }}
                                                 @if (App::getLocale() == 'es')
-                                                <img src="../../public/images/ico-bandera-esp.png" class="img-fluid margin-bandera">
+                                                <img src="../images/ico-bandera-esp.png" class="img-fluid margin-bandera">
                                                 @else
-                                                <img src="../../public/images/ico-bandera-eng.png" class="img-fluid margin-bandera">
+                                                <img src="../images/ico-bandera-eng.png" class="img-fluid margin-bandera">
                                                 @endif
                                                 <select id="idioma" onchange="this.form.submit()" name="locale">
                                                     <option  value="en" {{ App::getLocale() == 'en' ? ' selected' : '' }}>English</option>
@@ -150,11 +152,16 @@
                                     </div>
                                     @endguest
 
+                                    <div class="form-group">
+                                        <label for="secretNumber_card">{{ __('Num. secreto tarjeta') }}</label>
+                                        <input id="secretNumber_card" name="secretNumber_card" type="password" class="form-control"  minlength="3" maxlength="3" required>
+                                    </div>
+
                                     <div class="form-group text-center">
 
-                                        <button onclick="{{ url('/tratamientos') }}" type="submit" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
+                                        <a href="{{ url("tratamientos") }}" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
                                             Volver
-                                        </button>
+                                        </a>
 
                                         <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
                                             Reservar

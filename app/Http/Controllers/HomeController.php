@@ -19,7 +19,7 @@ class HomeController extends Controller {
         $reservas_spa = Reservasspa::all();
         $reservas_trat = Reservastratamiento::all();
         
-        return view('home', compact('user','reservas_hab','reservas_rest','reservas_spa','reservas_trat'));
+        return view('/home', compact('user','reservas_hab','reservas_rest','reservas_spa','reservas_trat'));
     }
 
 }
