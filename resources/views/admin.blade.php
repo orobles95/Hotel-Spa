@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hotel-Spa Miramar</title>
+        <title>{{ trans('zona_socio.titulo_nav') }}</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -49,7 +49,7 @@
 
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
+                                                    {{ trans('zona_socio.cerrar_sesion') }}
                                                 </a>
 
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -59,12 +59,12 @@
                                         </li>
 
                                         <li class="int-box nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a>
+                                            <a class="nav-link" href="{{ route('login') }}">{{ trans('zona_socio.usuario_login') }}</a>
                                         </li>
 
 
                                         <li class="int-box nav-item select_lang_nav">
-                                            <form action="language" method="post">
+                                            <form action="{{ route('language') }}" method="post">
                                                 {{ csrf_field() }}
                                                 @if (App::getLocale() == 'es')
                                                 <img src="images/ico-bandera-esp.png" class="img-fluid margin-bandera">
@@ -94,7 +94,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong>Tablero de usuario (User dashboard)</strong>
+                                <strong>{{ trans('zona_socio.tablero_admin_titulo') }}</strong>
                             </div>
                             <div class="card-body">
                                 <div class="row justify-content-center" style="margin-top: 50px;">
@@ -107,10 +107,10 @@
                                         <a id="reservasBtn" style="cursor: pointer;">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h4><i class="fas fa-bed"></i> Administrar Usuarios</h4>
+                                                    <h4><i class="fas fa-bed"></i> {{ trans('zona_socio.tablero_admin_adminUsers_titulo') }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <p>Administrar usuarios de la página web.</p>
+                                                    <p>{{ trans('zona_socio.tablero_admin_adminUsers') }}</p>
                                                 </div>
                                             </div>
                                         </a>

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Reserva en {{$tratamiento->nom}}</title>
+        <title>{{ trans('zona_socio.reserva_tratamiento_titulo') }}</title>
 
         <!-- Bootstrap and my style -->
         <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -42,10 +42,10 @@
                                             <!--  isset($array_uri[1]) ? $array_uri[1] : false  -->
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item" href="{{ route('home') }}">
-                                                    {{ __('Home') }}
+                                                    {{ trans('zona_socio.user_zone') }}
                                                 </a>
                                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
+                                                    {{ trans('zona_socio.cerrar_sesion') }}
                                                 </a>
 
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -62,7 +62,7 @@
                                             @endif
                                         </li>
                                         <li class="int-box nav-item select_lang_nav">
-                                            <form action="language" method="post">
+                                            <form action="{{ route('language') }}" method="post">
                                                 {{ csrf_field() }}
                                                 @if (App::getLocale() == 'es')
                                                 <img src="../images/ico-bandera-esp.png" class="img-fluid margin-bandera">
@@ -94,7 +94,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title text-center">
                                     <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-                                    Reserva para el tratamiento {{$tratamiento->nom}}
+                                    {{ trans('zona_socio.reserva_tratamiento') }}{{$tratamiento->nom}}
                                 </h3>
                             </div>
 
@@ -104,17 +104,17 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group">
-                                        <label for="title">Tratamiento</label>
+                                        <label for="title">{{ trans('zona_socio.tratamiento') }}</label>
                                         <input readonly="readonly" type="text" name="tratamiento" id="tratamiento" class="form-control" value="{{$tratamiento->nom}}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="year">Fecha</label>
+                                        <label for="year">{{ trans('zona_socio.fecha') }}</label>
                                         <input type="text" name="fechaentrada" id="llegada" class="form-control" value="Selecciona la fecha">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="synopsis">Hora</label>
+                                        <label for="synopsis">{{ trans('zona_socio.hora') }}</label>
                                         <select  class="form-control" name="hora" id="hora" >
                                             <option value="13:00">13:00</option>
                                             <option value="13:30">13:30</option>
@@ -133,40 +133,35 @@
 
                                     @guest
                                     <div class="form-group">
-                                        <label for="card_number">Numero targeta de pago</label>
-                                        <input id="card_number" name="card_number" type="number" class="form-control" min="1111111111111111" max="9999999999999999" placeholder="16 numeros sin espacios" required>
+                                        <label for="card_number">{{ trans('zona_socio.input_tarjeta') }}</label>
+                                        <input id="card_number" name="card_number" type="number" class="form-control" min="1111111111111111" max="9999999999999999" placeholder="{{ trans('zona_socio.input_tarjeta_placeholder') }}" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="holder_card">{{ __('Titular tarjeta') }}</label>
+                                        <label for="holder_card">{{ trans('zona_socio.input_titular') }}</label>
                                         <input id="holder_card" name="holder_card" type="text" class="form-control" minlength="5" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="expDate_card">{{ __('Fecha cad. tarjeta') }}</label>
+                                        <label for="expDate_card">{{ trans('zona_socio.input_fechaCad') }}</label>
                                         <input id="expDate_card" name="expDate_card" type="text" class="form-control" minlength="5" maxlength="5" placeholder="07/18" required>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="secretNumber_card">{{ __('Num. secreto tarjeta') }}</label>
-                                        <input id="secretNumber_card" name="secretNumber_card" type="password" class="form-control"  minlength="3" maxlength="3" required>
-                                    </div>
                                     @endguest
 
                                     <div class="form-group">
-                                        <label for="secretNumber_card">{{ __('Num. secreto tarjeta') }}</label>
+                                        <label for="secretNumber_card">{{ trans('zona_socio.input_numSecreto') }}</label>
                                         <input id="secretNumber_card" name="secretNumber_card" type="password" class="form-control"  minlength="3" maxlength="3" required>
                                     </div>
 
-                                    <div class="form-group text-center">
 
-                                        <a href="{{ url("tratamientos") }}" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
-                                            Volver
+                                    <div class="form-group text-center">
+                                        <a href="{{ url('habitaciones') }}" class="btn btn-default" style="padding:8px 100px;margin-top:25px;">
+                                            {{ trans('zona_socio.volverBtn') }}
                                         </a>
 
                                         <button type="submit" class="btn btn-primary" style="padding:8px 100px;margin-top:25px;">
-                                            Reservar
+                                            {{ trans('zona_socio.reservarBtn') }}
                                         </button>
-
                                     </div>
 
                                 </form>

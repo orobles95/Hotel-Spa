@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Zona socios</title>
+        <title>{{ trans('zona_socio.titulo_nav') }}</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -46,13 +46,13 @@
 
                                     @guest
                                     @if (auth('admin')->check())
-                                    <li><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin area') }}</a></li>
+                                    <li><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ trans('zona_socio.admin_area') }}</a></li>
                                     @else
-                                    <li><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
+                                    <li><a class="nav-link" href="{{ route('admin.login') }}">{{ trans('zona_socio.admin_login') }}</a></li>
                                     @endif
 
-                                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                    <li><a class="nav-link" href="{{ route('login') }}">{{ trans('zona_socio.usuario_login') }}</a></li>
+                                    <li><a class="nav-link" href="{{ route('register') }}">{{ trans('zona_socio.registro') }}</a></li>
                                     @else
                                     <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -61,7 +61,7 @@
 
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                                {{ trans('zona_socio.cerrar_sesion') }}
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

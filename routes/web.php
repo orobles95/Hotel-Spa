@@ -48,7 +48,7 @@ Route::get('/notificaciones', function () {
 Route::post('/language', array(
     'Middleware' => 'LanguageSwitcher',
     'uses' => 'LanguageController@index'
-));
+))->name('language');
 
 Auth::routes();
 

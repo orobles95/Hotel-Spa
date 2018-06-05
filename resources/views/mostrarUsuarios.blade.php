@@ -3,10 +3,10 @@
     @include('crearUsuario')
 
     <div class="rowTitulo row">
-        <label class="col-3">Nombre y apellidos</label>
-        <label class="col-3">Email</label>
-        <label class="col-3">Teléfono</label>
-        <label class="col-3">Acciones</label>
+        <label class="col-3">{{ trans('zona_socio.nombre_apellido') }}</label>
+        <label class="col-3">{{ trans('zona_socio.input_email') }}</label>
+        <label class="col-3">{{ trans('zona_socio.input_telefono') }}</label>
+        <label class="col-3">{{ trans('zona_socio.acciones') }}</label>
     </div>
 
     @foreach( $users as $user )

@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Zona socios</title>
+        <title>{{ trans('zona_socio.titulo_nav') }}</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -47,13 +47,13 @@
 
                                     @guest
                                     @if (auth('admin')->check())
-                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin area') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.dashboard') }}">{{ trans('zona_socio.admin_area') }}</a></li>
                                     @else
-                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.login') }}">{{ trans('zona_socio.admin_login') }}</a></li>
                                     @endif
 
-                                    <li class="int-box"><a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a></li>
-                                    <li class="int-box"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('login') }}">{{ trans('zona_socio.usuario_login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('register') }}">{{ trans('zona_socio.registro') }}</a></li>
                                     @else
                                     <li class="int-box nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -62,7 +62,7 @@
 
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                                {{ trans('zona_socio.cerrar_sesion') }}
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -72,7 +72,7 @@
                                     </li>
                                     @endguest
                                     <li class="int-box nav-item cambio_idioma_nav">
-                                        <form action="language" method="post">
+                                        <form action="{{ route('language') }}" method="post">
                                             {{ csrf_field() }}
                                             @if (App::getLocale() == 'es')
                                             <img src="images/ico-bandera-esp.png" class="img-fluid">
@@ -98,14 +98,14 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="card" style="margin-top: 60px; margin-bottom: 208px;">
-                                <div class="card-header">{{ __('Register') }}</div>
+                                <div class="card-header">{{ trans('zona_socio.registar_titulo') }}</div>
 
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('register') }}">
                                         {{ csrf_field()  }}
 
                                         <div class="form-group row">
-                                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_nombre') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -119,7 +119,7 @@
                                         </div>
                                         
                                         <div class="form-group row">
-                                            <label for="lastName" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
+                                            <label for="lastName" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_apellido') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="lastName" name="lastName" type="text" class="form-control"  minlength="2" required>
@@ -127,7 +127,7 @@
                                         </div>
                                         
                                         <div class="form-group row">
-                                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_email') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -141,7 +141,7 @@
                                         </div>
                                                                                 
                                         <div class="form-group row">
-                                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>
+                                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_telefono') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="phoneNumber" name="phoneNumber" type="number" class="form-control" min="111111111" max="999999999" required>
@@ -149,15 +149,15 @@
                                         </div>
                                         
                                         <div class="form-group row">
-                                            <label for="card_number" class="col-md-4 col-form-label text-md-right">{{ __('Targeta de pago') }}</label>
+                                            <label for="card_number" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_tarjeta') }}</label>
 
                                             <div class="col-md-6">
-                                                <input id="card_number" name="card_number" type="number" class="form-control" min="1111111111111111" max="9999999999999999" placeholder="16 numeros sin espacios" required>
+                                                <input id="card_number" name="card_number" type="number" class="form-control" min="1111111111111111" max="9999999999999999" placeholder="{{ trans('zona_socio.input_tarjeta_placeholder') }}" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="holder_card" class="col-md-4 col-form-label text-md-right">{{ __('Titular tarjeta') }}</label>
+                                            <label for="holder_card" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_titular') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="holder_card" name="holder_card" type="text" class="form-control" minlength="5" required>
@@ -165,7 +165,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="expDate_card" class="col-md-4 col-form-label text-md-right">{{ __('Fecha cad. tarjeta') }}</label>
+                                            <label for="expDate_card" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_fechaCad') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="expDate_card" name="expDate_card" type="text" class="form-control" minlength="5" maxlength="5" placeholder="07/18" required>
@@ -173,10 +173,10 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_password') }}</label>
 
                                             <div class="col-md-6">
-                                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" minlength="6" placeholder="Minimo 6 caracteres" required>
+                                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" minlength="6" placeholder="{{ trans('zona_socio.input_password_placeholder') }}" required>
 
                                                 @if ($errors->has('password'))
                                                 <span class="invalid-feedback">
@@ -187,7 +187,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_password_conf') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" minlength="6" required>
@@ -197,7 +197,7 @@
                                         <div class="form-group row mb-0">
                                             <div class="col-md-6 offset-md-4">
                                                 <button type="submit" class="btn btn-primary">
-                                                    {{ __('Register') }}
+                                                    {{ trans('zona_socio.registarBtn') }}
                                                 </button>
                                             </div>
                                         </div>

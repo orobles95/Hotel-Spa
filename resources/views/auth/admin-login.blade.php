@@ -8,7 +8,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Zona socios</title>
+        <title>{{ trans('zona_socio.titulo_nav') }}</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -46,9 +46,9 @@
 
                                     @guest
                                     
-                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.login') }}">{{ __('Admin login') }}</a></li>
-                                    <li class="int-box"><a class="nav-link" href="{{ route('login') }}">{{ __('User Login') }}</a></li>
-                                    <li class="int-box"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('admin.login') }}">{{ trans('zona_socio.admin_login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('login') }}">{{ trans('zona_socio.usuario_login') }}</a></li>
+                                    <li class="int-box"><a class="nav-link" href="{{ route('register') }}">{{ trans('zona_socio.registro') }}</a></li>
                                     @else
                                     <li class="int-box nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -57,7 +57,7 @@
 
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                                {{ trans('zona_socio.cerrar_sesion') }}
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -67,7 +67,7 @@
                                     </li>
                                     @endguest
                                     <li class="int-box nav-item cambio_idioma_nav">
-                                        <form action="language" method="post">
+                                        <form action="{{ route('language') }}" method="post">
                                             {{ csrf_field() }}
                                             @if (App::getLocale() == 'es')
                                             <img src="../images/ico-bandera-esp.png" class="img-fluid">
@@ -93,14 +93,14 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="card carddd">
-                                <div class="card-header">{{ __('Admin login') }}</div>
+                                <div class="card-header">{{ trans('zona_socio.admin_login_titulo') }}</div>
 
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('admin.login.submit') }}">
                                         @csrf
 
                                         <div class="form-group row">
-                                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ trans('zona_socio.login_email') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -114,7 +114,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ trans('zona_socio.input_password') }}</label>
 
                                             <div class="col-md-6">
                                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -131,7 +131,7 @@
                                             <div class="col-md-6 offset-md-4">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
+                                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ trans('zona_socio.login_recuerda') }}
                                                     </label>
                                                 </div>
                                             </div>
@@ -140,11 +140,11 @@
                                         <div class="form-group row mb-0">
                                             <div class="col-md-8 offset-md-4">
                                                 <button type="submit" class="btn btn-primary">
-                                                    {{ __('Login') }}
+                                                    {{ trans('zona_socio.login_login') }}
                                                 </button>
 
                                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                    {{ __('Forgot Your Password?') }}
+                                                    {{ trans('zona_socio.login_olvido') }}
                                                 </a>
                                             </div>
                                         </div>
