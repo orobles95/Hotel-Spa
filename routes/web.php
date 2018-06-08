@@ -96,14 +96,20 @@ Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->
 Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
 
 
-Route::get('/crearEmpleado', 'crearEmpleadoController@getEmpleado');
-Route::post('/newEmp', 'crearEmpleadoController@afegirEmpleado');
+Route::get('/crearEmpleado', 'EmpleadoController@getEmpleado');
+Route::post('/newEmp', 'EmpleadoController@creaEmpleado');
 
-Route::get('/modificarEmpleado', 'editarEmpleadoController@muestraEmpleado');
-Route::post('/editEmp', 'editarEmpleadoController@modificaEmpleado');
+Route::get('/modificarEmpleado', 'EmpleadoController@muestraEmpleado');
+Route::put('/editEmp', 'EmpleadoController@modificaEmpleado');
 
-Route::get('/eliminarEmpleado', 'eliminarEmpleadoController@muestraEmpleado');
-Route::post('/delEmp', 'eliminarEmpleadoController@eliminaEmpleado');
+Route::get('/eliminarEmpleado', 'EmpleadoController@muestraEmpleado');
+Route::put('/delEmp', 'EmpleadoController@eliminaEmpleado');
+
+Route::get('/altaEmpleado', 'EmpleadoController@muestraEmpleado');
+Route::put('/altaEmp', 'EmpleadoController@altaEmpleado');
+
+Route::get('/bajaEmpleado', 'EmpleadoController@muestraEmpleado');
+Route::put('/bajaEmp', 'EmpleadoController@bajaEmpleado');
 
 //Route::get('/suscribete', 'suscribeController@getIndex');
 Route::post('/suscribe', 'suscribeController@afegirSuscriptor');

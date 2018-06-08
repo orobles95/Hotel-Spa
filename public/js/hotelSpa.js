@@ -1,13 +1,16 @@
 $(document).ready(function() {
     // comenzamos que cuando cargue la pagina no se muestre el div que contiene los datos
     $('#containerEmpleados').hide();
+    $('#containerUsuarios').hide();
 });
 
 $('#adminEmpleados').click(function() {
+    $('#containerUsuarios').hide();
     $('#containerEmpleados').show();
 });
 
 $('#reservasBtn').click(function() {
+    $('#containerEmpleados').hide();
     $('#containerUsuarios').css("display", "flex");
     $('#containerUsuarios').show();
 });
@@ -18,6 +21,8 @@ $('#reservasBtn').click(function() {
 var urlNew = "http://localhost/Hotel-Spa/public/crearEmpleado";
 var urlEdit = "http://localhost/Hotel-Spa/public/modificarEmpleado?id=";
 var urlDelete = "http://localhost/Hotel-Spa/public/eliminarEmpleado?id=";
+var urlAlta = "http://localhost/Hotel-Spa/public/altaEmpleado?id=";
+var urlBaja = "http://localhost/Hotel-Spa/public/bajaEmpleado?id=";
 var iduser;
 
 $('#modalButtonNewEmp').click(function() {
@@ -79,6 +84,60 @@ $("button[name='modalButtonDeleteEmp']").click(function() {
 
                 $('#modalButtonDeleteEmp').modal('toggle');
                 $('#miModalDeleteEmp').modal('show');
+            })
+            .fail(function() {
+                alert('Error.....');
+            })
+            .always(function() {
+                //alert('Fi');
+            });
+});
+
+$("button[name='modalButtonAltaEmp']").click(function() {
+    iduser = this.value;
+    $.get(urlEdit + iduser)
+            .done(function(data) {
+                $('#altaEmpid').val(data[0].idEmp);
+                $('#altaEmpdni').html(data[0].dniEmp);
+                $('#altaEmpnombre').html(data[0].nombre);
+                $('#altaEmpapellidos').html(data[0].apellidos);
+                $('#altaEmpemail').html(data[0].email);
+                $('#altaEmpcontrasenya').html(data[0].contrasenya);
+                $('#altaEmptelefono').html(data[0].telefono);
+                $('#altaEmpdireccion').html(data[0].direccion);
+                $('#altaEmpcargo').html(data[0].cargo);
+                $('#altaEmppuesto').html(data[0].puesto);
+                $('#altaEmpestado').html(data[0].estado);
+
+                $('#modalButtonAltaEmp').modal('toggle');
+                $('#miModalAltaEmp').modal('show');
+            })
+            .fail(function() {
+                alert('Error.....');
+            })
+            .always(function() {
+                //alert('Fi');
+            });
+});
+
+$("button[name='modalButtonBajaEmp']").click(function() {
+    iduser = this.value;
+    $.get(urlEdit + iduser)
+            .done(function(data) {
+                $('#bajaEmpid').val(data[0].idEmp);
+                $('#bajaEmpdni').html(data[0].dniEmp);
+                $('#bajaEmpnombre').html(data[0].nombre);
+                $('#bajaEmpapellidos').html(data[0].apellidos);
+                $('#bajaEmpemail').html(data[0].email);
+                $('#bajaEmpcontrasenya').html(data[0].contrasenya);
+                $('#bajaEmptelefono').html(data[0].telefono);
+                $('#bajaEmpdireccion').html(data[0].direccion);
+                $('#bajaEmpcargo').html(data[0].cargo);
+                $('#bajaEmppuesto').html(data[0].puesto);
+                $('#bajaEmpestado').html(data[0].estado);
+
+                $('#modalButtonBajaEmp').modal('toggle');
+                $('#miModalBajaEmp').modal('show');
             })
             .fail(function() {
                 alert('Error.....');

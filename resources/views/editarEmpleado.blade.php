@@ -2,13 +2,14 @@
     <div class="modal-dialog" role="document">
         <div id="containerEmp" class="modal-content">
             <div class="text-center darkColor">
-                <i class="fas fa-user"></i> Modificar empleado
+                <i class="fas fa-user-edit"></i> Modificar empleado
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <form id="formEditEmp" name="formEditEmp" class="form-horizontal" method="POST" action="{{ url('/editEmp') }}">
                 <div class="controls">
+                    {{ method_field('PUT') }}
                     {{ csrf_field() }}
                     <input type="text" id="editEmpid" name="editEmpdid" hidden />
                     <div class="form-group row align-items-center">

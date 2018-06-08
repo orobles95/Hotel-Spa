@@ -97,7 +97,7 @@
                                 <strong>{{ trans('zona_socio.tablero_admin_titulo') }}</strong>
                             </div>
                             <div class="card-body">
-                                <div class="row justify-content-center" style="margin-top: 50px;">
+                                <div class="row justify-content-center">
 
                                     <div class="col-6">
                                         @include('perfil_admin')
@@ -128,7 +128,7 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-                                        <a id="reservasBtn" style="cursor: pointer;">
+                                        <div id="adminReservas" class="adminButton">
                                             <div class="card">
                                                 <div class="card-header">
                                                     <h4><i class="fas fa-bed"></i> {{ trans('zona_socio.tablero_admin_adminReservas_titulo') }}</h4>
@@ -137,7 +137,7 @@
                                                     <p>{{ trans('zona_socio.tablero_admin_adminReservas') }}</p>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -151,6 +151,8 @@
                 @include('crearEmpleado')
                 @include('editarEmpleado')
                 @include('eliminarEmpleado')
+                @include('altaEmpleado')
+                @include('bajaEmpleado')
             </div>
         </section>
 

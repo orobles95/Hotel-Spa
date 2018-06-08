@@ -1,65 +1,66 @@
-<div class="modal fade" id="miModalDeleteEmp" tabindex="-1" role="dialog" aria-labelledby="miModalDeleteEmp" aria-hidden="true">
+<div class="modal fade" id="miModalBajaEmp" tabindex="-1" role="dialog" aria-labelledby="miModalBajaEmp" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div id="containerEmp" class="modal-content">
             <div class="text-center darkColor">
-                <i class="fas fa-user-times"></i> Eliminar empleado
+                <i class="fas fa-arrow-down"><i class="fas fa-user"></i></i> Baja empleado
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="formDeleteEmp" name="formDeleteEmp" class="form-horizontal" method="POST" action="{{ url('/delEmp') }}">
+            <form id="formBajaEmp" name="formBajaEmp" class="form-horizontal" method="POST" action="{{ url('/bajaEmp') }}">
                 <div class="controls">
                     {{ method_field('PUT') }}
                     {{ csrf_field() }}
-                    <input type="text" id="deleteEmpid" name="deleteEmpid" hidden />
+                    <input type="text" id="bajaEmpid" name="bajaEmpid" hidden />
                     <div class="row">
                         <label class="col-5 eliminarEmp">DNI: </label>
-                        <label id="deleteEmpdni"></label>
+                        <label id="bajaEmpdni"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Estado: </label>
-                        <label id="deleteEmpestado"></label>
+                        <label id="bajaEmpestado"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Nombre: </label>
-                        <label id="deleteEmpnombre"></label>
+                        <label id="bajaEmpnombre"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Apellidos: </label>
-                        <label id="deleteEmpapellidos"></label>
+                        <label id="bajaEmpapellidos"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Email: </label>
-                        <label id="deleteEmpemail"></label>
+                        <label id="bajaEmpemail"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Contraseña: </label>
-                        <label id="deleteEmpcontrasenya"></label>
+                        <label id="bajaEmpcontrasenya"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Teléfono: </label>
-                        <label id="deleteEmptelefono"></label>
+                        <label id="bajaEmptelefono"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Dirección: </label>
-                        <label id="deleteEmpdireccion"></label>
+                        <label id="bajaEmpdireccion"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Cargo: </label>
-                        <label id="deleteEmpcargo"></label>
+                        <label id="bajaEmpcargo"></label>
                     </div>
                     <div class="row">
                         <label class="col-5 eliminarEmp">Puesto: </label>
-                        <label id="deleteEmppuesto"></label>
+                        <label id="bajaEmppuesto"></label>
                     </div>
                 </div>
                 <div class="text-right darkColor">
-                    <button id="eliminar" class="btn btn-danger" type="submit">Eliminar</button>
+                    <button id="baja" class="btn btn-success" type="submit">Baja</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
 
 
 

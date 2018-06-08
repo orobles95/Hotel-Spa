@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div id="containerEmp" class="modal-content">
             <div class="text-center darkColor">
-                <i class="fas fa-user"></i> Crear nuevo empleado
+                <i class="fas fa-user-plus"></i> Crear nuevo empleado
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
