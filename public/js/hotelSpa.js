@@ -1,85 +1,91 @@
-/*$(document).ready(function () {
- // comenzamos que cuando cargue la pagina no se muestre el div que contiene los datos
- $('#containerUsuarios').hide();
- });
- */
-$('#reservasBtn').click(function () {
+$(document).ready(function() {
+    // comenzamos que cuando cargue la pagina no se muestre el div que contiene los datos
+    $('#containerEmpleados').hide();
+});
+
+$('#adminEmpleados').click(function() {
+    $('#containerEmpleados').show();
+});
+
+$('#reservasBtn').click(function() {
     $('#containerUsuarios').css("display", "flex");
     $('#containerUsuarios').show();
 });
 
 
 
-/*
- var urlNew = "http://localhost/Hotel-Spa/public/crearUsuario";
- var urlEdit = "http://localhost/Hotel-Spa/public/modificarUsuario?id=";
- var urlDelete = "http://localhost/Hotel-Spa/public/eliminarUsuario?id=";
- var iduser;
- 
- $('#modalButtonNew').click(function () {
- $.get(urlNew)
- .done(function (data) {
- $('#modalButtonNew').modal('toggle');
- $('#miModalNew').modal('show');
- })
- .fail(function () {
- alert('Error.....');
- })
- .always(function () {
- //alert('Fi');
- });
- });
- 
- $("button[name='modalButtonEdit']").click(function () {
- iduser = this.value;
- $.get(urlEdit + iduser)
- .done(function (data) {
- $('#editidUsuario').val(data[0].idCliente);
- $('#editnombre').val(data[0].nombre);
- $('#editapellidos').val(data[0].apellidos);
- $('#editemail').val(data[0].email);
- $('#editcontrasenya').val(data[0].contrasenya);
- $('#edittelefono').val(data[0].telefono);
- $('#editnumTarjeta').val(data[0].numTarjeta);
- $('#editfechaTarjeta').val(data[0].fechaTarjeta);
- $('#editcvvTarjeta').val(data[0].cvvTarjeta);
- 
- $('#modalButtonEdit').modal('toggle');
- $('#miModalEdit').modal('show');
- })
- .fail(function () {
- alert('Error.....');
- })
- .always(function () {
- //alert('Fi');
- });
- });
- 
- $("button[name='modalButtonDelete']").click(function () {
- iduser = this.value;
- $.get(urlDelete + iduser)
- .done(function (data) {
- $('#deleteidUsuario').val(data[0].idCliente);
- $('#deletenombre').val(data[0].nombre);
- $('#deleteapellidos').val(data[0].apellidos);
- $('#deleteemail').val(data[0].email);
- $('#deletecontrasenya').val(data[0].contrasenya);
- $('#deletetelefono').val(data[0].telefono);
- $('#deletenumTarjeta').val(data[0].numTarjeta);
- $('#deletefechaTarjeta').val(data[0].fechaTarjeta);
- $('#deletecvvTarjeta').val(data[0].cvvTarjeta);
- 
- $('#modalButtonDelete').modal('toggle');
- $('#miModalDelete').modal('show');
- })
- .fail(function () {
- alert('Error.....');
- })
- .always(function () {
- //alert('Fi');
- });
- });
- */
+
+var urlNew = "http://localhost/Hotel-Spa/public/crearEmpleado";
+var urlEdit = "http://localhost/Hotel-Spa/public/modificarEmpleado?dni=";
+var urlDelete = "http://localhost/Hotel-Spa/public/eliminarEmpleado?dni=";
+var iduser;
+
+$('#modalButtonNewEmp').click(function() {
+    $.get(urlNew)
+            .done(function(data) {
+                $('#modalButtonNewEmp').modal('toggle');
+                $('#miModalNewEmp').modal('show');
+            })
+            .fail(function() {
+                alert('Error.....');
+            })
+            .always(function() {
+                //alert('Fi');
+            });
+});
+
+$("button[name='modalButtonEditEmp']").click(function() {
+    iduser = this.value;
+    $.get(urlEdit + iduser)
+            .done(function(data) {
+                $('#editEmpdni').val(data[0].dniEmp);
+                $('#editEmpnombre').val(data[0].nombre);
+                $('#editEmpapellidos').val(data[0].apellidos);
+                $('#editEmpemail').val(data[0].email);
+                $('#editEmpcontrasenya').val(data[0].contrasenya);
+                $('#editEmptelefono').val(data[0].telefono);
+                $('#editEmpdireccion').val(data[0].direccion);
+                $('#editEmpcargo').val(data[0].cargo);
+                $('#editEmppuesto').val(data[0].puesto);
+                $('#editEmpestado').val(data[0].estado);
+
+                $('#modalButtonEditEmp').modal('toggle');
+                $('#miModalEditEmp').modal('show');
+            })
+            .fail(function() {
+                alert('Error.....');
+            })
+            .always(function() {
+                //alert('Fi');
+            });
+});
+
+$("button[name='modalButtonDeleteEmp']").click(function() {
+    iduser = this.value;
+    $.get(urlDelete + iduser)
+            .done(function(data) {
+                $('#deleteEmpdni').html(data[0].dniEmp);
+                $('#deleteEmpnombre').html(data[0].nombre);
+                $('#deleteEmpapellidos').html(data[0].apellidos);
+                $('#deleteEmpemail').html(data[0].email);
+                $('#deleteEmpcontrasenya').html(data[0].contrasenya);
+                $('#deleteEmptelefono').html(data[0].telefono);
+                $('#deleteEmpdireccion').html(data[0].direccion);
+                $('#deleteEmpcargo').html(data[0].cargo);
+                $('#deleteEmppuesto').html(data[0].puesto);
+                $('#deleteEmpestado').html(data[0].estado);
+
+                $('#modalButtonDeleteEmp').modal('toggle');
+                $('#miModalDeleteEmp').modal('show');
+            })
+            .fail(function() {
+                alert('Error.....');
+            })
+            .always(function() {
+                //alert('Fi');
+            });
+});
+
 function cancelaReserva(t) {
 
     $('#modal_cancelar_reserva').modal('show');

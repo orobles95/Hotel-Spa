@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model {
+class Empleado extends Model {
 
-    protected $table = 'clientes';
-    protected $primaryKey = 'idCliente';
+    protected $table = 'empleados';
+    protected $primaryKey = 'dniEmp';
     public $timestamps = false;
 
 }

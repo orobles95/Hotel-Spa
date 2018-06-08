@@ -82,8 +82,8 @@ return [
     'fecha' => 'Fecha',
     'volverBtn' => 'Volver',
     'reservarBtn' => 'Reservar',
-    
-    
-    
-    
+    'tablero_admin_adminEmpleados_titulo' => 'Administrar Empleados',
+    'tablero_admin_adminEmpleados' => 'Administrar empleados de la página web.',
+    'tablero_admin_adminReservas_titulo' => 'Administrar Reservas',
+    'tablero_admin_adminReservas' => 'Administrar reservas de la página web.',
 ];

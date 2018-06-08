@@ -90,7 +90,7 @@
             <div class="container">
                 <div>{!! Notification::showAll() !!}</div>
                 <div class="row justify-content-center" style="margin-top: 50px;">
-                    
+
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
@@ -107,10 +107,34 @@
                                         <a id="reservasBtn" style="cursor: pointer;">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h4><i class="fas fa-bed"></i> {{ trans('zona_socio.tablero_admin_adminUsers_titulo') }}</h4>
+                                                    <h4><i class="fas fa-user-friends"></i> {{ trans('zona_socio.tablero_admin_adminUsers_titulo') }}</h4>
                                                 </div>
                                                 <div class="card-body">
                                                     <p>{{ trans('zona_socio.tablero_admin_adminUsers') }}</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="adminEmpleados" class="adminButton">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4><i class="fas fa-user-friends"></i> {{ trans('zona_socio.tablero_admin_adminEmpleados_titulo') }}</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p>{{ trans('zona_socio.tablero_admin_adminEmpleados') }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <a id="reservasBtn" style="cursor: pointer;">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4><i class="fas fa-bed"></i> {{ trans('zona_socio.tablero_admin_adminReservas_titulo') }}</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p>{{ trans('zona_socio.tablero_admin_adminReservas') }}</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -121,9 +145,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 @include('mostrarUsuarios')
-                
+                @include('mostrarEmpleados')
+                @include('crearEmpleado')
+                @include('editarEmpleado')
+                @include('eliminarEmpleado')
             </div>
         </section>
 

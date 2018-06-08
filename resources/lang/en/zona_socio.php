@@ -3,13 +3,13 @@
 return [
     'titulo_nav' => 'Member Zone | Gran Hotel Miramar',
     'admin_area' => 'Admin Area',
-    'admin_login' => 'Loguin Admin',
-    'usuario_login' => 'Loguin User',
+    'admin_login' => 'Login Admin',
+    'usuario_login' => 'Login User',
     'registro' => 'Registry',
     'cerrar_sesion' => 'Logout',
     'user_zone' => 'User Zone',
-    'user_login_titulo' => 'Loguin User',
-    'admin_login_titulo' => 'Loguin Admin',
+    'user_login_titulo' => 'Login User',
+    'admin_login_titulo' => 'Login Admin',
     'login_email' => 'Email',
     'login_password' => 'Password',
     'login_recuerda' => 'Remember password',
@@ -82,8 +82,8 @@ return [
     'fecha' => 'Date',
     'volverBtn' => 'Return',
     'reservarBtn' => 'Reserve',
-    
-    
-    
-    
+    'tablero_admin_adminEmpleados_titulo' => 'Manage employees',
+    'tablero_admin_adminEmpleados' => 'Manage employees of the website.',
+    'tablero_admin_adminReservas_titulo' => 'Manage Reservations',
+    'tablero_admin_adminReservas' => 'Manage reservations of the web page.',
 ];

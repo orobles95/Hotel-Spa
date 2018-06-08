@@ -96,15 +96,15 @@ Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->
 Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
 
 
-/*
-Route::get('/crearUsuario', 'crearUsuarioController@getIndex');
-Route::post('/newUser', 'crearUsuarioController@afegirUsuari');
 
-Route::get('/modificarUsuario', 'editarUsuarioController@mostraUsuari');
-Route::post('/editUser', 'editarUsuarioController@modificarUsuari');
+Route::get('/crearEmpleado', 'crearEmpleadoController@getEmpleado');
+Route::post('/newEmp', 'crearEmpleadoController@afegirEmpleado');
 
-Route::get('/eliminarUsuario', 'eliminarUsuarioController@mostraUsuari');
-Route::post('/delUser', 'eliminarUsuarioController@eliminarUsuari');
-*/
+Route::get('/modificarEmpleado', 'editarEmpleadoController@muestraEmpleado');
+Route::post('/editEmp', 'editarEmpleadoController@modificaEmpleado');
+
+Route::get('/eliminarEmpleado', 'eliminarEmpleadoController@muestraEmpleado');
+Route::post('/delEmp', 'eliminarEmpleadoController@eliminaEmpleado');
+
 //Route::get('/suscribete', 'suscribeController@getIndex');
 Route::post('/suscribe', 'suscribeController@afegirSuscriptor');

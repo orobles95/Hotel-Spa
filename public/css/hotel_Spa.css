@@ -592,3 +592,37 @@ p {
     padding-top: 1vw;
     padding-bottom: 1vw;
 }
+/******************************************************************************/
+
+/********************* ADMIN **************************************************/
+.adminButton {
+    margin-top: 1vw;
+    /*margin-bottom: 1vw;*/
+}
+.adminButton :hover{
+    background: #b7e7f0;
+    cursor: pointer;
+}
+.cursorP {
+    cursor: pointer;
+}
+#containerEmpleados {
+    margin: 1vw auto;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 0.3vw;
+    width: 100%;
+    min-height: 40vh;
+    border: 1px solid #ccc;
+    display: flex;
+    display: none;
+    flex-direction: column;
+}
+#containerEmp {
+    width: 35vw;
+    margin: 50px auto;
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.075)inset, 0 0 6px rgba(0,0,0,0.6);
+}
+/******************************************************************************/
