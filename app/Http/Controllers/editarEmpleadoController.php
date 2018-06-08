@@ -11,19 +11,19 @@ class editarEmpleadoController extends Controller {
 
     public function muestraEmpleado() {
 
-        $dni = $_GET['dni'];
-        $usuari = DB::select("SELECT * FROM empleados WHERE dniEmp = " . $dni);
+        $id = $_GET['id'];
+        $usuari = DB::select("SELECT * FROM empleados WHERE idEmp = " . $id);
 
         return $usuari;
     }
 
     public function modificaEmpleado(Request $request) {
 
-        $dni = $request->editEmpdni;
-        //$empdni = DB::select("SELECT * FROM empleados WHERE dniEmp = " . $dni . " AND email = '" . $request->editEmpemail . "'");
-        $empdni = DB::select("SELECT * FROM empleados WHERE dniEmp = '" . $dni . "'");
+        $id = $request->editEmpid;
+        $empdni = DB::select("SELECT * FROM empleados WHERE idEmp <> '" . $id . "' AND dniEmp = '" . $request->editEmpdni . "'");
+        //$empdni = DB::select("SELECT * FROM empleados WHERE dniEmp = '" . $dni . "'");
         $empemail = DB::select("SELECT * FROM empleados WHERE email = '" . $request->editEmpemail . "'");
-        $usuari = Empleado::findOrFail($dni);
+        $usuari = Empleado::findOrFail($id);
 
         if ($empdni == null) {
             if ($empemail == null) {

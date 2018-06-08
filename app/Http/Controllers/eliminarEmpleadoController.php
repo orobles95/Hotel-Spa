@@ -11,16 +11,17 @@ class eliminarEmpleadoController extends Controller {
 
     public function muestraEmpleado() {
 
-        $dni = $_GET['dni'];
-        $usuari = DB::select("SELECT * FROM empleados WHERE dniEmp = " . $dni);
+        $id = $_GET['id'];
+        $usuari = DB::select("SELECT * FROM empleados WHERE idEmp = " . $id);
+        //$usuari = Empleado::where('idEmp', $id)->first();
 
         return $usuari;
     }
 
     public function eliminaEmpleado(Request $request) {
 
-        $dni = $request->deleteEmpdni;
-        $usuari = Empleado::findOrFail($dni);
+        $id = $request->deleteEmpid;
+        $usuari = Empleado::findOrFail($id);
 
         if ($usuari != null) {
 

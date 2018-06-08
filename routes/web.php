@@ -96,7 +96,6 @@ Route::get('reservatratamientos/{id}', 'ReservaController@getShowtratamiento')->
 Route::post('reservatratamientos/{id}', 'ReservaController@postCreatetratamiento')->name('catalog.create');
 
 
-
 Route::get('/crearEmpleado', 'crearEmpleadoController@getEmpleado');
 Route::post('/newEmp', 'crearEmpleadoController@afegirEmpleado');
 

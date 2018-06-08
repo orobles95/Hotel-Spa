@@ -10,6 +10,7 @@
             <form id="formEditEmp" name="formEditEmp" class="form-horizontal" method="POST" action="{{ url('/editEmp') }}">
                 <div class="controls">
                     {{ csrf_field() }}
+                    <input type="text" id="editEmpid" name="editEmpdid" hidden />
                     <div class="form-group row align-items-center">
                         <div class="col-3">
                             <label for="editEmpdni" class="control-label">DNI:</label>

@@ -10,6 +10,7 @@
             <form id="formDeleteEmp" name="formDeleteEmp" class="form-horizontal" method="POST" action="{{ url('/delEmp') }}">
                 <div class="controls">
                     {{ csrf_field() }}
+                    <input type="text" id="deleteEmpid" name="deleteEmpid" hidden />
                     <div class="form-group row">
                         <label class="col-3 control-label">DNI: </label>
                         <label id="deleteEmpdni" class="control-label"></label>

@@ -16,8 +16,8 @@ $('#reservasBtn').click(function() {
 
 
 var urlNew = "http://localhost/Hotel-Spa/public/crearEmpleado";
-var urlEdit = "http://localhost/Hotel-Spa/public/modificarEmpleado?dni=";
-var urlDelete = "http://localhost/Hotel-Spa/public/eliminarEmpleado?dni=";
+var urlEdit = "http://localhost/Hotel-Spa/public/modificarEmpleado?id=";
+var urlDelete = "http://localhost/Hotel-Spa/public/eliminarEmpleado?id=";
 var iduser;
 
 $('#modalButtonNewEmp').click(function() {
@@ -38,6 +38,7 @@ $("button[name='modalButtonEditEmp']").click(function() {
     iduser = this.value;
     $.get(urlEdit + iduser)
             .done(function(data) {
+                $('#editEmpid').val(data[0].idEmp);
                 $('#editEmpdni').val(data[0].dniEmp);
                 $('#editEmpnombre').val(data[0].nombre);
                 $('#editEmpapellidos').val(data[0].apellidos);
@@ -64,6 +65,7 @@ $("button[name='modalButtonDeleteEmp']").click(function() {
     iduser = this.value;
     $.get(urlDelete + iduser)
             .done(function(data) {
+                $('#deleteEmpid').val(data[0].idEmp);
                 $('#deleteEmpdni').html(data[0].dniEmp);
                 $('#deleteEmpnombre').html(data[0].nombre);
                 $('#deleteEmpapellidos').html(data[0].apellidos);
