@@ -1,3 +1,20 @@
+<h3>Propósito del proyecto</h3>
+<p>El proyecto está desarrollado en Laravel tanto el frontend como el backend, y este último corriendo en un servidor local como xampp.
+Este proyecto nace de la idea de comodidad a la hora de reservar una habitación on-line, ampliando dichas reservas a todos los servicios ofrecidos por el hotel-balneario, tanto de servicios de habitación como de tratamientos de belleza, pasando por reservas de mesa en sus restaurantes o actividades que realice.
+La idea es que el cliente del balneario pueda reservar todos los servicios online, escogiendo el horario disponible que más le convenga, pudiendo cancelarlo en cualquier momento sin necesidad de llamar por teléfono.</p>
+
+
+<h3>Objetivos:</h3>
+<p>-El objetivo del proyecto es facilitar la gestión del personal encargado de hacer las reservas, ahorrando empleados y tiempo al delegar dicha función en el cliente.<br>
+-El hotel-balneario pondrá a disposición de sus clientes una agenda encargada de mostrar las fechas y horarios disponibles para sus habitaciones, restaurantes y/o tratamientos ofrecidos.<br>
+-Los clientes tendrán que registrarse en la aplicación para poder gestionar sus reservas.<br>
+-Como política de www y a fin de que el cliente no pueda acaparar la agenda, se penalizara con el pago de un porcentaje del importe del servicio contratado por reserva anulada sin suficiente anterioridad o según las normas del hotel.<br>
+-El cliente que no esté registrado y no desee registrarse podrá hacer reservas previo pago, pero no podrá anularlas. De esta manera incentivamos a los clientes a registrarse y facilitarnos sus datos.</p>
+
+
+<h3>Directorio /Docs</h3>
+<p>Aquí encontraréis los archivos de desarrollo del proyecto (desde el desde el manual de instalación de las herramientas necesarias hasta una memoria final de la aplicación final) paso a paso explicados y documentados.</p><br>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -26,33 +43,6 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
 
 If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
