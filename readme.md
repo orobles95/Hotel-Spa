@@ -18,32 +18,32 @@ La idea es que el cliente del balneario pueda reservar todos los servicios onlin
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Estado de compilación"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Descargas Totales"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Última versión estable"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="Licencia"></a>
 </p>
 
-## About Laravel
+## Sobre Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Laravel es un marco de aplicación web con sintaxis expresiva y elegante. Creemos que el desarrollo debe ser una experiencia agradable y creativa para ser verdaderamente gratificante. Laravel intenta eliminar el dolor del desarrollo al facilitar las tareas comunes utilizadas en la mayoría de los proyectos web, como:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Motor de enrutamiento simple y rápido] (https://laravel.com/docs/routing).
+- [Potente contenedor de inyección de dependencia] (https://laravel.com/docs/container).
+- Múltiples back-end para [sesión] (https://laravel.com/docs/session) y [caché] (https://laravel.com/docs/cache) de almacenamiento.
+- Expresivo, intuitivo [base de datos ORM] (https://laravel.com/docs/eloquent).
+- Base de datos agnóstica [migraciones de esquema] (https://laravel.com/docs/migrations).
+- [Procesamiento robusto de trabajos en segundo plano] (https://laravel.com/docs/queues).
+- [Transmisión de eventos en tiempo real] (https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+Laravel es accesible, pero potente, y proporciona las herramientas necesarias para aplicaciones grandes y robustas.
 
-## Learning Laravel
+## Aprendiendo Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Laravel tiene la [documentación] más extensa y exhaustiva (https://laravel.com/docs) y la biblioteca de video tutoriales de cualquier marco de aplicación web moderno, lo que hace que sea muy fácil comenzar a aprender el marco.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Si no está de humor para leer, [Laracasts] (https://laracasts.com) contiene más de 1100 tutoriales en video sobre una variedad de temas que incluyen Laravel, PHP moderno, pruebas unitarias, JavaScript y más. Aumente el nivel de habilidad de usted y de todo su equipo explorando nuestra completa biblioteca de videos.
 
-## License
+## Licencia
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+El marco de trabajo Laravel es un software de código abierto con licencia bajo la [licencia MIT] (https://opensource.org/licenses/MIT).
